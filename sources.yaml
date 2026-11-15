@@ -1,0 +1,154 @@
+# Curated list of AI & LLM Infrastructure blogs monitored daily.
+# Supported modes:
+#   rss        - Standard RSS/Atom/Substack XML feed
+#   sitemap    - XML sitemap (<urlset> or <sitemapindex>) + article metadata enrichment
+#   html_links - Static/SSR index page link extraction + article metadata enrichment
+
+sources:
+  - id: vllm
+    name: vLLM Blog
+    homepage: https://vllm.ai/blog
+    mode: rss
+    feed_url: https://vllm.ai/blog/rss.xml
+    max_items: 50
+
+  - id: lmsys
+    name: LMSYS / SGLang
+    homepage: https://www.lmsys.org/blog/
+    mode: sitemap
+    sitemap_url: https://www.lmsys.org/sitemap.xml
+    url_pattern: ^https://www\.lmsys\.org/blog/\d{4}-\d{2}-\d{2}-
+    max_items: 50
+
+  - id: modal
+    name: Modal Blog
+    homepage: https://modal.com/blog
+    mode: rss
+    feed_url: https://modal.com/blog/atom.xml
+    max_items: 50
+
+  - id: baseten
+    name: Baseten Blog
+    homepage: https://www.baseten.co/blog/
+    mode: html_links
+    index_url: https://www.baseten.co/blog/
+    url_pattern: ^https://www\.baseten\.co/blog/[^/?#]+/?$
+    exclude_pattern: ^https://www\.baseten\.co/blog/?$
+    max_items: 50
+
+  - id: fireworks
+    name: Fireworks AI
+    homepage: https://fireworks.ai/blog
+    mode: html_links
+    index_url: https://fireworks.ai/blog
+    url_pattern: ^https://fireworks\.ai/blog/[^/?#]+/?$
+    exclude_pattern: ^https://fireworks\.ai/blog/?$
+    max_items: 50
+
+  - id: together
+    name: Together AI
+    homepage: https://www.together.ai/blog
+    mode: rss
+    feed_url: https://www.together.ai/blog/rss.xml
+    max_items: 50
+
+  - id: anyscale
+    name: Anyscale / Ray
+    homepage: https://www.anyscale.com/blog
+    mode: sitemap
+    sitemap_url: https://www.anyscale.com/sitemap.xml
+    url_pattern: ^https://(?:www\.)?anyscale\.com/blog/[^/?#]+/?$
+    max_items: 50
+
+  - id: skypilot
+    name: SkyPilot Blog
+    homepage: https://skypilot.ai/blog
+    mode: html_links
+    index_url: https://skypilot.ai/blog
+    url_pattern: ^https://skypilot\.ai/blog/[^/?#]+/?$
+    exclude_pattern: ^https://skypilot\.ai/blog/?$
+    max_items: 50
+
+  - id: crusoe
+    name: Crusoe Blog
+    homepage: https://www.crusoe.ai/resources/blog
+    mode: html_links
+    index_url: https://www.crusoe.ai/resources/blog
+    url_pattern: ^https://www\.crusoe\.ai/resources/blog/[^/?#]+/?$
+    exclude_pattern: ^https://www\.crusoe\.ai/resources/blog/?$
+    max_items: 50
+
+  - id: pytorch
+    name: PyTorch Blog
+    homepage: https://pytorch.org/blog/
+    mode: rss
+    feed_url: https://pytorch.org/feed/
+    max_items: 50
+
+  - id: nvidia
+    name: NVIDIA Data Center & Cloud
+    homepage: https://developer.nvidia.com/blog/category/data-center-cloud/
+    mode: rss
+    feed_url: https://developer.nvidia.com/blog/category/data-center-cloud/feed/
+    max_items: 50
+
+  - id: modular
+    name: Modular Blog
+    homepage: https://www.modular.com/blog
+    mode: rss
+    feed_url: https://www.modular.com/blog/rss.xml
+    max_items: 50
+
+  - id: timdettmers
+    name: Tim Dettmers
+    homepage: https://timdettmers.com/
+    mode: rss
+    feed_url: https://timdettmers.com/feed/
+    max_items: 50
+
+  - id: thinkingmachines-blog
+    name: Thinking Machines Blog
+    homepage: https://thinkingmachines.ai/blog/
+    mode: html_links
+    index_url: https://thinkingmachines.ai/blog/
+    url_pattern: ^https://thinkingmachines\.ai/blog/[^/?#]+/?$
+    exclude_pattern: ^https://thinkingmachines\.ai/blog/?$
+    max_items: 50
+
+  - id: humansand
+    name: humans& Blog
+    homepage: https://humansand.ai/blogs/
+    mode: html_links
+    index_url: https://humansand.ai/blogs/
+    url_pattern: ^https://humansand\.ai/blog/[^/?#]+/?$
+    max_items: 50
+
+  - id: anthropic-eng
+    name: Anthropic Engineering
+    homepage: https://www.anthropic.com/engineering
+    mode: html_links
+    index_url: https://www.anthropic.com/engineering
+    url_pattern: ^https://www\.anthropic\.com/(?:engineering|research)/[^/?#]+/?$
+    exclude_pattern: ^https://www\.anthropic\.com/(?:engineering|research)/?$
+    max_items: 50
+
+  - id: lilianweng
+    name: Lilian Weng (Lil'Log)
+    homepage: https://lilianweng.github.io/
+    mode: rss
+    feed_url: https://lilianweng.github.io/index.xml
+    max_items: 50
+
+  - id: aleksagordic
+    name: Aleksa Gordić
+    homepage: https://www.aleksagordic.com/blog
+    mode: rss
+    feed_url: https://www.aleksagordic.com/feed.xml
+    max_items: 50
+
+  - id: semianalysis
+    name: SemiAnalysis
+    homepage: https://newsletter.semianalysis.com/
+    mode: rss
+    feed_url: https://newsletter.semianalysis.com/feed
+    max_items: 50

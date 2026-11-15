@@ -1,0 +1,19 @@
+# General
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Python environments
+.venv/
+venv/
+
+# Frontend build & dependencies
+frontend/node_modules/
+frontend/dist/
+frontend/public/data/
+
+# Local scratch
+*.db
+*.sqlite3
+.env

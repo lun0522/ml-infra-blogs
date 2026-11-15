@@ -1,0 +1,16 @@
+[project]
+name = "ml-infra-blogs-backend"
+version = "0.1.0"
+description = "Daily AI & LLM infrastructure blog monitor and static JSON exporter"
+requires-python = ">=3.11"
+dependencies = [
+  "httpx>=0.28.0",
+  "certifi>=2024.0.0",
+  "feedparser>=6.0.11",
+  "beautifulsoup4>=4.12.0",
+  "pyyaml>=6.0.2",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
