@@ -4,7 +4,6 @@ import {
   AlertCircle,
   ChevronLeft,
   ChevronRight,
-  Clock,
   Cpu,
   ExternalLink,
   Moon,
@@ -227,7 +226,7 @@ export function App() {
               >
                 <Cpu className="h-[18px] w-[18px]" />
               </div>
-              <h1 className="text-base font-bold tracking-tight text-slate-900 sm:text-lg dark:text-white">
+              <h1 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl dark:text-white">
                 AI &amp; LLM Infra Blogs
               </h1>
             </div>
@@ -270,7 +269,7 @@ export function App() {
                 type="search"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Filter posts by title, keyword, or blog (press / to focus)..."
+                placeholder="Filter posts (press / to focus)"
                 className="w-full rounded-xl border border-slate-200 bg-slate-50/70 py-2 pr-9 pl-9 text-sm text-slate-900 placeholder:text-slate-400 focus:border-sky-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 dark:border-slate-700/80 dark:bg-slate-950/70 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-sky-400 dark:focus:bg-slate-950"
               />
               {searchQuery && (
@@ -303,7 +302,7 @@ export function App() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-[1360px] px-4 py-6 md:px-6">
+      <main className="mx-auto max-w-[1360px] px-4 pt-6 pb-10 md:px-6">
 
         {/* Loading & Error States */}
         {loading && (
@@ -405,17 +404,6 @@ export function App() {
         )}
 
       </main>
-
-      <footer className="mx-auto flex max-w-[1360px] items-center gap-2 px-4 py-8 text-xs text-slate-500 md:px-6 dark:text-slate-400">
-        <Clock className="h-3.5 w-3.5 shrink-0" />
-        <span>
-          Auto-refreshed daily via GitHub Actions · Edit{" "}
-          <code className="rounded bg-slate-200/70 px-1 py-0.5 dark:bg-slate-800">
-            sources.yaml
-          </code>{" "}
-          to add or remove blogs
-        </span>
-      </footer>
     </div>
   );
 }
@@ -434,8 +422,8 @@ function PostRow({
 
   return (
     <article className="group px-4 py-3.5 transition hover:bg-sky-50/45 sm:px-5 dark:hover:bg-slate-800/40">
-      <div className="flex flex-col gap-1.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
-        <div className="flex flex-wrap items-center gap-2 text-xs">
+      <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+        <div className="flex min-w-0 flex-wrap items-center gap-2 text-xs">
           <span className="font-semibold text-sky-700 dark:text-sky-400">
             {post.source_name}
           </span>
