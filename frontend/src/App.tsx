@@ -5,6 +5,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Clock,
+  Cpu,
   ExternalLink,
   Moon,
   Search,
@@ -219,9 +220,17 @@ export function App() {
       <header className="sticky top-0 z-30 border-b border-slate-200/90 bg-white/85 backdrop-blur-md dark:border-slate-800/80 dark:bg-[#090F18]/90">
         <div className="mx-auto max-w-[1360px] px-4 py-3 md:px-6">
           <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
-            <h1 className="order-1 shrink-0 text-base font-bold tracking-tight text-slate-900 sm:text-lg dark:text-white">
-              AI &amp; LLM Infra Blogs
-            </h1>
+            <div className="order-1 flex shrink-0 items-center gap-2.5">
+              <div
+                aria-hidden="true"
+                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-sky-500/12 text-sky-600 ring-1 ring-sky-500/25 dark:bg-sky-400/12 dark:text-sky-400 dark:ring-sky-400/25"
+              >
+                <Cpu className="h-[18px] w-[18px]" />
+              </div>
+              <h1 className="text-base font-bold tracking-tight text-slate-900 sm:text-lg dark:text-white">
+                AI &amp; LLM Infra Blogs
+              </h1>
+            </div>
 
             <div className="order-3 flex w-full flex-wrap items-baseline gap-x-2 gap-y-0.5 text-xs text-slate-500 md:order-2 md:w-auto md:flex-1 md:justify-end dark:text-slate-400">
               <span>Not affiliated with or endorsed by any listed source</span>

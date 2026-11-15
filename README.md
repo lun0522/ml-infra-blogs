@@ -2,18 +2,7 @@
 
 Daily automated aggregator and searchable static dashboard tracking AI systems, LLM inference engines, GPU kernels, cluster orchestration, and frontier lab engineering blogs.
 
-**Target GitHub Pages URL:** `https://lun0522.github.io/ml-infra-blogs/`
-
-## How It Works
-
-1. **Declarative Source List ([`sources.yaml`](sources.yaml))**:
-   - **`rss` mode**: Standard RSS/Atom/Substack feeds (`aleksagordic.com`, `developer.nvidia.com`, `lilianweng.github.io`, `modal.com`, `modular.com`, `pytorch.org`, `semianalysis`, `timdettmers.com`, `together.ai`, `vllm.ai`).
-   - **`sitemap` mode**: XML sitemaps paired with lazy metadata enrichment only for unseen article URLs (`anyscale.com`, `lmsys.org`).
-   - **`html_links` mode**: Plain HTML link extraction + card/article metadata parsing without needing a headless browser (`anthropic.com/engineering`, `baseten.co`, `crusoe.ai`, `fireworks.ai`, `humansand.ai`, `skypilot.ai`, `thinkingmachines.ai/blog/`).
-2. **Persistent Archive (`data/posts.json`)**:
-   - Preserves `first_seen` timestamps and up to the latest 50 posts per source across runs so posts remain archived even after rolling off a blog's front page, and previously seen non-RSS articles don't need re-fetching.
-3. **Static Dashboard (`frontend/`)**:
-   - Built with Vite, React, TypeScript, and Tailwind CSS v4 with light/dark mode, paginated timeline view, instant search, and source filtering.
+**Live Site:** https://lun0522.github.io/ml-infra-blogs/
 
 ## Monitored Sources
 
@@ -40,6 +29,17 @@ Daily automated aggregator and searchable static dashboard tracking AI systems, 
 | [Tim Dettmers](https://timdettmers.com/) | `rss` | `https://timdettmers.com/feed/` | GPU hardware analysis, quantization (`bitsandbytes`), memory hierarchies |
 | [Together AI](https://www.together.ai/blog) | `rss` | `https://www.together.ai/blog/rss.xml` | Distributed training/inference stacks, FlashAttention/kernels, GPU clusters |
 | [vLLM Blog](https://vllm.ai/blog) | `rss` | `https://vllm.ai/blog/rss.xml` | vLLM engine releases, PagedAttention, scheduling, distributed serving |
+
+## How It Works
+
+1. **Declarative Source List ([`sources.yaml`](sources.yaml))**:
+   - **`rss` mode**: Standard RSS/Atom/Substack feeds (`aleksagordic.com`, `developer.nvidia.com`, `lilianweng.github.io`, `modal.com`, `modular.com`, `pytorch.org`, `semianalysis`, `timdettmers.com`, `together.ai`, `vllm.ai`).
+   - **`sitemap` mode**: XML sitemaps paired with lazy metadata enrichment only for unseen article URLs (`anyscale.com`, `lmsys.org`).
+   - **`html_links` mode**: Plain HTML link extraction + card/article metadata parsing without needing a headless browser (`anthropic.com/engineering`, `baseten.co`, `crusoe.ai`, `fireworks.ai`, `humansand.ai`, `skypilot.ai`, `thinkingmachines.ai/blog/`).
+2. **Persistent Archive (`data/posts.json`)**:
+   - Preserves `first_seen` timestamps and up to the latest 50 posts per source across runs so posts remain archived even after rolling off a blog's front page, and previously seen non-RSS articles don't need re-fetching.
+3. **Static Dashboard (`frontend/`)**:
+   - Built with Vite, React, TypeScript, and Tailwind CSS v4 with light/dark mode, paginated timeline view, instant search, and source filtering.
 
 ## Running Locally
 
@@ -69,10 +69,3 @@ npm run dev
 ```
 
 Open `http://localhost:5173`. Production builds (`npm run build`) emit static assets into `frontend/dist/`.
-
-## Deploying to GitHub Pages
-
-1. Push to `main`.
-2. In your GitHub repository: **Settings → Pages → Build and deployment → Source**, choose **GitHub Actions**.
-3. Also under **Settings → Actions → General → Workflow permissions**, ensure **Read and write permissions** is enabled (needed for the daily job to commit `data/posts.json` updates).
-4. Trigger **Daily Blog Monitor & GitHub Pages Deploy** (`.github/workflows/deploy.yml`) manually from the **Actions** tab, or let it run daily at `14:00 UTC`.
