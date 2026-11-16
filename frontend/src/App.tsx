@@ -2,8 +2,11 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import MiniSearch from "minisearch";
 import {
   AlertCircle,
+  Bookmark,
+  ChevronDown,
   ChevronLeft,
   ChevronRight,
+  ChevronUp,
   Cpu,
   ExternalLink,
   Moon,
@@ -11,6 +14,7 @@ import {
   Sun,
   X,
 } from "lucide-react";
+import { PINNED_REFERENCES, type PinnedReference } from "./data/references";
 import type { ArchivePayload, PostRecord } from "./types";
 import {
   effectiveTimestamp,
@@ -53,6 +57,52 @@ function resolveAssetPath(relPath: string): string {
   return `${prefix}${relPath.replace(/^\/+/, "")}`;
 }
 
+interface IndexedCollection<T extends { id: string }> {
+  index: MiniSearch<T>;
+  byId: Map<string, T>;
+}
+
+function createSearchIndex<T extends { id: string }>(
+  items: readonly T[],
+  fields: (keyof T & string)[],
+  boost: Record<string, number>,
+): IndexedCollection<T> {
+  const index = new MiniSearch<T>({
+    fields,
+    searchOptions: {
+      boost,
+      prefix: true,
+      fuzzy: (term) => (term.length >= 4 ? 0.2 : false),
+      combineWith: "AND",
+    },
+  });
+  const byId = new Map<string, T>();
+  const uniqueItems: T[] = [];
+
+  for (const item of items) {
+    if (byId.has(item.id)) continue;
+    byId.set(item.id, item);
+    uniqueItems.push(item);
+  }
+  if (uniqueItems.length > 0) {
+    index.addAll(uniqueItems);
+  }
+
+  return { index, byId };
+}
+
+function querySearchIndex<T extends { id: string }>(
+  collection: IndexedCollection<T>,
+  query: string,
+): T[] {
+  const matches: T[] = [];
+  for (const result of collection.index.search(query)) {
+    const item = collection.byId.get(String(result.id));
+    if (item) matches.push(item);
+  }
+  return matches;
+}
+
 export function App() {
   const [theme, setTheme] = useState<Theme>(readInitialTheme);
   const isDark = theme === "dark";
@@ -64,6 +114,7 @@ export function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedSource, setSelectedSource] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
+  const [referencesOpen, setReferencesOpen] = useState(false);
 
   const searchInputRef = useRef<HTMLInputElement>(null);
 
@@ -144,53 +195,73 @@ export function App() {
     [payload?.sources],
   );
 
-  const searchIndex = useMemo(() => {
-    const index = new MiniSearch<PostRecord>({
-      fields: ["title", "summary", "source_name"],
-      searchOptions: {
-        boost: { title: 3, source_name: 2, summary: 1 },
-        prefix: true,
-        fuzzy: (term) => (term.length >= 4 ? 0.2 : false),
-        combineWith: "AND",
-      },
-    });
-    const postById = new Map<string, PostRecord>();
-    const uniquePosts: PostRecord[] = [];
+  const trimmedQuery = searchQuery.trim();
 
-    for (const post of payload?.posts ?? []) {
-      if (postById.has(post.id)) continue;
-      postById.set(post.id, post);
-      uniquePosts.push(post);
-    }
-    if (uniquePosts.length > 0) {
-      index.addAll(uniquePosts);
-    }
+  const searchIndex = useMemo(
+    () =>
+      createSearchIndex(payload?.posts ?? [], ["title", "summary", "source_name"], {
+        title: 3,
+        source_name: 2,
+        summary: 1,
+      }),
+    [payload?.posts],
+  );
 
-    return { index, postById };
-  }, [payload?.posts]);
+  const referenceIndex = useMemo(
+    () =>
+      createSearchIndex(PINNED_REFERENCES, ["title", "summary", "author"], {
+        title: 3,
+        author: 2,
+        summary: 1,
+      }),
+    [],
+  );
+
+  const filteredReferences = useMemo(() => {
+    if (selectedSource !== "all") return [];
+    if (!trimmedQuery) return PINNED_REFERENCES;
+    return querySearchIndex(referenceIndex, trimmedQuery);
+  }, [referenceIndex, selectedSource, trimmedQuery]);
 
   const filteredPosts = useMemo(() => {
     if (!payload) return [];
-    const q = searchQuery.trim();
-
-    if (!q) {
+    if (!trimmedQuery) {
       if (selectedSource === "all") return payload.posts;
       return payload.posts.filter((post) => post.source_id === selectedSource);
     }
-
-    return searchIndex.index
-      .search(q)
-      .map((result) => searchIndex.postById.get(String(result.id)))
-      .filter(
-        (post): post is PostRecord =>
-          post !== undefined &&
-          (selectedSource === "all" || post.source_id === selectedSource),
-      );
-  }, [payload, searchIndex, searchQuery, selectedSource]);
+    return querySearchIndex(searchIndex, trimmedQuery).filter(
+      (post) => selectedSource === "all" || post.source_id === selectedSource,
+    );
+  }, [payload, searchIndex, selectedSource, trimmedQuery]);
 
   const totalPages = Math.max(1, Math.ceil(filteredPosts.length / PAGE_SIZE));
   const safePage = Math.min(currentPage, totalPages);
   const startIdx = (safePage - 1) * PAGE_SIZE;
+  const showReferencesSection =
+    filteredReferences.length > 0 && (Boolean(trimmedQuery) || safePage === 1);
+  const referencesExpanded = referencesOpen || Boolean(trimmedQuery);
+  const referenceGridCols =
+    filteredReferences.length === 1
+      ? "grid-cols-1"
+      : filteredReferences.length === 2
+        ? "grid-cols-1 md:grid-cols-2 md:divide-x md:divide-y-0"
+        : "grid-cols-1 md:grid-cols-3 md:divide-x md:divide-y-0";
+  const referenceHeaderLabel = (
+    <div className="flex min-w-0 flex-wrap items-center gap-x-2.5 gap-y-0.5">
+      <div className="flex items-center gap-2">
+        <Bookmark className="h-4 w-4 shrink-0 text-sky-600 dark:text-sky-400" />
+        <span className="text-sm font-semibold text-slate-800 dark:text-slate-100">
+          Evergreen
+        </span>
+        <span className="rounded-full bg-sky-500/12 px-2 py-0.5 text-[11px] font-semibold text-sky-700 tabular-nums dark:bg-sky-400/12 dark:text-sky-300">
+          {filteredReferences.length}
+        </span>
+      </div>
+      <span className="text-xs text-slate-500 dark:text-slate-400">
+        Timeless guides &amp; deep dives
+      </span>
+    </div>
+  );
 
   const pagedPosts = useMemo(
     () => filteredPosts.slice(startIdx, startIdx + PAGE_SIZE),
@@ -318,8 +389,49 @@ export function App() {
           </div>
         )}
 
+        {/* Evergreen */}
+        {!loading && !errorMsg && showReferencesSection && (
+          <section
+            aria-label="Evergreen"
+            className="mb-5 overflow-hidden rounded-2xl border border-slate-200/90 bg-white/90 shadow-xs dark:border-slate-800/90 dark:bg-slate-900/75"
+          >
+            {trimmedQuery ? (
+              <div className="flex items-center px-4 py-3 sm:px-5">
+                {referenceHeaderLabel}
+              </div>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setReferencesOpen((prev) => !prev)}
+                aria-expanded={referencesOpen}
+                className="flex w-full cursor-pointer items-center justify-between gap-3 px-4 py-3 text-left transition hover:bg-sky-50/45 sm:px-5 dark:hover:bg-slate-800/40"
+              >
+                {referenceHeaderLabel}
+                <span className="inline-flex shrink-0 items-center gap-1 rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-600 dark:border-slate-700/80 dark:bg-slate-800/80 dark:text-slate-300">
+                  <span>{referencesOpen ? "Collapse" : "Expand"}</span>
+                  {referencesOpen ? (
+                    <ChevronUp className="h-3.5 w-3.5" />
+                  ) : (
+                    <ChevronDown className="h-3.5 w-3.5" />
+                  )}
+                </span>
+              </button>
+            )}
+
+            {referencesExpanded && (
+              <div
+                className={`grid divide-y divide-slate-200/80 border-t border-slate-200/80 dark:divide-slate-800/80 dark:border-slate-800/80 ${referenceGridCols}`}
+              >
+                {filteredReferences.map((item) => (
+                  <ReferenceCard key={item.id} item={item} />
+                ))}
+              </div>
+            )}
+          </section>
+        )}
+
         {/* Empty State */}
-        {!loading && !errorMsg && filteredPosts.length === 0 && (
+        {!loading && !errorMsg && filteredPosts.length === 0 && !showReferencesSection && (
           <div className="rounded-2xl border border-slate-200 bg-white/80 p-12 text-center dark:border-slate-800 dark:bg-slate-900/60">
             <p className="text-sm font-medium text-slate-700 dark:text-slate-200">
               No posts match the current filters.
@@ -459,6 +571,30 @@ function PostRow({
         </p>
       )}
     </article>
+  );
+}
+
+function ReferenceCard({ item }: { item: PinnedReference }) {
+  return (
+    <a
+      href={item.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex flex-col px-4 py-3.5 transition hover:bg-sky-50/45 sm:px-5 dark:hover:bg-slate-800/40"
+    >
+      <div className="flex items-center justify-between gap-2 text-xs">
+        <span className="truncate font-semibold text-sky-700 dark:text-sky-400">
+          {item.author}
+        </span>
+        <ExternalLink className="h-3.5 w-3.5 shrink-0 text-slate-400 opacity-0 transition group-hover:opacity-70 dark:text-slate-500" />
+      </div>
+      <h2 className="mt-1 line-clamp-2 text-[15px] leading-snug font-semibold text-slate-900 transition group-hover:text-sky-700 dark:text-slate-100 dark:group-hover:text-sky-300">
+        {item.title}
+      </h2>
+      <p className="mt-1 line-clamp-3 text-xs leading-relaxed text-slate-600 dark:text-slate-400">
+        {item.summary}
+      </p>
+    </a>
   );
 }
 
