@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-16T23:15:32Z",
-  "last_new_count": 11,
+  "generated_at": "2026-11-17T22:06:17Z",
+  "last_new_count": 8,
   "sources": [
     {
       "id": "vllm",
@@ -11,9 +11,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 0,
+      "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-16T23:15:32Z"
+      "last_checked": "2026-11-17T22:06:17Z"
     },
     {
       "id": "lmsys",
@@ -24,9 +24,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 0,
+      "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-16T23:15:32Z"
+      "last_checked": "2026-11-17T22:06:17Z"
     },
     {
       "id": "modal",
@@ -39,7 +39,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-16T23:15:32Z"
+      "last_checked": "2026-11-17T22:06:17Z"
     },
     {
       "id": "baseten",
@@ -50,9 +50,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 9,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-16T23:15:32Z"
+      "last_checked": "2026-11-17T22:06:17Z"
     },
     {
       "id": "fireworks",
@@ -63,9 +63,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 15,
-      "new_count": 0,
-      "total_count": 15,
-      "last_checked": "2026-11-16T23:15:32Z"
+      "new_count": 2,
+      "total_count": 17,
+      "last_checked": "2026-11-17T22:06:17Z"
     },
     {
       "id": "together",
@@ -76,9 +76,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 3,
+      "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-16T23:15:32Z"
+      "last_checked": "2026-11-17T22:06:17Z"
     },
     {
       "id": "anyscale",
@@ -89,9 +89,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 0,
+      "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-16T23:15:32Z"
+      "last_checked": "2026-11-17T22:06:17Z"
     },
     {
       "id": "skypilot",
@@ -104,7 +104,7 @@
       "fetched_count": 12,
       "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-16T23:15:32Z"
+      "last_checked": "2026-11-17T22:06:17Z"
     },
     {
       "id": "crusoe",
@@ -115,9 +115,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 12,
-      "new_count": 2,
-      "total_count": 14,
-      "last_checked": "2026-11-16T23:15:32Z"
+      "new_count": 1,
+      "total_count": 15,
+      "last_checked": "2026-11-17T22:06:17Z"
     },
     {
       "id": "pytorch",
@@ -128,9 +128,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 10,
-      "new_count": 2,
+      "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-16T23:15:32Z"
+      "last_checked": "2026-11-17T22:06:17Z"
     },
     {
       "id": "nvidia",
@@ -143,7 +143,7 @@
       "fetched_count": 50,
       "new_count": 2,
       "total_count": 50,
-      "last_checked": "2026-11-16T23:15:32Z"
+      "last_checked": "2026-11-17T22:06:17Z"
     },
     {
       "id": "modular",
@@ -154,9 +154,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-16T23:15:32Z"
+      "last_checked": "2026-11-17T22:06:17Z"
     },
     {
       "id": "timdettmers",
@@ -169,7 +169,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-16T23:15:32Z"
+      "last_checked": "2026-11-17T22:06:17Z"
     },
     {
       "id": "thinkingmachines-blog",
@@ -182,7 +182,7 @@
       "fetched_count": 8,
       "new_count": 0,
       "total_count": 8,
-      "last_checked": "2026-11-16T23:15:32Z"
+      "last_checked": "2026-11-17T22:06:17Z"
     },
     {
       "id": "humansand",
@@ -195,7 +195,7 @@
       "fetched_count": 3,
       "new_count": 0,
       "total_count": 3,
-      "last_checked": "2026-11-16T23:15:32Z"
+      "last_checked": "2026-11-17T22:06:17Z"
     },
     {
       "id": "anthropic-eng",
@@ -208,7 +208,7 @@
       "fetched_count": 24,
       "new_count": 0,
       "total_count": 24,
-      "last_checked": "2026-11-16T23:15:32Z"
+      "last_checked": "2026-11-17T22:06:17Z"
     },
     {
       "id": "lilianweng",
@@ -221,7 +221,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-16T23:15:32Z"
+      "last_checked": "2026-11-17T22:06:17Z"
     },
     {
       "id": "aleksagordic",
@@ -234,7 +234,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 15,
-      "last_checked": "2026-11-16T23:15:32Z"
+      "last_checked": "2026-11-17T22:06:17Z"
     },
     {
       "id": "semianalysis",
@@ -247,10 +247,80 @@
       "fetched_count": 20,
       "new_count": 0,
       "total_count": 20,
-      "last_checked": "2026-11-16T23:15:32Z"
+      "last_checked": "2026-11-17T22:06:17Z"
     }
   ],
   "posts": [
+    {
+      "id": "41dc972095bf5b59",
+      "source_id": "nvidia",
+      "source_name": "NVIDIA Data Center & Cloud",
+      "url": "https://developer.nvidia.com/blog/co-designing-sparse-attention-for-efficient-long-context-inference/",
+      "title": "Co-Designing Sparse Attention for Efficient Long-Context Inference",
+      "summary": "Agentic workloads, long documents, and large codebases are pushing context lengths from tens of thousands of tokens to hundreds of thousands. At those lengths,...",
+      "published_at": "2026-11-17T17:30:00Z",
+      "first_seen": "2026-11-17T22:06:17Z"
+    },
+    {
+      "id": "f0125ef202cb9e95",
+      "source_id": "nvidia",
+      "source_name": "NVIDIA Data Center & Cloud",
+      "url": "https://developer.nvidia.com/blog/integrating-qpus-into-supercomputing-centers-using-slurm-hres-plugins/",
+      "title": "Integrating QPUs into Supercomputing Centers Using Slurm HRES Plugins",
+      "summary": "Quantum processors are being integrated into supercomputing centers worldwide. National programs in North America, Europe, and Asia are driving the installation...",
+      "published_at": "2026-11-17T17:00:00Z",
+      "first_seen": "2026-11-17T22:06:17Z"
+    },
+    {
+      "id": "cc73d3d9d370371f",
+      "source_id": "lmsys",
+      "source_name": "LMSYS / SGLang",
+      "url": "https://www.lmsys.org/blog/2026-11-17-sglang-summit-recap",
+      "title": "SGLang Summit 2026 Recap: Building Open AI Infrastructure Together",
+      "summary": "More than 2,000 developers, researchers, and industry leaders gathered at Fort Mason in San Francisco on November 12–13 for the first SGLang Summit.",
+      "published_at": "2026-11-17T00:00:00Z",
+      "first_seen": "2026-11-17T22:06:17Z"
+    },
+    {
+      "id": "ee18cf28e3d8dd3b",
+      "source_id": "crusoe",
+      "source_name": "Crusoe Blog",
+      "url": "https://www.crusoe.ai/resources/blog/serving-glm-5-3-coding-agents-faster-on-nvidia-gb200-nvl72",
+      "title": "Serving GLM-5.3 coding agents on NVIDIA GB200 NVL72",
+      "summary": "Benchmark: an NVIDIA GB200 NVL72 fleet on Crusoe Cloud serves GLM-5.3 coding agents faster than the median of 47 OpenRouter endpoints. Setup and results.",
+      "published_at": "2026-11-17T00:00:00Z",
+      "first_seen": "2026-11-17T22:06:17Z"
+    },
+    {
+      "id": "3b0e5c8776f86b10",
+      "source_id": "anyscale",
+      "source_name": "Anyscale / Ray",
+      "url": "https://www.anyscale.com/blog/diagnosing-gpu-starvation-with-ray-train",
+      "title": "Ray Train: Diagnosing GPU Starvation in Model Training with Data Ingest Observability",
+      "summary": "Diagnose GPU starvation with Ray Train data ingest observability: see if data loading stalls training, find the slow stage, and fix it on Ray or Anyscale.",
+      "published_at": "2026-11-17T00:00:00Z",
+      "first_seen": "2026-11-17T22:06:17Z"
+    },
+    {
+      "id": "d7cfb9e1f5f4404a",
+      "source_id": "fireworks",
+      "source_name": "Fireworks AI",
+      "url": "https://fireworks.ai/blog/what-minimax-m3-1-flash-reveals-about-choosing-and-combining-models/",
+      "title": "What MiniMax M3.1 Flash reveals about choosing and combining models",
+      "summary": "Where does MiniMax M3.1 Flash fit in your application? Explore domain benchmark results on quality, cost and speed, plus simulations of model combinations.",
+      "published_at": "2026-11-17T00:00:00Z",
+      "first_seen": "2026-11-17T22:06:17Z"
+    },
+    {
+      "id": "18f01f9e04e03544",
+      "source_id": "fireworks",
+      "source_name": "Fireworks AI",
+      "url": "https://fireworks.ai/blog/should-you-switch-your-agents-to-kimi-k3-1-pro/",
+      "title": "Should you switch your agents to Kimi K3.1 Pro?",
+      "summary": "Kimi K3.1 Pro outscores Kimi K3 on 14 of 17 benchmarks but regresses on contract review. See where it replaces Claude Opus 5.5 and where pairing models wins.",
+      "published_at": "2026-11-17T00:00:00Z",
+      "first_seen": "2026-11-17T22:06:17Z"
+    },
     {
       "id": "220c9ea950c9c133",
       "source_id": "pytorch",
@@ -470,6 +540,16 @@
       "summary": "TL;DR Scaling pretraining for a ~1-trillion-parameter Mixture-of-Experts (MoE) model on shared, public infrastructure was previously considered unfeasible due to unique architectural and interconnect bottlenecks. However, by leveraging the fine-grained flexibility... The post Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan appeared first on PyTorch .",
       "published_at": "2026-11-12T12:00:19Z",
       "first_seen": "2026-11-15T07:01:16Z"
+    },
+    {
+      "id": "7c1afea3cea21e43",
+      "source_id": "vllm",
+      "source_name": "vLLM Blog",
+      "url": "https://vllm.ai/blog/2026-11-12-rl-small-dense-tpu-v7",
+      "title": "Reinforcement Learning: Optimizing 0.6B Dense Models on TPU v7 via vLLM",
+      "summary": "Co-designing RL for a Qwen3-0.6B dense policy on Google Cloud TPU v7 across vLLM, Tunix, MaxText, and Pallas, with a 107x end-to-end speedup from ~100 minutes to ~56 seconds per true-8K RL cycle.",
+      "published_at": "2026-11-12T00:00:00Z",
+      "first_seen": "2026-11-17T22:06:17Z"
     },
     {
       "id": "d1aaac7fecefea87",
@@ -3012,26 +3092,6 @@
       "first_seen": "2026-11-15T07:01:16Z"
     },
     {
-      "id": "07bfd3c1b03f97d3",
-      "source_id": "nvidia",
-      "source_name": "NVIDIA Data Center & Cloud",
-      "url": "https://developer.nvidia.com/blog/giga-scale-ai-ethernet-evolution-spectrum-x-ethernet-rewrites-rules/",
-      "title": "Giga-Scale AI and the Ethernet Evolution: How Spectrum-X Ethernet Rewrites the Rules",
-      "summary": "The massive growth of generative AI has fundamentally altered data center design. As distributed model training scales to span hundreds of thousands of GPUs,...",
-      "published_at": "2026-08-24T15:08:39Z",
-      "first_seen": "2026-11-15T07:22:28Z"
-    },
-    {
-      "id": "d73c2ff32abfb6b8",
-      "source_id": "nvidia",
-      "source_name": "NVIDIA Data Center & Cloud",
-      "url": "https://developer.nvidia.com/blog/nvidia-vera-rubin-and-blackwell-set-a-new-standard-for-agentic-ai-performance-per-watt/",
-      "title": "NVIDIA Vera Rubin and Blackwell Set a New Standard for Agentic AI Performance per Watt",
-      "summary": "AI agents have expanded inference from single-turn interactions into multi-step workflows that reason, invoke tools, coordinate subagents, and carry growing...",
-      "published_at": "2026-08-24T15:00:05Z",
-      "first_seen": "2026-11-15T07:22:28Z"
-    },
-    {
       "id": "8fb31a39b25a9cb6",
       "source_id": "vllm",
       "source_name": "vLLM Blog",
@@ -3228,16 +3288,6 @@
       "url": "https://www.lmsys.org/blog/2026-08-17-advanced-cuda-graph",
       "title": "Advanced CUDA Graph Techniques in SGLang",
       "summary": "CUDA Graphs promise to remove kernel-launch overhead, but getting close to that benefit in a real inference engine requires graphing as much of the workload as possible without sacrificing compatibility, startup time, or memory.",
-      "published_at": "2026-08-17T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z"
-    },
-    {
-      "id": "a092ada2f63b566a",
-      "source_id": "vllm",
-      "source_name": "vLLM Blog",
-      "url": "https://vllm.ai/blog/2026-08-17-distributed-layerwise-offload",
-      "title": "Distributed Layerwise Offload: Scaling Toward 200B+ DiT Models Efficiently in vLLM-Omni",
-      "summary": "Distributed Layerwise Offload shards and streams DiT weights across devices, serving a measured 124 GB Cosmos3 model on 64 GB HBM and estimating a path toward 200B+ models.",
       "published_at": "2026-08-17T00:00:00Z",
       "first_seen": "2026-11-15T07:22:28Z"
     },
@@ -3932,16 +3982,6 @@
       "first_seen": "2026-11-15T07:22:28Z"
     },
     {
-      "id": "fefecdb023d58e41",
-      "source_id": "anyscale",
-      "source_name": "Anyscale / Ray",
-      "url": "https://www.anyscale.com/blog/an-informal-introduction-to-reinforcement-learning",
-      "title": "An informal introduction to reinforcement learning",
-      "summary": "Learn the fundamentals of reinforcement learning (RL), how AI agents learn through rewards, and why RL powers real-world applications from robotics to recommendation systems.",
-      "published_at": "2026-07-10T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z"
-    },
-    {
       "id": "6cac9653c9424a94",
       "source_id": "thinkingmachines-blog",
       "source_name": "Thinking Machines Blog",
@@ -3989,16 +4029,6 @@
       "title": "How to price serverless GPUs",
       "summary": "To compare rates for serverless and reserved GPUs, look at your application's peak-to-average ratio.",
       "published_at": "2026-07-06T12:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z"
-    },
-    {
-      "id": "5edeeba224286a48",
-      "source_id": "lmsys",
-      "source_name": "LMSYS / SGLang",
-      "url": "https://www.lmsys.org/blog/2026-07-06-dspark-sglang",
-      "title": "DSpark in SGLang: Speculative Decoding with Confidence-Driven, Variable-Length Verification",
-      "summary": "Speculative decoding trades extra compute for fewer decode steps, and the trade sours as load grows: at batch size B with K speculative tokens the target verifies B K tokens every step, and past a point that costs more than it saves.",
-      "published_at": "2026-07-06T00:00:00Z",
       "first_seen": "2026-11-15T07:22:28Z"
     },
     {
