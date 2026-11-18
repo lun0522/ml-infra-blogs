@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-18T01:56:53Z",
-  "last_new_count": 0,
+  "generated_at": "2026-11-18T21:44:27Z",
+  "last_new_count": 4,
   "sources": [
     {
       "id": "vllm",
@@ -11,9 +11,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 0,
+      "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "lmsys",
@@ -26,7 +26,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "modal",
@@ -37,9 +37,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 0,
+      "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "baseten",
@@ -52,7 +52,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 11,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "fireworks",
@@ -65,7 +65,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 17,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "together",
@@ -78,7 +78,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "anyscale",
@@ -91,7 +91,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "skypilot",
@@ -104,7 +104,7 @@
       "fetched_count": 12,
       "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "crusoe",
@@ -115,9 +115,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 12,
-      "new_count": 0,
-      "total_count": 15,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "new_count": 1,
+      "total_count": 16,
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "pytorch",
@@ -130,7 +130,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "nvidia",
@@ -143,7 +143,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "modular",
@@ -156,7 +156,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "timdettmers",
@@ -169,7 +169,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "thinkingmachines-blog",
@@ -182,7 +182,7 @@
       "fetched_count": 8,
       "new_count": 0,
       "total_count": 8,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "humansand",
@@ -195,7 +195,7 @@
       "fetched_count": 3,
       "new_count": 0,
       "total_count": 3,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "anthropic-eng",
@@ -208,7 +208,7 @@
       "fetched_count": 24,
       "new_count": 0,
       "total_count": 24,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "lilianweng",
@@ -221,7 +221,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "aleksagordic",
@@ -234,7 +234,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 15,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "semianalysis",
@@ -247,7 +247,7 @@
       "fetched_count": 20,
       "new_count": 0,
       "total_count": 20,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "cloudflare",
@@ -258,9 +258,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 20,
-      "new_count": 0,
-      "total_count": 20,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "new_count": 1,
+      "total_count": 21,
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "netpreme",
@@ -273,7 +273,7 @@
       "fetched_count": 4,
       "new_count": 0,
       "total_count": 4,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "last_checked": "2026-11-18T21:44:27Z"
     },
     {
       "id": "periodic",
@@ -286,10 +286,50 @@
       "fetched_count": 4,
       "new_count": 0,
       "total_count": 4,
-      "last_checked": "2026-11-18T01:56:53Z"
+      "last_checked": "2026-11-18T21:44:27Z"
     }
   ],
   "posts": [
+    {
+      "id": "af17318c693b84ad",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/java4shell-waf-protection/",
+      "title": "How Cloudflare WAF helps protect against Java4Shell (CVE-2026-114938)",
+      "summary": "Java4Shell is a critical memory-corruption flaw in OpenJDK's Base64 decoder that can lead to remote code execution. Cloudflare has released six WAF managed rules for paid plans that logs matching requests by default. Patch your Java runtimes now.",
+      "published_at": "2026-11-18T14:52:10Z",
+      "first_seen": "2026-11-18T21:44:27Z"
+    },
+    {
+      "id": "5555d95a947ff51b",
+      "source_id": "crusoe",
+      "source_name": "Crusoe Blog",
+      "url": "https://www.crusoe.ai/resources/blog/managed-rl-9b-model-beats-1t-finqa",
+      "title": "Crusoe Managed RL: a 9B model beats a 1T model on FinQA",
+      "summary": "Crusoe Managed RL is an API for RL post-training of open-weight models. On FinQA, GRPO took a 9B Qwen model from 53.1% to 73.9% held-out, ahead of a 1T model.",
+      "published_at": "2026-11-18T00:00:00Z",
+      "first_seen": "2026-11-18T21:44:27Z"
+    },
+    {
+      "id": "ce01adc1aafaf102",
+      "source_id": "vllm",
+      "source_name": "vLLM Blog",
+      "url": "https://vllm.ai/blog/2026-11-18-flydsl-monokernels",
+      "title": "Keeping Agents Fast: High-Interactivity Decode with FlyDSL MonoKernels in vLLM",
+      "summary": "How FlyDSL MonoKernels keep agents responsive with high-interactivity decode in vLLM on AMD Instinct GPUs, using model-specific fusion, data-ready handoffs, and specialized-decode integration.",
+      "published_at": "2026-11-18T00:00:00Z",
+      "first_seen": "2026-11-18T21:44:27Z"
+    },
+    {
+      "id": "1a154e0d9508156f",
+      "source_id": "modal",
+      "source_name": "Modal Blog",
+      "url": "https://modal.com/blog/scaling-intelligence-asya",
+      "title": "Building new research tools for Maya epigraphy on Modal",
+      "summary": "Miguel Novelo grew up surrounded by Maya glyphs carved into stone across Mexico's Yucatán peninsula, printed in books, and painted on ceramics. For centuries, Maya scribes used this writing system to record histories, trace the movements of the heavens, and keep calendars. For most of his life, he saw them only as drawings.",
+      "published_at": "2026-11-18T00:00:00Z",
+      "first_seen": "2026-11-18T21:44:27Z"
+    },
     {
       "id": "44ae9daa3513b73a",
       "source_id": "baseten",
@@ -3491,16 +3531,6 @@
       "first_seen": "2026-11-15T07:22:28Z"
     },
     {
-      "id": "a6c25665dda11f01",
-      "source_id": "vllm",
-      "source_name": "vLLM Blog",
-      "url": "https://vllm.ai/blog/2026-08-20-verl-omni-v0-2-0",
-      "title": "VeRL-Omni v0.2.0: Faster Diffusion RL and Stable Omni Training",
-      "summary": "A release focused on higher-throughput diffusion rollout, reusable omni adapters, and broader recipe coverage.",
-      "published_at": "2026-08-20T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z"
-    },
-    {
       "id": "8a294acf7ec9c475",
       "source_id": "lmsys",
       "source_name": "LMSYS / SGLang",
@@ -4707,16 +4737,6 @@
       "url": "https://www.together.ai/blog/coding-agent-benchmarks",
       "title": "Benchmarking inference at scale: coding agents",
       "summary": "Real-world inference benchmarks for coding agents: 31% more TPS than TensorRT-LLM, 2× better TTFT at saturation, and 76% lower cost than Claude Opus 4.6.",
-      "published_at": "2026-05-19T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z"
-    },
-    {
-      "id": "a6e5735bb5ccaed4",
-      "source_id": "modal",
-      "source_name": "Modal Blog",
-      "url": "https://modal.com/blog/introducing-claude-managed-agents-with-modal-sandboxes",
-      "title": "Introducing Claude Managed Agents with Modal Sandboxes",
-      "summary": "Last month, Anthropic launched Claude Managed Agents, a suite of composable APIs for building and deploying cloud-hosted agents at scale, that separates the agent loop from the code execution.",
       "published_at": "2026-05-19T00:00:00Z",
       "first_seen": "2026-11-15T07:22:28Z"
     },
