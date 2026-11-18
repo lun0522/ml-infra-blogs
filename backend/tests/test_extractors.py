@@ -229,6 +229,41 @@ class ExtractorTests(unittest.TestCase):
             "Training low-precision models requires careful scaling so gradients stay accurate across layers.",
         )
 
+    def test_headingless_card_enriches_and_strips_og_title_suffix(self) -> None:
+        index_html = """
+        <html><body>
+          <a href="./news/ai-infra">
+            <p>AI Infrastructure at Periodic</p>
+            <p>Sep 15, 2026</p>
+          </a>
+        </body></html>"""
+        article_html = """
+        <html><head>
+          <meta property="og:title" content="AI Infrastructure at Periodic – Periodic Labs" />
+          <meta property="og:description" content="Training, inference, and sandboxing infrastructure." />
+        </head><body><h1>AI Infrastructure at Periodic</h1></body></html>"""
+        src = SourceConfig(
+            id="periodic",
+            name="Periodic Labs",
+            homepage="https://periodic.com/news",
+            mode="html_links",
+            index_url="https://periodic.com/news",
+            url_pattern=r"^https://periodic\.com/news/[^/?#]+/?$",
+        )
+
+        def fake_get(url: str) -> str:
+            if url == "https://periodic.com/news":
+                return index_html
+            if url == "https://periodic.com/news/ai-infra":
+                return article_html
+            raise AssertionError(f"Unexpected fetch: {url}")
+
+        posts = fetch_source_posts(fake_get, src, seen_keys=set())
+        self.assertEqual(len(posts), 1)
+        self.assertEqual(posts[0].title, "AI Infrastructure at Periodic")
+        self.assertEqual(posts[0].published_at, "2026-09-15T00:00:00Z")
+        self.assertEqual(posts[0].summary, "Training, inference, and sandboxing infrastructure.")
+
 
 if __name__ == "__main__":
     unittest.main()

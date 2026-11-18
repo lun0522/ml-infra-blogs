@@ -6,7 +6,7 @@ Daily automated aggregator and searchable static dashboard tracking AI systems, 
 
 ## Monitored Sources
 
-19 active AI/LLM infrastructure blogs are configured in [`sources.yaml`](sources.yaml):
+22 active AI/LLM infrastructure blogs are configured in [`sources.yaml`](sources.yaml):
 
 | Source | Mode | Endpoint | Focus |
 | :--- | :--- | :--- | :--- |
@@ -14,6 +14,7 @@ Daily automated aggregator and searchable static dashboard tracking AI systems, 
 | [Anthropic Engineering](https://www.anthropic.com/engineering) | `html_links` | `https://www.anthropic.com/engineering` | Claude engineering, harness design, context & agent infrastructure |
 | [Anyscale / Ray](https://www.anyscale.com/blog) | `sitemap` | `https://www.anyscale.com/sitemap.xml` | Ray Core/Serve/Train, heterogeneous GPU cluster scheduling |
 | [Baseten Blog](https://www.baseten.co/blog/) | `html_links` | `https://www.baseten.co/blog/` | Production inference, TensorRT-LLM, quantization, latency tuning |
+| [Cloudflare Blog](https://blog.cloudflare.com/) | `rss` | `https://blog.cloudflare.com/rss/` | Edge inference, Workers AI, distributed infrastructure, systems engineering |
 | [Crusoe Blog](https://www.crusoe.ai/resources/blog) | `html_links` | `https://www.crusoe.ai/resources/blog` | Bare-metal GPU cloud fabrics, data center power, cluster infra |
 | [Fireworks AI](https://fireworks.ai/blog) | `html_links` | `https://fireworks.ai/blog` | Fast inference engines, speculative decoding, serving architecture |
 | [humans& Blog](https://humansand.ai/blogs/) | `html_links` | `https://humansand.ai/blogs/` | Engineering and systems notes from humans& |
@@ -21,7 +22,9 @@ Daily automated aggregator and searchable static dashboard tracking AI systems, 
 | [LMSYS / SGLang](https://www.lmsys.org/blog/) | `sitemap` | `https://www.lmsys.org/sitemap.xml` | SGLang runtime, RadixAttention, disaggregated serving, systems research |
 | [Modal Blog](https://modal.com/blog) | `rss` | `https://modal.com/blog/atom.xml` | Serverless GPU containers, cold-start optimization, inference workloads |
 | [Modular Blog](https://www.modular.com/blog) | `rss` | `https://www.modular.com/blog/rss.xml` | MAX engine, Mojo GPU kernels, compiler-driven ML execution |
+| [Netpreme Blog](https://netpreme.com/blog) | `sitemap` | `https://netpreme.com/sitemap.xml` | Scale-up memory tiers, KV-cache acceleration, sparse attention infrastructure |
 | [NVIDIA Data Center & Cloud](https://developer.nvidia.com/blog/category/data-center-cloud/) | `rss` | `https://developer.nvidia.com/blog/category/data-center-cloud/feed/` | CUDA, TensorRT-LLM, NCCL, NVLink/InfiniBand networking, GPU architecture |
+| [Periodic Labs](https://periodic.com/news) | `html_links` | `https://periodic.com/news` | Scientific AI infrastructure, training, inference, and autonomous labs |
 | [PyTorch Blog](https://pytorch.org/blog/) | `rss` | `https://pytorch.org/feed/` | `torch.compile`, Triton/Inductor, distributed collectives, PyTorch internals |
 | [SemiAnalysis](https://newsletter.semianalysis.com/) | `rss` | `https://newsletter.semianalysis.com/feed` | Chips, accelerator benchmarks, cluster networking, data center infrastructure |
 | [SkyPilot Blog](https://skypilot.ai/blog) | `html_links` | `https://skypilot.ai/blog` | Multi-cloud GPU orchestration, spot recovery, distributed job queues |
@@ -33,9 +36,9 @@ Daily automated aggregator and searchable static dashboard tracking AI systems, 
 ## How It Works
 
 1. **Declarative Source List ([`sources.yaml`](sources.yaml))**:
-   - **`rss` mode**: Standard RSS/Atom/Substack feeds (`aleksagordic.com`, `developer.nvidia.com`, `lilianweng.github.io`, `modal.com`, `modular.com`, `pytorch.org`, `semianalysis`, `timdettmers.com`, `together.ai`, `vllm.ai`).
-   - **`sitemap` mode**: XML sitemaps paired with lazy metadata enrichment only for unseen article URLs (`anyscale.com`, `lmsys.org`).
-   - **`html_links` mode**: Plain HTML link extraction + card/article metadata parsing without needing a headless browser (`anthropic.com/engineering`, `baseten.co`, `crusoe.ai`, `fireworks.ai`, `humansand.ai`, `skypilot.ai`, `thinkingmachines.ai/blog/`).
+   - **`rss` mode**: Standard RSS/Atom/Substack feeds (`aleksagordic.com`, `blog.cloudflare.com`, `developer.nvidia.com`, `lilianweng.github.io`, `modal.com`, `modular.com`, `pytorch.org`, `semianalysis`, `timdettmers.com`, `together.ai`, `vllm.ai`).
+   - **`sitemap` mode**: XML sitemaps paired with lazy metadata enrichment only for unseen article URLs (`anyscale.com`, `lmsys.org`, `netpreme.com`).
+   - **`html_links` mode**: Plain HTML link extraction + card/article metadata parsing without needing a headless browser (`anthropic.com/engineering`, `baseten.co`, `crusoe.ai`, `fireworks.ai`, `humansand.ai`, `periodic.com/news`, `skypilot.ai`, `thinkingmachines.ai/blog/`).
 2. **Persistent Archive (`data/posts.json`)**:
    - Preserves `first_seen` timestamps and up to the latest 50 posts per source across runs so posts remain archived even after rolling off a blog's front page, and previously seen non-RSS articles don't need re-fetching.
 3. **Static Dashboard (`frontend/`)**:

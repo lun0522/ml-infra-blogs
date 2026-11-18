@@ -282,9 +282,11 @@ def parse_html_links(html_text: str, base_url: str, source: SourceConfig) -> lis
         if not url_matches_source(url, source):
             continue
 
-        title, published_at, summary = _extract_card_context(anchor, url, base_url, source)
+        title, published_at, summary, has_heading = _extract_card_context(
+            anchor, url, base_url, source
+        )
         seen_keys.add(key)
-        needs_enrichment = not title or not published_at or not summary
+        needs_enrichment = not has_heading or not title or not published_at or not summary
         posts.append(
             RawPost(
                 url=url,
@@ -305,8 +307,8 @@ def _extract_card_context(
     url: str,
     base_url: str,
     source: SourceConfig,
-) -> tuple[str, str | None, str]:
-    """Pull heading title, date, and summary from an anchor or its enclosing card."""
+) -> tuple[str, str | None, str, bool]:
+    """Pull heading title, date, summary, and heading presence from an anchor or its card."""
     container = _find_card_container(anchor, base_url, source)
 
     # Prefer a heading inside the anchor, then inside its immediate card container.
@@ -342,11 +344,16 @@ def _extract_card_context(
     summary = ""
     for para in (*anchor.find_all("p"), *container.find_all("p")):
         para_text = clean_text(para.get_text(" ", strip=True), max_len=SUMMARY_MAX_LEN)
-        if len(para_text) >= 25 and para_text != title and not parse_date(para_text):
+        if (
+            len(para_text) >= 45
+            and para_text != title
+            and (not title or para_text.lower() not in title.lower())
+            and not parse_date(para_text)
+        ):
             summary = para_text
             break
 
-    return title, published_at, summary
+    return title, published_at, summary, heading is not None
 
 
 def _contains_multiple_cards(parent: Tag, base_url: str, source: SourceConfig) -> bool:
@@ -407,7 +414,8 @@ def extract_article_metadata(
                 summary = summary or _opt_clean(obj.get("description"), SUMMARY_MAX_LEN)
 
     # 2. Standard meta tags (OpenGraph, article:published_time, schema.org itemprop)
-    title = title or _meta_content(soup, property="og:title") or _meta_content(soup, name="twitter:title")
+    meta_title = _meta_content(soup, property="og:title") or _meta_content(soup, name="twitter:title")
+    title = title or (_strip_site_suffix(meta_title) if meta_title else None)
     if not published_at:
         for attrs in (
             {"property": "article:published_time"},

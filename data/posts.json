@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-17T22:06:17Z",
-  "last_new_count": 8,
+  "generated_at": "2026-11-18T01:54:44Z",
+  "last_new_count": 30,
   "sources": [
     {
       "id": "vllm",
@@ -11,9 +11,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-17T22:06:17Z"
+      "last_checked": "2026-11-18T01:54:44Z"
     },
     {
       "id": "lmsys",
@@ -26,7 +26,7 @@
       "fetched_count": 50,
       "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-17T22:06:17Z"
+      "last_checked": "2026-11-18T01:54:44Z"
     },
     {
       "id": "modal",
@@ -39,7 +39,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-17T22:06:17Z"
+      "last_checked": "2026-11-18T01:54:44Z"
     },
     {
       "id": "baseten",
@@ -49,10 +49,10 @@
       "monitor_url": "https://www.baseten.co/blog/",
       "status": "ok",
       "error": null,
-      "fetched_count": 9,
-      "new_count": 0,
-      "total_count": 10,
-      "last_checked": "2026-11-17T22:06:17Z"
+      "fetched_count": 10,
+      "new_count": 1,
+      "total_count": 11,
+      "last_checked": "2026-11-18T01:54:44Z"
     },
     {
       "id": "fireworks",
@@ -63,9 +63,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 15,
-      "new_count": 2,
+      "new_count": 0,
       "total_count": 17,
-      "last_checked": "2026-11-17T22:06:17Z"
+      "last_checked": "2026-11-18T01:54:44Z"
     },
     {
       "id": "together",
@@ -78,7 +78,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-17T22:06:17Z"
+      "last_checked": "2026-11-18T01:54:44Z"
     },
     {
       "id": "anyscale",
@@ -89,9 +89,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-17T22:06:17Z"
+      "last_checked": "2026-11-18T01:54:44Z"
     },
     {
       "id": "skypilot",
@@ -104,7 +104,7 @@
       "fetched_count": 12,
       "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-17T22:06:17Z"
+      "last_checked": "2026-11-18T01:54:44Z"
     },
     {
       "id": "crusoe",
@@ -115,9 +115,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 12,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 15,
-      "last_checked": "2026-11-17T22:06:17Z"
+      "last_checked": "2026-11-18T01:54:44Z"
     },
     {
       "id": "pytorch",
@@ -130,7 +130,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-17T22:06:17Z"
+      "last_checked": "2026-11-18T01:54:44Z"
     },
     {
       "id": "nvidia",
@@ -141,9 +141,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 2,
+      "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-17T22:06:17Z"
+      "last_checked": "2026-11-18T01:54:44Z"
     },
     {
       "id": "modular",
@@ -156,7 +156,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-17T22:06:17Z"
+      "last_checked": "2026-11-18T01:54:44Z"
     },
     {
       "id": "timdettmers",
@@ -169,7 +169,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-17T22:06:17Z"
+      "last_checked": "2026-11-18T01:54:44Z"
     },
     {
       "id": "thinkingmachines-blog",
@@ -182,7 +182,7 @@
       "fetched_count": 8,
       "new_count": 0,
       "total_count": 8,
-      "last_checked": "2026-11-17T22:06:17Z"
+      "last_checked": "2026-11-18T01:54:44Z"
     },
     {
       "id": "humansand",
@@ -195,7 +195,7 @@
       "fetched_count": 3,
       "new_count": 0,
       "total_count": 3,
-      "last_checked": "2026-11-17T22:06:17Z"
+      "last_checked": "2026-11-18T01:54:44Z"
     },
     {
       "id": "anthropic-eng",
@@ -208,7 +208,7 @@
       "fetched_count": 24,
       "new_count": 0,
       "total_count": 24,
-      "last_checked": "2026-11-17T22:06:17Z"
+      "last_checked": "2026-11-18T01:54:44Z"
     },
     {
       "id": "lilianweng",
@@ -221,7 +221,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-17T22:06:17Z"
+      "last_checked": "2026-11-18T01:54:44Z"
     },
     {
       "id": "aleksagordic",
@@ -234,7 +234,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 15,
-      "last_checked": "2026-11-17T22:06:17Z"
+      "last_checked": "2026-11-18T01:54:44Z"
     },
     {
       "id": "semianalysis",
@@ -247,10 +247,69 @@
       "fetched_count": 20,
       "new_count": 0,
       "total_count": 20,
-      "last_checked": "2026-11-17T22:06:17Z"
+      "last_checked": "2026-11-18T01:54:44Z"
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare Blog",
+      "homepage": "https://blog.cloudflare.com/",
+      "mode": "rss",
+      "monitor_url": "https://blog.cloudflare.com/rss/",
+      "status": "ok",
+      "error": null,
+      "fetched_count": 20,
+      "new_count": 20,
+      "total_count": 20,
+      "last_checked": "2026-11-18T01:54:44Z"
+    },
+    {
+      "id": "netpreme",
+      "name": "Netpreme Blog",
+      "homepage": "https://netpreme.com/blog",
+      "mode": "sitemap",
+      "monitor_url": "https://netpreme.com/sitemap.xml",
+      "status": "ok",
+      "error": null,
+      "fetched_count": 4,
+      "new_count": 4,
+      "total_count": 4,
+      "last_checked": "2026-11-18T01:54:44Z"
+    },
+    {
+      "id": "periodic",
+      "name": "Periodic Labs",
+      "homepage": "https://periodic.com/news",
+      "mode": "html_links",
+      "monitor_url": "https://periodic.com/news",
+      "status": "ok",
+      "error": null,
+      "fetched_count": 4,
+      "new_count": 4,
+      "total_count": 4,
+      "last_checked": "2026-11-18T01:54:44Z"
     }
   ],
   "posts": [
+    {
+      "id": "44ae9daa3513b73a",
+      "source_id": "baseten",
+      "source_name": "Baseten Blog",
+      "url": "https://www.baseten.co/blog/baseten-is-now-available-on-microsoft-foundry/",
+      "title": "Baseten is now available on Microsoft Foundry",
+      "summary": "Enterprises on Azure can now run frontier open models powered by Baseten in Microsoft Foundry.",
+      "published_at": "2026-11-17T21:22:46Z",
+      "first_seen": "2026-11-18T01:54:44Z"
+    },
+    {
+      "id": "340c2ff0827fd3fe",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/quad9-withdrawal-from-france/",
+      "title": "Quad9’s withdrawal from France: A canary in the coal mine",
+      "summary": "Quad9's forced withdrawal from France highlights the dangers of mandating DNS-level blocking. We explore why forcing public resolvers to act as content filters is technically flawed and threatens the open Internet.",
+      "published_at": "2026-11-17T20:24:27Z",
+      "first_seen": "2026-11-18T01:54:44Z"
+    },
     {
       "id": "41dc972095bf5b59",
       "source_id": "nvidia",
@@ -442,6 +501,36 @@
       "first_seen": "2026-11-15T07:01:16Z"
     },
     {
+      "id": "09e5e80125ce2409",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/kitesurf-open-source/",
+      "title": "Kitesurf is now open source",
+      "summary": "Kitesurf, our experimental browser engine for AI agents, is now open source. Inspect the code, run it locally, or deploy your own instance on Cloudflare Workers.",
+      "published_at": "2026-11-13T20:20:21Z",
+      "first_seen": "2026-11-18T01:54:44Z"
+    },
+    {
+      "id": "4766c254790f5422",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/adapting-to-ai-penetration-testing-orchestrators/",
+      "title": "Adapting to AI penetration testing orchestrators: The Modern Security Model",
+      "summary": "AI-orchestrated penetration testing platforms like ARTEX have become increasingly powerful tools enabling effective attacks on exposed infrastructure. Here we share Cloudflare’s observations and recommended countermeasures.",
+      "published_at": "2026-11-13T19:26:07Z",
+      "first_seen": "2026-11-18T01:54:44Z"
+    },
+    {
+      "id": "813e40fce5f80ae4",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/spend-management/",
+      "title": "Introducing Spend Management: Spending limits and alerts for Cloudflare",
+      "summary": "Spend Management adds opt-in spending caps for Cloudflare Workers and Durable Objects, and more products soon. Here is how we built the metering pipeline that turns usage into runtime decisions.",
+      "published_at": "2026-11-13T14:00:00Z",
+      "first_seen": "2026-11-18T01:54:44Z"
+    },
+    {
       "id": "a432f23f6af3fb9d",
       "source_id": "lmsys",
       "source_name": "LMSYS / SGLang",
@@ -622,6 +711,16 @@
       "first_seen": "2026-11-15T07:01:16Z"
     },
     {
+      "id": "1e25c4d1d22c66b1",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/choosing-quepaxa/",
+      "title": "Choosing QuePaxa, an unusual consensus algorithm",
+      "summary": "Cloudflare is building an experimental consensus service using a never-before-deployed consensus algorithm, QuePaxa. In this post we explain how QuePaxa works and why we chose it.",
+      "published_at": "2026-11-11T14:24:46Z",
+      "first_seen": "2026-11-18T01:54:44Z"
+    },
+    {
       "id": "632cdccd01666d81",
       "source_id": "modal",
       "source_name": "Modal Blog",
@@ -722,6 +821,16 @@
       "first_seen": "2026-11-15T07:01:16Z"
     },
     {
+      "id": "2b7422de13498b39",
+      "source_id": "netpreme",
+      "source_name": "Netpreme Blog",
+      "url": "https://netpreme.com/blog/the-scale-up-memory-tier",
+      "title": "The Scale-Up Memory Tier",
+      "summary": "Long-context inference puts pressure on GPU HBM memory. As context grows, KV caches take up more space, competing with model weights and other data for HBM capacity.",
+      "published_at": "2026-11-10T00:00:00Z",
+      "first_seen": "2026-11-18T01:54:44Z"
+    },
+    {
       "id": "337293196b08d664",
       "source_id": "crusoe",
       "source_name": "Crusoe Blog",
@@ -752,6 +861,16 @@
       "first_seen": "2026-11-15T07:01:16Z"
     },
     {
+      "id": "b2982d30c3500929",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/launching-vite-ecosystem-fund/",
+      "title": "Launching the Vite Ecosystem Fund",
+      "summary": "Cloudflare is distributing the first $301,300 of the Vite Ecosystem Fund to open source projects and maintainers. The recipients were chosen by a panel of Vite stack core team members, including maintainers not employed by Cloudflare.",
+      "published_at": "2026-11-09T13:00:00Z",
+      "first_seen": "2026-11-18T01:54:44Z"
+    },
+    {
       "id": "881c7e199684ed12",
       "source_id": "semianalysis",
       "source_name": "SemiAnalysis",
@@ -770,6 +889,16 @@
       "summary": "Loops is now generally available. Post-train on frontier open models and deploy directly to Baseten Dedicated Inference.",
       "published_at": "2026-11-06T16:36:04Z",
       "first_seen": "2026-11-15T07:01:16Z"
+    },
+    {
+      "id": "dab63348f0c77269",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/vole-mole/",
+      "title": "The post-quantum future of web privacy",
+      "summary": "Cryptographic protocols like Privacy Pass help keep web sites safe from abuse while keeping their users private. This post looks at the quantum threat to these protocols, and some new post-quantum cryptography that may help close the gap.",
+      "published_at": "2026-11-06T14:00:00Z",
+      "first_seen": "2026-11-18T01:54:44Z"
     },
     {
       "id": "6295486ef33e99da",
@@ -842,6 +971,16 @@
       "first_seen": "2026-11-15T07:01:16Z"
     },
     {
+      "id": "65bf7a9e9f17dc12",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/trusted-agent-delegation/",
+      "title": "Agents aren’t humans (but they kinda are)",
+      "summary": "AI agents act for millions, but servers see intermediaries that strip user visibility. This post defines the problem space and introduces a collaborative approach to safely identifying, allowing, and managing this automated traffic.",
+      "published_at": "2026-11-05T17:03:04Z",
+      "first_seen": "2026-11-18T01:54:44Z"
+    },
+    {
       "id": "48f399a0d9a24cf0",
       "source_id": "nvidia",
       "source_name": "NVIDIA Data Center & Cloud",
@@ -880,6 +1019,16 @@
       "summary": "We're expanding our NVIDIA collaboration to help enterprises customize, deploy, and scale open models for production AI.",
       "published_at": "2026-11-05T14:51:40Z",
       "first_seen": "2026-11-15T07:01:16Z"
+    },
+    {
+      "id": "f7da7f0caa0fc410",
+      "source_id": "lmsys",
+      "source_name": "LMSYS / SGLang",
+      "url": "https://www.lmsys.org/blog/2026-11-05-deepseek-v41-h200-pd-optimization",
+      "title": "Optimizing DeepSeek-V4.1 on H200 with SGLang PD Disaggregation",
+      "summary": "We optimized DeepSeek-V4.1-Flash on an eight-GPU H200 SGLang deployment with a 1P1D configuration: four GPUs for Prefill and four for Decode.",
+      "published_at": "2026-11-05T00:00:00Z",
+      "first_seen": "2026-11-18T01:54:44Z"
     },
     {
       "id": "6f04afeb421712dc",
@@ -940,6 +1089,16 @@
       "summary": "Put the right model to work on every task and cut AI coding spend, with intelligent routing, unified access, and enterprise control.",
       "published_at": "2026-11-04T18:26:31Z",
       "first_seen": "2026-11-15T07:01:16Z"
+    },
+    {
+      "id": "19361844fc329f21",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/personal-agents-visibility-control/",
+      "title": "See the agents, set the terms: New visibility and control for personal agents",
+      "summary": "Personal AI agents have changed how users interact with the web, blurring the lines between automated and human traffic. Learn how Cloudflare gives site owners visibility and control to manage personal agent access.",
+      "published_at": "2026-11-04T14:00:00Z",
+      "first_seen": "2026-11-18T01:54:44Z"
     },
     {
       "id": "09aa947305129d47",
@@ -1032,6 +1191,16 @@
       "first_seen": "2026-11-15T07:01:16Z"
     },
     {
+      "id": "5101d1a486d69739",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/zero-wire/",
+      "title": "Introducing Zero Wire, a hub for investigating critical Internet vulnerabilities",
+      "summary": "Zero Wire on Cloudflare Radar pairs plain-language briefings with global attack telemetry and remediation steps. Triage critical CVEs faster and decide how to protect your infrastructure.",
+      "published_at": "2026-11-03T14:00:00Z",
+      "first_seen": "2026-11-18T01:54:44Z"
+    },
+    {
       "id": "fde924c44da671e9",
       "source_id": "pytorch",
       "source_name": "PyTorch Blog",
@@ -1110,6 +1279,16 @@
       "summary": "NVIDIA DSX AI Factory Platform brings together technologies to help the ecosystem design, build, and operate more efficient AI factories, including open source,...",
       "published_at": "2026-11-02T16:00:00Z",
       "first_seen": "2026-11-15T07:01:16Z"
+    },
+    {
+      "id": "0a490515f796920d",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/dns-targeted-zone-builds/",
+      "title": "How we halved DNS build delay and cut memory use by 85%",
+      "summary": "Zone setting changes used to rebuild entire DNS zones, even ones with tens of millions of records. Here is how we built a planner that picks the smallest safe build, cutting full builds by 40%, peak memory by 85%, and halving build delay.",
+      "published_at": "2026-11-02T14:00:00Z",
+      "first_seen": "2026-11-18T01:54:44Z"
     },
     {
       "id": "7f6f2bc0a104967b",
@@ -1192,6 +1371,16 @@
       "first_seen": "2026-11-15T07:01:16Z"
     },
     {
+      "id": "16ec2c40ac77b51d",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/emudhra-patching/",
+      "title": "4 real? Tracking exploitation and patching of eMudhra’s weak keys",
+      "summary": "Four, just four: that’s the key to break into any unpatched connection on the Internet that is using eMudhra certificates. Here’s how we quickly patched Cloudflare, what evidence we can see of attempted exploitation, and how much of the rest of the Internet remains exposed.",
+      "published_at": "2026-10-30T17:38:50Z",
+      "first_seen": "2026-11-18T01:54:44Z"
+    },
+    {
       "id": "a283ca869f875377",
       "source_id": "nvidia",
       "source_name": "NVIDIA Data Center & Cloud",
@@ -1200,6 +1389,16 @@
       "summary": "NVIDIA GPUDirect Storage (GDS) accelerates GPU storage access in on-premises and cloud environments. It provides a robust, portable, and efficient data path...",
       "published_at": "2026-10-30T15:01:36Z",
       "first_seen": "2026-11-15T07:01:16Z"
+    },
+    {
+      "id": "1c645bca188b35a5",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/private-origins-public-to-private/",
+      "title": "Cloudflare services for private origins is now generally available",
+      "summary": "Public traffic to private origins, with WAF, bot management, caching, and Workers, is now available to every customer with Cloudflare One connectivity.",
+      "published_at": "2026-10-30T14:23:43Z",
+      "first_seen": "2026-11-18T01:54:44Z"
     },
     {
       "id": "616d80cb5d4ff5fd",
@@ -1220,6 +1419,16 @@
       "summary": "NVL72 puts all 72 GPUs in a rack on one NVLink fabric, but only rack-local jobs get the speedup. How SkyPilot keeps multi-node training and inference on NVLink with topology-aware placement, in-place recovery from GPU failures, and automatic defragmentation.",
       "published_at": "2026-10-29T15:00:00Z",
       "first_seen": "2026-11-15T07:01:16Z"
+    },
+    {
+      "id": "efe72c6018e6d6bd",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/ddos-threat-report-2026-q3/",
+      "title": "Cloudflare DDoS Threat Report 2026 Q3: More swarms, fewer giants",
+      "summary": "Cloudflare mitigated over 8,200 DDoS attacks per hour in Q3 2026 as attackers shifted to shorter, high-frequency strikes. Explore the latest threat data, including the collapse of CLDAP vectors and the impact of recent botnet takedowns.",
+      "published_at": "2026-10-29T12:55:00Z",
+      "first_seen": "2026-11-18T01:54:44Z"
     },
     {
       "id": "9dcabfb47f6e81cc",
@@ -1252,6 +1461,26 @@
       "first_seen": "2026-11-15T07:01:16Z"
     },
     {
+      "id": "008876f8cd1cb09f",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/q3-2026-internet-disruption-summary/",
+      "title": "What took the Internet offline in Q3 2026",
+      "summary": "An examination of global Internet disruptions observed by Cloudflare Radar during the third quarter of 2026. This review analyzes how power failures, natural disasters, and government shutdowns impacted network connectivity and traffic.",
+      "published_at": "2026-10-27T13:00:00Z",
+      "first_seen": "2026-11-18T01:54:44Z"
+    },
+    {
+      "id": "73905398b90a9385",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/php-ctf/",
+      "title": "Introducing the Cloudflare PHP Capture the Flag challenge",
+      "summary": "We are launching a PHP Capture the Flag challenge integrated with our Bug Bounty program to test our WAF protections. Security researchers are invited to bypass our defenses and capture the flag to help make the Internet safer.",
+      "published_at": "2026-10-27T13:00:00Z",
+      "first_seen": "2026-11-18T01:54:44Z"
+    },
+    {
       "id": "92255bce16632fd4",
       "source_id": "together",
       "source_name": "Together AI",
@@ -1260,6 +1489,16 @@
       "summary": "Together GPU Clusters auto repair detects GPU, host and fabric faults, picks the lightest fix, and lets you decide per fault and per Xid code which repairs run automatically. Here is how it works.",
       "published_at": "2026-10-27T00:00:00Z",
       "first_seen": "2026-11-15T07:01:16Z"
+    },
+    {
+      "id": "95d5916fd6281c36",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/kv-cache-exposure-remediation/",
+      "title": "Cross-request KV cache exposure in the GLM-5.3 Workers AI model, and our remediation with SGLang",
+      "summary": "A configuration mismatch in GLM 5.3 on Workers AI triggered an SGLang bug that exposed KV cache pages across requests. Here is how we addressed the issue.",
+      "published_at": "2026-10-26T22:01:23Z",
+      "first_seen": "2026-11-18T01:54:44Z"
     },
     {
       "id": "698b41c6fa5388d6",
@@ -1290,6 +1529,16 @@
       "summary": "Training large-scale AI models on thousands of GPUs is a high-stakes operation where monitoring and automation must be built-in to optimize cluster resiliency...",
       "published_at": "2026-10-26T15:00:00Z",
       "first_seen": "2026-11-15T07:22:28Z"
+    },
+    {
+      "id": "307511b20c1a62e8",
+      "source_id": "netpreme",
+      "source_name": "Netpreme Blog",
+      "url": "https://netpreme.com/blog/cracking-the-memory-wall-agents-state-and-the-missing-tier",
+      "title": "Cracking the Memory Wall: Agents, State and the Missing Tier",
+      "summary": "On October 14, 2026, Netpreme hosted the panel “Cracking the Memory Wall for Next-Gen AI Infrastructure” near the OCP Global Summit with a group of industry leaders:",
+      "published_at": "2026-10-26T00:00:00Z",
+      "first_seen": "2026-11-18T01:54:44Z"
     },
     {
       "id": "e2456acfc78543ba",
@@ -1330,6 +1579,26 @@
       "summary": "Trainium Best for Inference? But now good for Training too, Native Trainium PyTorch, High Quality CI, TorchTitan, GPU Impossible Profiler",
       "published_at": "2026-10-23T19:06:44Z",
       "first_seen": "2026-11-15T07:01:16Z"
+    },
+    {
+      "id": "20d42f4887085c51",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/origin-range-requests/",
+      "title": "Origin Range Requests: Serving large files without range-request tuning",
+      "summary": "Naive byte-range caching can waste gigabytes of origin bandwidth on small requests. We rebuilt our cache architecture in Pingora to coordinate partial fetches automatically, cutting R2 p99 latency in half.",
+      "published_at": "2026-10-23T18:22:59Z",
+      "first_seen": "2026-11-18T01:54:44Z"
+    },
+    {
+      "id": "5d93986f3f764f68",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/post-quantum-geo-key-manager/",
+      "title": "Bringing post-quantum cryptography to geographically fenced key management",
+      "summary": "Cloudflare's new post-quantum GeoKey Manager protects geographically fenced decryption keys from harvest now, decrypt later attacks. Learn how we redesigned our cryptography stack to support strict data sovereignty in a post-quantum world.",
+      "published_at": "2026-10-23T18:06:56Z",
+      "first_seen": "2026-11-18T01:54:44Z"
     },
     {
       "id": "5c25f1831f0e4d47",
@@ -1420,6 +1689,16 @@
       "summary": "We post-trained Qwen3-4B with RL to fly a simulated Tesla Roadster. In storms, it beats DeepSeek, Muse, Beam, Nemotron and GPT-6 Astra, even when they get unlimited time to think.",
       "published_at": "2026-10-22T15:00:00Z",
       "first_seen": "2026-11-15T07:01:16Z"
+    },
+    {
+      "id": "8021cc12e6d8c82e",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/k-isms/",
+      "title": "Localizing compliance at scale: Achieving South Korea’s ISMS certification",
+      "summary": "Cloudflare has achieved South Korea's ISMS certification following an audit across 80 controls. Learn how we localized user consent flows, adapted social sign-up paths at the edge, and validated our global security program.",
+      "published_at": "2026-10-22T13:00:00Z",
+      "first_seen": "2026-11-18T01:54:44Z"
     },
     {
       "id": "36d704729415bc14",
@@ -1660,6 +1939,16 @@
       "summary": "60GW Under Construction, SemiAnalysis Leading Indicators, 1.3T of Lease Contracts Signed YTD, The Shortage Could Move to Chips",
       "published_at": "2026-10-19T05:39:38Z",
       "first_seen": "2026-11-15T07:01:16Z"
+    },
+    {
+      "id": "87934008e06c4fcf",
+      "source_id": "netpreme",
+      "source_name": "Netpreme Blog",
+      "url": "https://netpreme.com/blog/xm-sparse-sglang-hisparse-netpreme-xmem",
+      "title": "XM-Sparse: Pushing the Throughput Frontier of Sparse Attention with Netpreme X-Mem™",
+      "summary": "XM-Sparse integrates Netpreme X-Mem™ with SGLang HiSparse. High-bandwidth access to offloaded KV caches reduces decode latency, while the added capacity supports larger batches and higher concurrency. Our earlier prefill benchmark compared X-Mem™ with host DRAM offloading. For an 80K-token prompt with a high prefix-cache hit rate, X-Mem™ cut time to first token by 6.7×. This post covers the decode side.",
+      "published_at": "2026-10-19T00:00:00Z",
+      "first_seen": "2026-11-18T01:54:44Z"
     },
     {
       "id": "ccc1e44fc582bdd0",
@@ -2600,6 +2889,36 @@
       "summary": "For operators of large-scale AI factories, maximizing continuous output is essential for productivity. In massive-scale AI training, every GPU in the cluster...",
       "published_at": "2026-09-15T16:55:00Z",
       "first_seen": "2026-11-15T07:22:28Z"
+    },
+    {
+      "id": "af97d326108c765f",
+      "source_id": "periodic",
+      "source_name": "Periodic Labs",
+      "url": "https://periodic.com/news/nature-is-our-learning-environment",
+      "title": "Nature Is Our Learning Environment",
+      "summary": "Scientific midtraining and reinforcement learning on our lab data make Periodic Neon the Pareto-optimal model for challenging XRD analysis.",
+      "published_at": "2026-09-15T00:00:00Z",
+      "first_seen": "2026-11-18T01:54:44Z"
+    },
+    {
+      "id": "0912a6ee88802438",
+      "source_id": "periodic",
+      "source_name": "Periodic Labs",
+      "url": "https://periodic.com/news/building-labs-that-learn",
+      "title": "Building Labs that Learn",
+      "summary": "Introducing Periodic Neon, a 1T-parameter model that we post-trained to analyze experimental results and deployed to our physical labs. This is a step towards putting autonomous discovery into the hands of scientists.",
+      "published_at": "2026-09-15T00:00:00Z",
+      "first_seen": "2026-11-18T01:54:44Z"
+    },
+    {
+      "id": "ad94b90a3441ee8f",
+      "source_id": "periodic",
+      "source_name": "Periodic Labs",
+      "url": "https://periodic.com/news/ai-infrastructure-at-periodic",
+      "title": "AI Infrastructure at Periodic",
+      "summary": "The training, inference, and sandboxing infrastructure behind Periodic Neon and how we make scientific AI efficient at scale.",
+      "published_at": "2026-09-15T00:00:00Z",
+      "first_seen": "2026-11-18T01:54:44Z"
     },
     {
       "id": "3106e80619581574",
@@ -3892,16 +4211,6 @@
       "first_seen": "2026-11-15T07:22:28Z"
     },
     {
-      "id": "9ef0aedffa5fd165",
-      "source_id": "lmsys",
-      "source_name": "LMSYS / SGLang",
-      "url": "https://www.lmsys.org/blog/2026-07-10-rocm-miles-dsv4",
-      "title": "Bringing DeepSeek-V4 Flash RL Training to AMD Instinct MI355X GPUs with Miles",
-      "summary": "DeepSeek-V4 RL is now supported in Miles on AMD Instinct™ MI355X GPUs with ROCm™! RL requires SGLang rollout and Megatron training to implement the same policy closely enough that token probabilities remain aligned, even as Miles repeatedly transfers updated weights back to the live rollout engine.",
-      "published_at": "2026-07-10T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z"
-    },
-    {
       "id": "3b7321faee828a0b",
       "source_id": "anyscale",
       "source_name": "Anyscale / Ray",
@@ -4010,6 +4319,16 @@
       "summary": "What is Modal? A machine that runs programs of arithmetic & logic operations on information.",
       "published_at": "2026-07-09T00:00:00Z",
       "first_seen": "2026-11-15T07:22:28Z"
+    },
+    {
+      "id": "449f06dd2c4d493a",
+      "source_id": "netpreme",
+      "source_name": "Netpreme Blog",
+      "url": "https://netpreme.com/blog/accelerating-sglang-hicache-with-netpreme-xmem-mpu",
+      "title": "Accelerating SGLang HiCache with Netpreme X-Mem™ MPU",
+      "summary": "Netpreme X-Mem™ Memory Processing Unit (MPU) makes SGLang HiCache faster and more scalable with a purpose-built high-bandwidth KV memory tier.",
+      "published_at": "2026-07-08T00:00:00Z",
+      "first_seen": "2026-11-18T01:54:44Z"
     },
     {
       "id": "6009faaeaf9efe7e",
@@ -4960,6 +5279,16 @@
       "summary": "Introducing Agent Skills: organized folders of instructions, scripts, and resources that give Claude the procedural knowledge real work requires.",
       "published_at": "2025-10-16T00:00:00Z",
       "first_seen": "2026-11-15T07:01:16Z"
+    },
+    {
+      "id": "b5b8ba336d3cdff1",
+      "source_id": "periodic",
+      "source_name": "Periodic Labs",
+      "url": "https://periodic.com/news/introducing-periodic-labs",
+      "title": "Introducing Periodic Labs",
+      "summary": "Periodic Labs is an AI research and deployment company creating models and autonomous labs to accelerate science.",
+      "published_at": "2025-09-30T00:00:00Z",
+      "first_seen": "2026-11-18T01:54:44Z"
     },
     {
       "id": "3d58c9e92b1b0059",
