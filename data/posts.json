@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-18T21:44:27Z",
-  "last_new_count": 4,
+  "generated_at": "2026-11-19T22:00:28Z",
+  "last_new_count": 9,
   "sources": [
     {
       "id": "vllm",
@@ -11,9 +11,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "lmsys",
@@ -24,9 +24,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 0,
+      "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "modal",
@@ -39,7 +39,7 @@
       "fetched_count": 50,
       "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "baseten",
@@ -49,10 +49,10 @@
       "monitor_url": "https://www.baseten.co/blog/",
       "status": "ok",
       "error": null,
-      "fetched_count": 10,
-      "new_count": 0,
-      "total_count": 11,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "fetched_count": 11,
+      "new_count": 1,
+      "total_count": 12,
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "fireworks",
@@ -65,7 +65,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 17,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "together",
@@ -76,9 +76,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 0,
+      "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "anyscale",
@@ -91,7 +91,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "skypilot",
@@ -104,7 +104,7 @@
       "fetched_count": 12,
       "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "crusoe",
@@ -115,9 +115,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 12,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 16,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "pytorch",
@@ -130,7 +130,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "nvidia",
@@ -141,9 +141,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 0,
+      "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "modular",
@@ -154,9 +154,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 0,
+      "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "timdettmers",
@@ -169,7 +169,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "thinkingmachines-blog",
@@ -182,7 +182,7 @@
       "fetched_count": 8,
       "new_count": 0,
       "total_count": 8,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "humansand",
@@ -195,7 +195,7 @@
       "fetched_count": 3,
       "new_count": 0,
       "total_count": 3,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "anthropic-eng",
@@ -208,7 +208,7 @@
       "fetched_count": 24,
       "new_count": 0,
       "total_count": 24,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "lilianweng",
@@ -221,7 +221,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "aleksagordic",
@@ -234,7 +234,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 15,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "semianalysis",
@@ -247,7 +247,7 @@
       "fetched_count": 20,
       "new_count": 0,
       "total_count": 20,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "cloudflare",
@@ -258,9 +258,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 20,
-      "new_count": 1,
-      "total_count": 21,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "new_count": 2,
+      "total_count": 23,
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "netpreme",
@@ -270,10 +270,10 @@
       "monitor_url": "https://netpreme.com/sitemap.xml",
       "status": "ok",
       "error": null,
-      "fetched_count": 4,
-      "new_count": 0,
-      "total_count": 4,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "fetched_count": 5,
+      "new_count": 1,
+      "total_count": 5,
+      "last_checked": "2026-11-19T22:00:28Z"
     },
     {
       "id": "periodic",
@@ -286,10 +286,80 @@
       "fetched_count": 4,
       "new_count": 0,
       "total_count": 4,
-      "last_checked": "2026-11-18T21:44:27Z"
+      "last_checked": "2026-11-19T22:00:28Z"
     }
   ],
   "posts": [
+    {
+      "id": "31618e0c886ff009",
+      "source_id": "nvidia",
+      "source_name": "NVIDIA Data Center & Cloud",
+      "url": "https://developer.nvidia.com/blog/reducing-rollout-bottlenecks-in-reinforcement-learning-with-nvidia-dynamo/",
+      "title": "Reducing Rollout Bottlenecks in Reinforcement Learning with NVIDIA Dynamo",
+      "summary": "Reinforcement learning (RL) uses rewards to train models to solve problems and complete tasks more successfully. Inference drives this process. Workers generate...",
+      "published_at": "2026-11-19T20:28:13Z",
+      "first_seen": "2026-11-19T22:00:28Z"
+    },
+    {
+      "id": "a4594709ce99541f",
+      "source_id": "baseten",
+      "source_name": "Baseten Blog",
+      "url": "https://www.baseten.co/blog/deferred-tool-loading-without-changing-model-harness/",
+      "title": "Deferred tool loading: Make your agent 62.5% cheaper without changing your model or harness",
+      "summary": "We brought deferred tool loading to open models, making coding agents up to 62% cheaper and 26% faster with the exact same model and harness.",
+      "published_at": "2026-11-19T17:49:14Z",
+      "first_seen": "2026-11-19T22:00:28Z"
+    },
+    {
+      "id": "a67e4808fe94719f",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/internet-traffic-2026-us-election/",
+      "title": "Internet traffic and attacks during the 2026 U.S. midterm elections",
+      "summary": "On November 3, 2026 U.S. voters headed to the polls. Here’s what Cloudflare data across more than 1,400 protected sites tells us about Election Day Internet traffic and cyberattacks.",
+      "published_at": "2026-11-19T14:00:00Z",
+      "first_seen": "2026-11-19T22:00:28Z"
+    },
+    {
+      "id": "d23ef0ed31151ed7",
+      "source_id": "together",
+      "source_name": "Together AI",
+      "url": "https://www.together.ai/blog/introducing-together-storage-accelerator",
+      "title": "Introducing Together Storage Accelerator: fast, free data caching for your GPU cluster",
+      "summary": "Together Storage Accelerator is a distributed caching layer for Together GPU Clusters: about 20x faster warm reads, one origin fetch per cluster, no application changes, and it's included free.",
+      "published_at": "2026-11-19T00:00:00Z",
+      "first_seen": "2026-11-19T22:00:28Z"
+    },
+    {
+      "id": "cbe8226e97e86155",
+      "source_id": "modular",
+      "source_name": "Modular Blog",
+      "url": "https://www.modular.com/blog/reintroducing-max-module",
+      "title": "Modular: Reintroducing MAX’s Module",
+      "summary": "Reintroducing MAX’s Module",
+      "published_at": "2026-11-19T00:00:00Z",
+      "first_seen": "2026-11-19T22:00:28Z"
+    },
+    {
+      "id": "6fd6498f94dd7864",
+      "source_id": "modal",
+      "source_name": "Modal Blog",
+      "url": "https://modal.com/blog/abundant-efficient-rollout-architecture-with-modal-sandboxes",
+      "title": "How Abundant designed efficient rollout architecture with Modal Sandboxes",
+      "summary": "Abundant builds RL environments that run on Modal Sandboxes, powering training for frontier labs.",
+      "published_at": "2026-11-19T00:00:00Z",
+      "first_seen": "2026-11-19T22:00:28Z"
+    },
+    {
+      "id": "79b71893e69dee6b",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/open-clairic/",
+      "title": "An updated Clairic and Clairic-flash are now open-weight, from the new Workers AI Superintelligence team",
+      "summary": "Clairic graduates from preview, while Clairic-flash joins the repertoire on Workers AI. We’re doing an open-weight release for both extraction models.",
+      "published_at": "2026-11-18T22:00:00Z",
+      "first_seen": "2026-11-19T22:00:28Z"
+    },
     {
       "id": "af17318c693b84ad",
       "source_id": "cloudflare",
@@ -299,6 +369,26 @@
       "summary": "Java4Shell is a critical memory-corruption flaw in OpenJDK's Base64 decoder that can lead to remote code execution. Cloudflare has released six WAF managed rules for paid plans that logs matching requests by default. Patch your Java runtimes now.",
       "published_at": "2026-11-18T14:52:10Z",
       "first_seen": "2026-11-18T21:44:27Z"
+    },
+    {
+      "id": "31e0d062e36878da",
+      "source_id": "lmsys",
+      "source_name": "LMSYS / SGLang",
+      "url": "https://www.lmsys.org/blog/2026-11-18-humming-sglang",
+      "title": "Humming in SGLang: Flexible Low-Bit Kernels for Efficient MoE Serving",
+      "summary": "Humming is a lightweight, JIT-compiled kernel library for quantized dense and mixture-of-experts (MoE) inference. Its SGLang integration connects low-bit checkpoints to specialized kernels while preserving the framework’s routing, scheduling, and distributed execution.",
+      "published_at": "2026-11-18T00:00:00Z",
+      "first_seen": "2026-11-19T22:00:28Z"
+    },
+    {
+      "id": "e9b0b4072bb1a365",
+      "source_id": "netpreme",
+      "source_name": "Netpreme Blog",
+      "url": "https://netpreme.com/blog/dont-over-buy-hbm-tier-it-sglang-summit",
+      "title": "Don’t Over-Buy HBM, Tier It!",
+      "summary": "Nikita Lazarev’s SGLang Summit 2026 talk on memory tiering for LLM inference: HBM limits, sparse attention, KV cache offloading and data movement.",
+      "published_at": "2026-11-18T00:00:00Z",
+      "first_seen": "2026-11-19T22:00:28Z"
     },
     {
       "id": "5555d95a947ff51b",
@@ -3311,16 +3401,6 @@
       "first_seen": "2026-11-15T07:22:28Z"
     },
     {
-      "id": "2ec0699572aaad39",
-      "source_id": "nvidia",
-      "source_name": "NVIDIA Data Center & Cloud",
-      "url": "https://developer.nvidia.com/blog/nvidia-nvlink-fusion-brings-nvhbm-to-next-generation-ai-infrastructure/",
-      "title": "NVIDIA NVLink Fusion Brings NVHBM to Next-Generation AI Infrastructure",
-      "summary": "AI factories must support increasingly large models and more complex reasoning workloads. To keep up with the insatiable compute demands of AI workloads,...",
-      "published_at": "2026-08-26T21:06:58Z",
-      "first_seen": "2026-11-15T07:22:28Z"
-    },
-    {
       "id": "04875158e2517433",
       "source_id": "lmsys",
       "source_name": "LMSYS / SGLang",
@@ -4231,16 +4311,6 @@
       "first_seen": "2026-11-15T07:01:16Z"
     },
     {
-      "id": "34d6060cab897ffd",
-      "source_id": "lmsys",
-      "source_name": "LMSYS / SGLang",
-      "url": "https://www.lmsys.org/blog/2026-07-13-glm52-optimization",
-      "title": "Serving GLM5.2 NVFP4 Agentic Workload with SGLang: Reaching 500 TPS in 2 Weeks",
-      "summary": "Figure 0. Performance comparison between Day-0 and v0.5.15.post1 on 8\\B300",
-      "published_at": "2026-07-13T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z"
-    },
-    {
       "id": "3b7321faee828a0b",
       "source_id": "anyscale",
       "source_name": "Anyscale / Ray",
@@ -4721,16 +4791,6 @@
       "first_seen": "2026-11-15T07:01:16Z"
     },
     {
-      "id": "b57fc8a0352a5e2b",
-      "source_id": "modal",
-      "source_name": "Modal Blog",
-      "url": "https://modal.com/blog/applied-compute-reinforcement-learning",
-      "title": "Scaling reinforcement learning at Applied Compute",
-      "summary": "How Applied Compute trains custom agents with Reinforcement Learning for enterprises like DoorDash, Cognition, and Mercor on Modal.",
-      "published_at": "2026-05-20T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z"
-    },
-    {
       "id": "dc5d238e526841aa",
       "source_id": "together",
       "source_name": "Together AI",
@@ -4808,16 +4868,6 @@
       "title": "Modular: Inkwell: Why Your Inference Platform Matters As Much As Your Model",
       "summary": "Inkwell: Why Your Inference Platform Matters As Much As Your Model",
       "published_at": "2026-05-12T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z"
-    },
-    {
-      "id": "3d9f0ad9986c7ec3",
-      "source_id": "together",
-      "source_name": "Together AI",
-      "url": "https://www.together.ai/blog/serving-deepseek-v4-why-million-token-context-is-an-inference-systems-problem",
-      "title": "Serving DeepSeek-V4: why million-token context is an inference systems problem",
-      "summary": "DeepSeek-V4 makes million-token context a serving-systems problem. Together AI explores the inference work behind V4 on NVIDIA HGX B200, including compressed KV layouts, prefix caching, kernel maturity, and endpoint profiles for long-context workloads.",
-      "published_at": "2026-05-11T00:00:00Z",
       "first_seen": "2026-11-15T07:22:28Z"
     },
     {
@@ -5248,16 +5298,6 @@
       "title": "Modular: \"TTS 1 Max\" (powered by Modular Platform) Ranked #1 Speech Model on Artificial Analysis",
       "summary": "\"TTS 1 Max\" (powered by Modular Platform) Ranked #1 Speech Model on Artificial Analysis",
       "published_at": "2025-11-07T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z"
-    },
-    {
-      "id": "52a7230636ff87b3",
-      "source_id": "modular",
-      "source_name": "Modular Blog",
-      "url": "https://www.modular.com/blog/pytorch-and-llvm-in-2025-keeping-up-with-ai-innovation",
-      "title": "Modular: PyTorch and LLVM in 2025 — Keeping up With AI Innovation",
-      "summary": "PyTorch and LLVM in 2025 — Keeping up With AI Innovation",
-      "published_at": "2025-11-06T00:00:00Z",
       "first_seen": "2026-11-15T07:22:28Z"
     },
     {
