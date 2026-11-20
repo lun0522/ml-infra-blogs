@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-19T22:00:28Z",
-  "last_new_count": 9,
+  "generated_at": "2026-11-20T21:43:34Z",
+  "last_new_count": 10,
   "sources": [
     {
       "id": "vllm",
@@ -11,9 +11,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 0,
+      "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "lmsys",
@@ -26,7 +26,7 @@
       "fetched_count": 50,
       "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "modal",
@@ -37,9 +37,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "baseten",
@@ -49,10 +49,10 @@
       "monitor_url": "https://www.baseten.co/blog/",
       "status": "ok",
       "error": null,
-      "fetched_count": 11,
-      "new_count": 1,
-      "total_count": 12,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "fetched_count": 12,
+      "new_count": 3,
+      "total_count": 15,
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "fireworks",
@@ -65,7 +65,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 17,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "together",
@@ -76,9 +76,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 1,
+      "new_count": 2,
       "total_count": 50,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "anyscale",
@@ -91,7 +91,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "skypilot",
@@ -104,7 +104,7 @@
       "fetched_count": 12,
       "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "crusoe",
@@ -117,7 +117,7 @@
       "fetched_count": 12,
       "new_count": 0,
       "total_count": 16,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "pytorch",
@@ -130,7 +130,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "nvidia",
@@ -141,9 +141,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "modular",
@@ -154,9 +154,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "timdettmers",
@@ -169,7 +169,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "thinkingmachines-blog",
@@ -182,7 +182,7 @@
       "fetched_count": 8,
       "new_count": 0,
       "total_count": 8,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "humansand",
@@ -195,7 +195,7 @@
       "fetched_count": 3,
       "new_count": 0,
       "total_count": 3,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "anthropic-eng",
@@ -208,7 +208,7 @@
       "fetched_count": 24,
       "new_count": 0,
       "total_count": 24,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "lilianweng",
@@ -221,7 +221,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "aleksagordic",
@@ -234,7 +234,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 15,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "semianalysis",
@@ -247,7 +247,7 @@
       "fetched_count": 20,
       "new_count": 0,
       "total_count": 20,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "cloudflare",
@@ -258,9 +258,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 20,
-      "new_count": 2,
-      "total_count": 23,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "new_count": 3,
+      "total_count": 26,
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "netpreme",
@@ -271,9 +271,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 5,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 5,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "last_checked": "2026-11-20T21:43:34Z"
     },
     {
       "id": "periodic",
@@ -286,10 +286,90 @@
       "fetched_count": 4,
       "new_count": 0,
       "total_count": 4,
-      "last_checked": "2026-11-19T22:00:28Z"
+      "last_checked": "2026-11-20T21:43:34Z"
     }
   ],
   "posts": [
+    {
+      "id": "f93ea93941f60201",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/ruby2shell-waf-protection/",
+      "title": "How Cloudflare WAF protects against ruby2shell (CVE-2026-132825)",
+      "summary": "ruby2shell lets attackers corrupt memory in default Rails and Sinatra apps without logging in. Cloudflare WAF blocks it for every customer, including Free plans. Upgrade Ruby now, and use the WAF to cover the gap.",
+      "published_at": "2026-11-20T20:24:38Z",
+      "first_seen": "2026-11-20T21:43:34Z"
+    },
+    {
+      "id": "aacadb3f397640a3",
+      "source_id": "baseten",
+      "source_name": "Baseten Blog",
+      "url": "https://www.baseten.co/blog/meet-bison-1-and-groundhog-1/",
+      "title": "Meet bison-1 and groundhog-1, frontier American decision models",
+      "summary": "Meet bison-1 and groundhog-1: open decision models on an American backbone (Gemma 4). bison-1 is the #1-ranked decision model on Artificial Analysis.",
+      "published_at": "2026-11-20T20:02:42Z",
+      "first_seen": "2026-11-20T21:43:34Z"
+    },
+    {
+      "id": "7066f202a884aec0",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/phpaftershell-waf-protection/",
+      "title": "How Cloudflare WAF helps protect against phpAfterShell and other critical PHP flaws",
+      "summary": "phpAfterShell is a critical flaw in PHP's default session handler that can lead to code execution. Cloudflare WAF blocks it for all customers, including Free plans, and adds new rules for other PHP flaws fixed in the same release.",
+      "published_at": "2026-11-20T20:00:45Z",
+      "first_seen": "2026-11-20T21:43:34Z"
+    },
+    {
+      "id": "132e11b86d6d81bf",
+      "source_id": "baseten",
+      "source_name": "Baseten Blog",
+      "url": "https://www.baseten.co/blog/how-we-secure-100-clusters-across-25-clouds/",
+      "title": "How we secure 100+ clusters across 20+ clouds",
+      "summary": "We design clusters to be secure by default and apply controls that hold every cluster we run on to that design.",
+      "published_at": "2026-11-20T17:10:28Z",
+      "first_seen": "2026-11-20T21:43:34Z"
+    },
+    {
+      "id": "4e6b3a8dbef7c132",
+      "source_id": "baseten",
+      "source_name": "Baseten Blog",
+      "url": "https://www.baseten.co/blog/improved-controls-for-the-new-era-of-cyberattacks/",
+      "title": "Improved controls for the new era of cyberattacks",
+      "summary": "Cyber threats are increasing in volume, speed, and sophistication. This is our approach to staying ahead of them, alongside the controls we offer our customers.",
+      "published_at": "2026-11-20T17:08:01Z",
+      "first_seen": "2026-11-20T21:43:34Z"
+    },
+    {
+      "id": "ff4da9032d2d0257",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/nginx2root/",
+      "title": "nginx2root: Five new nginx vulnerabilities, and how Cloudflare protects origins from the worst of them",
+      "summary": "Five memory corruption bugs in nginx, called nginx2root, can let an unauthenticated attacker run code on a server. Here’s how they work, and why origins behind Cloudflare's proxy are shielded from the most serious of these bugs.",
+      "published_at": "2026-11-20T01:58:29Z",
+      "first_seen": "2026-11-20T21:43:34Z"
+    },
+    {
+      "id": "af212a7ce83c6fff",
+      "source_id": "together",
+      "source_name": "Together AI",
+      "url": "https://www.together.ai/blog/qwen3-tts",
+      "title": "Qwen3 TTS is now available on Together AI",
+      "summary": "Qwen3 TTS is now available on Together AI. Keep one voice across your product, change its tone with a plain-language instruction and move it between 10 languages, with first audio in as little as 97ms.",
+      "published_at": "2026-11-20T00:00:00Z",
+      "first_seen": "2026-11-20T21:43:34Z"
+    },
+    {
+      "id": "b3e7d9944d8f0b5b",
+      "source_id": "vllm",
+      "source_name": "vLLM Blog",
+      "url": "https://vllm.ai/blog/2026-11-20-inkling2-mini",
+      "title": "Inkling 2 Mini on vLLM: Day-0 Support for a Looped Model",
+      "summary": "vLLM supports Thinking Machines' Inkling 2 Mini from day 0: a looped MoE that runs its middle layers three times, with per-pass KV caches, gated messages between passes, fused kernels and DSpark speculative decoding.",
+      "published_at": "2026-11-20T00:00:00Z",
+      "first_seen": "2026-11-20T21:43:34Z"
+    },
     {
       "id": "31618e0c886ff009",
       "source_id": "nvidia",
@@ -319,6 +399,26 @@
       "summary": "On November 3, 2026 U.S. voters headed to the polls. Here’s what Cloudflare data across more than 1,400 protected sites tells us about Election Day Internet traffic and cyberattacks.",
       "published_at": "2026-11-19T14:00:00Z",
       "first_seen": "2026-11-19T22:00:28Z"
+    },
+    {
+      "id": "cc5d7f4c6c4cae15",
+      "source_id": "together",
+      "source_name": "Together AI",
+      "url": "https://www.together.ai/blog/tencent-hy4",
+      "title": "Tencent Hy4 is live on Together AI",
+      "summary": "Tencent Hy4 is live on Together AI. We tested its image input by extracting and rebuilding a chart, then tried its coding with a browser game generated from one prompt.",
+      "published_at": "2026-11-19T00:00:00Z",
+      "first_seen": "2026-11-20T21:43:34Z"
+    },
+    {
+      "id": "49859e815f405330",
+      "source_id": "lmsys",
+      "source_name": "LMSYS / SGLang",
+      "url": "https://www.lmsys.org/blog/2026-11-19-deepseek-v41-h20",
+      "title": "Optimizing DeepSeek-V4.1-Flash PD & Colocate Serving on H20-3e",
+      "summary": "We optimized disaggregated DeepSeek-V4.1-Flash serving on H20-3e by tuning prefill and decode parallelism, supporting BCG with prefill CP and bounded SWA replay, and speeding up Indexer kernels.",
+      "published_at": "2026-11-19T00:00:00Z",
+      "first_seen": "2026-11-20T21:43:34Z"
     },
     {
       "id": "d23ef0ed31151ed7",
@@ -3571,16 +3671,6 @@
       "first_seen": "2026-11-15T07:22:28Z"
     },
     {
-      "id": "f3884b8465eea382",
-      "source_id": "vllm",
-      "source_name": "vLLM Blog",
-      "url": "https://vllm.ai/blog/2026-08-21-isoexec",
-      "title": "IsoExec: Unified Execution to Eliminate Trainer-Inference Mismatch in SkyRL",
-      "summary": "IsoExec unifies numerical execution across SkyRL's vLLM and Megatron runtimes, reducing the average rollout-versus-training logprob difference below 1e-6 on Qwen3.5-35B-A3B with 25% overhead.",
-      "published_at": "2026-08-21T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z"
-    },
-    {
       "id": "c00ce7b9015fc9fc",
       "source_id": "together",
       "source_name": "Together AI",
@@ -4137,16 +4227,6 @@
       "url": "https://www.together.ai/blog/new-in-together-gpu-clusters-reliability-and-control-for-production-gpu-clusters",
       "title": "New in Together GPU Clusters: Reliability and control for production GPU clusters",
       "summary": "See how Together AI is improving production GPU clusters with passive health checks, node repair, stronger Slurm reliability, OIDC, and startup scripts.",
-      "published_at": "2026-07-15T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z"
-    },
-    {
-      "id": "66e2661b096eb318",
-      "source_id": "lmsys",
-      "source_name": "LMSYS / SGLang",
-      "url": "https://www.lmsys.org/blog/2026-07-15-inkling-day0-support",
-      "title": "SGLang and Miles Add Day-0 Support for Inkling, a Frontier Multimodal Model",
-      "summary": "We're excited to partner with the Thinking Machines team to bring Day-0 support for Inkling to SGLang and Miles, with dedicated optimizations for its new architecture and broad feature coverage, and with Modal to train a DFlash draft model for Inkling.",
       "published_at": "2026-07-15T00:00:00Z",
       "first_seen": "2026-11-15T07:22:28Z"
     },
@@ -4831,16 +4911,6 @@
       "first_seen": "2026-11-15T07:22:28Z"
     },
     {
-      "id": "baf9ed3c2de8166d",
-      "source_id": "together",
-      "source_name": "Together AI",
-      "url": "https://www.together.ai/blog/violin-open-source-translation-skill",
-      "title": "Violin: An open-source video translation skill that breaks language barriers",
-      "summary": "Violin is an open-source AI video translation tool that combines speech recognition, LLM translation, and text-to-speech to make video content accessible across languages.",
-      "published_at": "2026-05-14T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z"
-    },
-    {
       "id": "df2ef7a376d3928d",
       "source_id": "modular",
       "source_name": "Modular Blog",
@@ -4848,16 +4918,6 @@
       "title": "Modular: Translating to Mojo via AI Agents",
       "summary": "Translating to Mojo via AI Agents",
       "published_at": "2026-05-13T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z"
-    },
-    {
-      "id": "d714e58021e8d67c",
-      "source_id": "together",
-      "source_name": "Together AI",
-      "url": "https://www.together.ai/blog/introducing-voice-finder-a-new-tool-to-quickly-find-the-right-voice-for-your-app-from-over-600-voices",
-      "title": "https://www.together.ai/blog/introducing-voice-finder-a-new-tool-to-quickly-find-the-right-voice-for-your-app-from-over-600-voices",
-      "summary": "Voice finder helps developers search, match, filter, and audition 600+ voices across Together AI TTS models using natural-language prompts or uploaded audio samples.",
-      "published_at": "2026-05-12T00:00:00Z",
       "first_seen": "2026-11-15T07:22:28Z"
     },
     {
