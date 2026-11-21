@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-20T21:43:34Z",
-  "last_new_count": 10,
+  "generated_at": "2026-11-21T20:25:28Z",
+  "last_new_count": 1,
   "sources": [
     {
       "id": "vllm",
@@ -11,9 +11,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "lmsys",
@@ -24,9 +24,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "modal",
@@ -39,7 +39,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "baseten",
@@ -50,9 +50,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 12,
-      "new_count": 3,
-      "total_count": 15,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "new_count": 1,
+      "total_count": 16,
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "fireworks",
@@ -65,7 +65,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 17,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "together",
@@ -76,9 +76,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 2,
+      "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "anyscale",
@@ -91,7 +91,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "skypilot",
@@ -104,7 +104,7 @@
       "fetched_count": 12,
       "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "crusoe",
@@ -117,7 +117,7 @@
       "fetched_count": 12,
       "new_count": 0,
       "total_count": 16,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "pytorch",
@@ -130,7 +130,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "nvidia",
@@ -143,7 +143,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "modular",
@@ -156,7 +156,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "timdettmers",
@@ -169,7 +169,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "thinkingmachines-blog",
@@ -182,7 +182,7 @@
       "fetched_count": 8,
       "new_count": 0,
       "total_count": 8,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "humansand",
@@ -195,7 +195,7 @@
       "fetched_count": 3,
       "new_count": 0,
       "total_count": 3,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "anthropic-eng",
@@ -208,7 +208,7 @@
       "fetched_count": 24,
       "new_count": 0,
       "total_count": 24,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "lilianweng",
@@ -221,7 +221,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "aleksagordic",
@@ -234,7 +234,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 15,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "semianalysis",
@@ -247,7 +247,7 @@
       "fetched_count": 20,
       "new_count": 0,
       "total_count": 20,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "cloudflare",
@@ -258,9 +258,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 20,
-      "new_count": 3,
+      "new_count": 0,
       "total_count": 26,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "netpreme",
@@ -273,7 +273,7 @@
       "fetched_count": 5,
       "new_count": 0,
       "total_count": 5,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     },
     {
       "id": "periodic",
@@ -286,7 +286,7 @@
       "fetched_count": 4,
       "new_count": 0,
       "total_count": 4,
-      "last_checked": "2026-11-20T21:43:34Z"
+      "last_checked": "2026-11-21T20:25:28Z"
     }
   ],
   "posts": [
@@ -319,6 +319,16 @@
       "summary": "phpAfterShell is a critical flaw in PHP's default session handler that can lead to code execution. Cloudflare WAF blocks it for all customers, including Free plans, and adds new rules for other PHP flaws fixed in the same release.",
       "published_at": "2026-11-20T20:00:45Z",
       "first_seen": "2026-11-20T21:43:34Z"
+    },
+    {
+      "id": "ee9dcf6f41ab49b3",
+      "source_id": "baseten",
+      "source_name": "Baseten Blog",
+      "url": "https://www.baseten.co/blog/how-we-secure-100-clusters-across-20-clouds/",
+      "title": "How we secure 100+ clusters across 20+ clouds",
+      "summary": "We design clusters to be secure by default and apply controls that hold every cluster we run on to that design.",
+      "published_at": "2026-11-20T17:10:28Z",
+      "first_seen": "2026-11-21T20:25:28Z"
     },
     {
       "id": "132e11b86d6d81bf",
