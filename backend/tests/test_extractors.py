@@ -326,9 +326,17 @@ class ExtractorTests(unittest.TestCase):
               <description>Short RSS blurb that would normally hide the full body.</description>
               <content:encoded><![CDATA[
                 <h2>Runtime Internals</h2>
-                <p>First detailed technical paragraph explaining CUDA graph capture across worker processes, kernel fusion boundaries, and batch size bucket selection across distributed GPU hosts.</p>
-                <p>Second detailed paragraph measuring host memory overhead, paged KV-cache fragmentation, and tail scheduler latency reductions across hundreds of inference nodes under skewed traffic.</p>
+                <p>First detailed technical paragraph explaining CUDA graph capture across worker processes, kernel fusion boundaries, warp-specialized tensor core scheduling, and batch size bucket selection across distributed GPU inference hosts in large multi-node clusters.</p>
+                <p>Second detailed paragraph measuring host memory overhead, paged KV-cache fragmentation, prefix tree eviction behavior, and tail scheduler latency reductions across hundreds of inference nodes running mixed prefill and decode workloads under skewed production traffic.</p>
+                <p>Third detailed paragraph detailing asynchronous IPC weight synchronization, non-blocking collective communication overlap, and end-to-end token throughput improvements across H100 and Blackwell clusters.</p>
               ]]></content:encoded>
+            </item>
+            <item>
+              <title>Teaser Content Feed Post</title>
+              <link>https://example.com/blog/teaser-content</link>
+              <pubDate>Thu, 12 Nov 2026 08:30:00 GMT</pubDate>
+              <description>Short feed summary for teaser post.</description>
+              <content:encoded><![CDATA[<p>This content block is only a short 350-char teaser like some developer blogs emit in their RSS feed instead of the full article body, so the extractor still needs to visit the page.</p>]]></content:encoded>
             </item>
             <item>
               <title>Modular: Stub RSS Post</title>
@@ -351,6 +359,12 @@ class ExtractorTests(unittest.TestCase):
             fetches.append(url)
             if url == "https://example.com/feed.xml":
                 return rss_xml
+            if url == "https://example.com/blog/teaser-content":
+                return """<html><article>
+                  <h1>Teaser Content Feed Post</h1>
+                  <h2>Sparse Attention Design</h2>
+                  <p>Full article body explaining sparse attention indexing, top-k KV cache block selection, fused hardware epilogues, and DRAM memory bandwidth gains on long-context inference workloads across modern multi-GPU clusters.</p>
+                </article></html>"""
             if url == "https://example.com/blog/stub-feed":
                 return """<html><article>
                   <h1>Modular: Stub RSS Post</h1>
@@ -360,17 +374,25 @@ class ExtractorTests(unittest.TestCase):
             raise AssertionError(f"Unexpected fetch: {url}")
 
         posts = fetch_source_posts(fake_get, src, seen_keys=set())
-        self.assertEqual(len(posts), 2)
-        # Full content:encoded avoids extra fetch while extracting section headings + paragraphs.
-        self.assertEqual(fetches, ["https://example.com/feed.xml", "https://example.com/blog/stub-feed"])
+        self.assertEqual(len(posts), 3)
+        # Full content:encoded (>=750 chars) avoids extra fetch, while teaser content:encoded fetches full article.
+        self.assertEqual(
+            fetches,
+            [
+                "https://example.com/feed.xml",
+                "https://example.com/blog/teaser-content",
+                "https://example.com/blog/stub-feed",
+            ],
+        )
         self.assertIn("Sections: Runtime Internals", posts[0].excerpt)
         self.assertIn("CUDA graph capture", posts[0].excerpt)
+        self.assertIn("Sections: Sparse Attention Design", posts[1].excerpt)
         # Stub RSS description is upgraded in both summary and excerpt from fetched page.
         self.assertEqual(
-            posts[1].summary,
+            posts[2].summary,
             "Detailed engineering walkthrough of async tensor core scheduling on modern accelerators.",
         )
-        self.assertIn("Sections: Kernel Dispatch", posts[1].excerpt)
+        self.assertIn("Sections: Kernel Dispatch", posts[2].excerpt)
 
 
 if __name__ == "__main__":

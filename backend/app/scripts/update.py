@@ -38,6 +38,11 @@ def parse_args() -> argparse.Namespace:
         help="Re-export static JSON from data/posts.json without network fetches",
     )
     parser.add_argument(
+        "--refresh-thin-excerpts",
+        action="store_true",
+        help="Re-enrich archived posts whose cached excerpt is still thin or boilerplate",
+    )
+    parser.add_argument(
         "--workers",
         type=int,
         default=8,
@@ -53,6 +58,7 @@ def main() -> int:
         archive_path=args.archive,
         export_dir=args.export_dir,
         from_archive=args.from_archive,
+        refresh_thin_excerpts=args.refresh_thin_excerpts,
         max_workers=args.workers,
     )
     ok_sources = sum(1 for s in payload["sources"] if s["status"] == "ok")

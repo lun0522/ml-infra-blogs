@@ -123,6 +123,84 @@ class UpdaterTests(unittest.TestCase):
             self.assertEqual(len(vllm_posts), 1)
             self.assertEqual(vllm_posts[0]["title"], "Post Two")
 
+    def test_backfills_rolled_off_missing_excerpts_and_upgrades_thin_on_refresh(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            cfg = root / "sources.yaml"
+            archive = root / "data" / "posts.json"
+            cfg.write_text("\n".join(SAMPLE_CONFIG.splitlines()[:7]) + "\n", encoding="utf-8")
+
+            archive.parent.mkdir(parents=True, exist_ok=True)
+            archive.write_text(
+                json.dumps(
+                    {
+                        "generated_at": "2026-11-10T00:00:00Z",
+                        "last_new_count": 0,
+                        "sources": [],
+                        "posts": [
+                            {
+                                "id": "old1",
+                                "source_id": "vllm",
+                                "source_name": "vLLM Blog",
+                                "url": "https://vllm.ai/blog/rolled-off",
+                                "title": "Old Rolled-Off Post",
+                                "summary": "Special thanks to Alice for feedback on this post.",
+                                "published_at": "2026-10-01T00:00:00Z",
+                                "first_seen": "2026-10-01T00:00:00Z",
+                            },
+                            {
+                                "id": "thin1",
+                                "source_id": "vllm",
+                                "source_name": "vLLM Blog",
+                                "url": "https://vllm.ai/blog/nvidia-teaser",
+                                "title": "Teaser Post",
+                                "summary": "Short teaser summary already cached.",
+                                "published_at": "2026-11-05T00:00:00Z",
+                                "first_seen": "2026-11-05T00:00:00Z",
+                                "excerpt": "Short teaser excerpt.",
+                            },
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            responses = {
+                "https://vllm.ai/blog/rss.xml": """<?xml version="1.0"?>
+                    <rss version="2.0"><channel></channel></rss>""",
+                "https://vllm.ai/blog/rolled-off": """<html><article>
+                    <h1>Old Rolled-Off Post</h1>
+                    <h2>KV Cache Architecture</h2>
+                    <p>Special thanks to Alice for feedback on this post.</p>
+                    <p>This detailed technical paragraph explains block-level paged KV allocation across GPU HBM and host DRAM pools.</p>
+                </article></html>""",
+                "https://vllm.ai/blog/nvidia-teaser": """<html><article>
+                    <h1>Teaser Post</h1>
+                    <h2>Full Article Section</h2>
+                    <p>Expanded technical article body explaining sparse attention indexing, warp specialization, and kernel fusion across large inference clusters.</p>
+                </article></html>""",
+            }
+
+            # Normal run backfills missing excerpt on rolled-off post, leaving cached thin1 untouched.
+            first = run_update(config_path=cfg, archive_path=archive, http_get=responses.__getitem__)
+            by_id = {p["id"]: p for p in first["posts"]}
+            self.assertIn("KV Cache Architecture", by_id["old1"]["excerpt"])
+            self.assertEqual(
+                by_id["old1"]["summary"],
+                "This detailed technical paragraph explains block-level paged KV allocation across GPU HBM and host DRAM pools.",
+            )
+            self.assertEqual(by_id["thin1"]["excerpt"], "Short teaser excerpt.")
+
+            # refresh_thin_excerpts=True re-enriches thin1.
+            second = run_update(
+                config_path=cfg,
+                archive_path=archive,
+                refresh_thin_excerpts=True,
+                http_get=responses.__getitem__,
+            )
+            by_id2 = {p["id"]: p for p in second["posts"]}
+            self.assertIn("Full Article Section", by_id2["thin1"]["excerpt"])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -55,7 +55,7 @@ URL_YM_RE = re.compile(r"/(20\d{2})/(\d{2})(?:/|$)")
 SUMMARY_MAX_LEN = 420
 EXCERPT_MAX_LEN = 1600
 STUB_SUMMARY_MAX_LEN = 160
-MIN_ENRICHED_EXCERPT_LEN = 350
+MIN_ENRICHED_EXCERPT_LEN = 750
 SKIP_PROSE_PARENTS = {"header", "nav", "footer", "aside", "figcaption", "form"}
 LEAF_NOISE_RE = re.compile(
     r"(?:^|[-_\s])(?:newsletter|subscribe|cookie|consent|katex-mathml|related-posts|social-share|share-buttons|modal|popup)(?:$|[-_\s])",
@@ -290,7 +290,8 @@ def parse_rss_entries(xml_text: str, source: SourceConfig) -> list[RawPost]:
                 excerpt=excerpt,
                 has_heading=bool(title and title != url),
             )
-            or (not raw_content and len(excerpt.strip()) < 1000)
+            or len(excerpt.strip()) < MIN_ENRICHED_EXCERPT_LEN
+            or bool(LEAD_SKIP_RE.search(summary))
         )
 
         posts.append(
@@ -550,12 +551,33 @@ def extract_article_details(
         title = _strip_site_suffix(clean_text(soup.title.get_text(" ", strip=True), max_len=200))
 
     lead_paragraph, body_excerpt = _extract_structured_body(_select_content_root(soup), title)
-    if meta_summary and not _is_stub_text(meta_summary, title, min_len=80):
+    if (
+        meta_summary
+        and not _is_stub_text(meta_summary, title, min_len=80)
+        and not LEAD_SKIP_RE.search(meta_summary)
+    ):
         summary = meta_summary
     else:
         summary = lead_paragraph or meta_summary
     excerpt = body_excerpt or (summary or "")
     return title, published_at, summary, excerpt
+
+
+def should_upgrade_summary(
+    existing_summary: str,
+    candidate_summary: str | None,
+    title: str | None = None,
+) -> bool:
+    """Return True if candidate_summary meaningfully improves an empty, stub, or boilerplate summary."""
+    if not candidate_summary or LEAD_SKIP_RE.search(candidate_summary):
+        return False
+    if not existing_summary:
+        return True
+    if LEAD_SKIP_RE.search(existing_summary):
+        return True
+    return _is_stub_text(existing_summary, title, min_len=STUB_SUMMARY_MAX_LEN) and len(
+        candidate_summary
+    ) > len(existing_summary)
 
 
 def _is_stub_text(text: str | None, title: str | None = None, min_len: int = STUB_SUMMARY_MAX_LEN) -> bool:
@@ -785,17 +807,9 @@ def fetch_source_posts(
                 )
                 post.title = meta_title or post.title
                 post.published_at = post.published_at or meta_date
-                if meta_summary and (
-                    not post.summary
-                    or _is_stub_text(post.summary, post.title, min_len=STUB_SUMMARY_MAX_LEN)
-                    or bool(LEAD_SKIP_RE.search(post.summary))
-                ):
-                    if (
-                        not post.summary
-                        or len(meta_summary) > len(post.summary)
-                        or bool(LEAD_SKIP_RE.search(post.summary))
-                    ):
-                        post.summary = meta_summary
+                if should_upgrade_summary(post.summary, meta_summary, post.title):
+                    assert meta_summary is not None
+                    post.summary = meta_summary
                 if meta_excerpt and len(meta_excerpt) > len(post.excerpt):
                     post.excerpt = meta_excerpt
             except Exception:

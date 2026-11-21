@@ -10,10 +10,14 @@ from typing import Any, Callable
 
 from .config import load_config
 from .extractors import (
+    LEAD_SKIP_RE,
+    MIN_ENRICHED_EXCERPT_LEN,
     build_http_client,
     canonical_key,
+    extract_article_details,
     fetch_source_posts,
     post_id_for_url,
+    should_upgrade_summary,
 )
 from .models import PostRecord, RawPost, SourceConfig, SourceHealth
 
@@ -37,6 +41,7 @@ def run_update(
     archive_path: Path,
     export_dir: Path | None = None,
     from_archive: bool = False,
+    refresh_thin_excerpts: bool = False,
     max_workers: int = 8,
     http_get: Callable[[str], str] | None = None,
 ) -> dict[str, Any]:
@@ -51,6 +56,7 @@ def run_update(
         payload = _fetch_and_merge(
             sources=sources,
             existing_posts=existing_posts,
+            refresh_thin_excerpts=refresh_thin_excerpts,
             max_workers=max_workers,
             http_get=http_get,
         )
@@ -122,6 +128,7 @@ def _rebuild_from_existing(
 def _fetch_and_merge(
     sources: list[SourceConfig],
     existing_posts: dict[str, PostRecord],
+    refresh_thin_excerpts: bool,
     max_workers: int,
     http_get: Callable[[str], str] | None,
 ) -> dict[str, Any]:
@@ -129,12 +136,41 @@ def _fetch_and_merge(
     seen_keys = {
         key
         for key, post in existing_posts.items()
-        if post.published_at and post.summary and post.excerpt
+        if post.published_at
+        and post.summary
+        and post.excerpt
+        and (
+            not refresh_thin_excerpts
+            or (
+                len(post.excerpt) >= MIN_ENRICHED_EXCERPT_LEN
+                and not LEAD_SKIP_RE.search(post.summary)
+            )
+        )
     }
     source_results: dict[str, tuple[list[RawPost], str | None]]
 
+    def _execute(getter: Callable[[str], str]) -> tuple[dict[str, tuple[list[RawPost], str | None]], set[str]]:
+        results = _fetch_with_custom_getter(sources, seen_keys, getter, max_workers)
+        merged = {
+            canonical_key(raw.url)
+            for src in sources
+            for raw in results[src.id][0]
+        }
+        return results, merged
+
+    merged_keys: set[str] = set()
     if http_get is not None:
-        source_results = _fetch_with_custom_getter(sources, seen_keys, http_get, max_workers)
+        source_results, merged_keys = _execute(http_get)
+        total_new, health_by_id = _apply_source_results(
+            sources, source_results, existing_posts, run_ts
+        )
+        _backfill_archived_excerpts(
+            existing_posts=existing_posts,
+            skip_keys=merged_keys,
+            get_text=http_get,
+            max_workers=max_workers,
+            refresh_thin_excerpts=refresh_thin_excerpts,
+        )
     else:
         with build_http_client() as client:
             def client_get(url: str) -> str:
@@ -142,44 +178,17 @@ def _fetch_and_merge(
                 resp.raise_for_status()
                 return resp.text
 
-            source_results = _fetch_with_custom_getter(sources, seen_keys, client_get, max_workers)
-
-    total_new = 0
-    health_by_id: dict[str, SourceHealth] = {}
-    for src in sources:
-        raw_posts, err = source_results[src.id]
-        new_for_source = 0
-        for raw in raw_posts:
-            key = canonical_key(raw.url)
-            if key in existing_posts:
-                _merge_existing(existing_posts[key], raw, src)
-            else:
-                existing_posts[key] = PostRecord(
-                    id=post_id_for_url(raw.url),
-                    source_id=src.id,
-                    source_name=src.name,
-                    url=raw.url,
-                    title=raw.title,
-                    summary=raw.summary,
-                    published_at=raw.published_at,
-                    first_seen=run_ts,
-                    excerpt=raw.excerpt or raw.summary,
-                )
-                new_for_source += 1
-        total_new += new_for_source
-        health_by_id[src.id] = SourceHealth(
-            id=src.id,
-            name=src.name,
-            homepage=src.homepage,
-            mode=src.mode,
-            monitor_url=src.monitor_url,
-            status="error" if err else "ok",
-            error=err,
-            fetched_count=len(raw_posts),
-            new_count=new_for_source,
-            total_count=0,
-            last_checked=run_ts,
-        )
+            source_results, merged_keys = _execute(client_get)
+            total_new, health_by_id = _apply_source_results(
+                sources, source_results, existing_posts, run_ts
+            )
+            _backfill_archived_excerpts(
+                existing_posts=existing_posts,
+                skip_keys=merged_keys,
+                get_text=client_get,
+                max_workers=max_workers,
+                refresh_thin_excerpts=refresh_thin_excerpts,
+            )
 
     # Refresh source names on existing posts in case a source was renamed.
     source_map = {src.id: src for src in sources}
@@ -226,6 +235,106 @@ def _fetch_with_custom_getter(
     return results
 
 
+def _apply_source_results(
+    sources: list[SourceConfig],
+    source_results: dict[str, tuple[list[RawPost], str | None]],
+    existing_posts: dict[str, PostRecord],
+    run_ts: str,
+) -> tuple[int, dict[str, SourceHealth]]:
+    total_new = 0
+    health_by_id: dict[str, SourceHealth] = {}
+    for src in sources:
+        raw_posts, err = source_results[src.id]
+        new_for_source = 0
+        for raw in raw_posts:
+            key = canonical_key(raw.url)
+            if key in existing_posts:
+                _merge_existing(existing_posts[key], raw, src)
+            else:
+                existing_posts[key] = PostRecord(
+                    id=post_id_for_url(raw.url),
+                    source_id=src.id,
+                    source_name=src.name,
+                    url=raw.url,
+                    title=raw.title,
+                    summary=raw.summary,
+                    published_at=raw.published_at,
+                    first_seen=run_ts,
+                    excerpt=raw.excerpt or raw.summary,
+                )
+                new_for_source += 1
+        total_new += new_for_source
+        health_by_id[src.id] = SourceHealth(
+            id=src.id,
+            name=src.name,
+            homepage=src.homepage,
+            mode=src.mode,
+            monitor_url=src.monitor_url,
+            status="error" if err else "ok",
+            error=err,
+            fetched_count=len(raw_posts),
+            new_count=new_for_source,
+            total_count=0,
+            last_checked=run_ts,
+        )
+    return total_new, health_by_id
+
+
+def _backfill_archived_excerpts(
+    existing_posts: dict[str, PostRecord],
+    skip_keys: set[str],
+    get_text: Callable[[str], str],
+    max_workers: int,
+    refresh_thin_excerpts: bool,
+) -> None:
+    """Enrich older archived posts that rolled off live feeds without an excerpt."""
+    targets = [
+        post
+        for key, post in existing_posts.items()
+        if key not in skip_keys
+        and (
+            not post.excerpt
+            or (
+                refresh_thin_excerpts
+                and (
+                    len(post.excerpt) < MIN_ENRICHED_EXCERPT_LEN
+                    or bool(LEAD_SKIP_RE.search(post.summary))
+                )
+            )
+        )
+    ]
+    if not targets:
+        return
+
+    def _enrich_one(post: PostRecord) -> tuple[PostRecord, str | None, str | None, str | None, str] | None:
+        try:
+            html_text = get_text(post.url)
+        except Exception:
+            return None
+        meta_title, meta_date, meta_summary, meta_excerpt = extract_article_details(
+            html_text, post.url
+        )
+        return post, meta_title, meta_date, meta_summary, meta_excerpt
+
+    worker_count = max(1, min(max_workers, len(targets)))
+    with ThreadPoolExecutor(max_workers=worker_count) as pool:
+        for res in pool.map(_enrich_one, targets):
+            if res is None:
+                continue
+            post, meta_title, meta_date, meta_summary, meta_excerpt = res
+            if meta_title and not post.title:
+                post.title = meta_title
+            if meta_date and not post.published_at:
+                post.published_at = meta_date
+            if should_upgrade_summary(post.summary, meta_summary, post.title):
+                assert meta_summary is not None
+                post.summary = meta_summary
+            if meta_excerpt and len(meta_excerpt) > len(post.excerpt):
+                post.excerpt = meta_excerpt
+            elif not post.excerpt and post.summary:
+                post.excerpt = post.summary
+
+
 def _merge_existing(existing: PostRecord, raw: RawPost, src: SourceConfig) -> None:
     """Enrich missing fields on an already-archived post without altering first_seen."""
     existing.source_name = src.name
@@ -233,10 +342,7 @@ def _merge_existing(existing: PostRecord, raw: RawPost, src: SourceConfig) -> No
         existing.title = raw.title
     if raw.published_at and not existing.published_at:
         existing.published_at = raw.published_at
-    if raw.summary and (
-        not existing.summary
-        or (len(existing.summary) < 160 and len(raw.summary) > len(existing.summary))
-    ):
+    if should_upgrade_summary(existing.summary, raw.summary, existing.title):
         existing.summary = raw.summary
     if raw.excerpt and len(raw.excerpt) > len(existing.excerpt):
         existing.excerpt = raw.excerpt
