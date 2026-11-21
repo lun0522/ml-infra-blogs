@@ -36,6 +36,7 @@ class RawPost:
     title: str
     published_at: str | None = None
     summary: str = ""
+    excerpt: str = ""
     needs_enrichment: bool = False
 
 
@@ -51,6 +52,7 @@ class PostRecord:
     summary: str
     published_at: str | None
     first_seen: str
+    excerpt: str = ""
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)

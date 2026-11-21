@@ -78,6 +78,7 @@ def _index_existing_posts(raw_posts: list[dict[str, Any]]) -> dict[str, PostReco
             summary=str(item.get("summary") or ""),
             published_at=item.get("published_at"),
             first_seen=str(item.get("first_seen") or utc_now_iso()),
+            excerpt=str(item.get("excerpt") or ""),
         )
     return indexed
 
@@ -128,7 +129,7 @@ def _fetch_and_merge(
     seen_keys = {
         key
         for key, post in existing_posts.items()
-        if post.published_at and post.summary
+        if post.published_at and post.summary and post.excerpt
     }
     source_results: dict[str, tuple[list[RawPost], str | None]]
 
@@ -162,6 +163,7 @@ def _fetch_and_merge(
                     summary=raw.summary,
                     published_at=raw.published_at,
                     first_seen=run_ts,
+                    excerpt=raw.excerpt or raw.summary,
                 )
                 new_for_source += 1
         total_new += new_for_source
@@ -231,8 +233,13 @@ def _merge_existing(existing: PostRecord, raw: RawPost, src: SourceConfig) -> No
         existing.title = raw.title
     if raw.published_at and not existing.published_at:
         existing.published_at = raw.published_at
-    if raw.summary and not existing.summary:
+    if raw.summary and (
+        not existing.summary
+        or (len(existing.summary) < 160 and len(raw.summary) > len(existing.summary))
+    ):
         existing.summary = raw.summary
+    if raw.excerpt and len(raw.excerpt) > len(existing.excerpt):
+        existing.excerpt = raw.excerpt
 
 
 def _trim_posts(posts: list[PostRecord], sources: list[SourceConfig]) -> list[PostRecord]:

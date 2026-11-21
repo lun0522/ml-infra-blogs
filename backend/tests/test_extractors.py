@@ -6,6 +6,7 @@ import unittest
 
 from app.extractors import (
     canonical_key,
+    extract_article_details,
     extract_article_metadata,
     extract_date_from_url,
     fetch_source_posts,
@@ -106,10 +107,10 @@ class ExtractorTests(unittest.TestCase):
             url_pattern=r"^https://humansand\.ai/blog/[^/?#]+/?$",
         )
 
-        # First confirm direct HTML parsing flags missing date on second post.
+        # First confirm direct HTML parsing flags thin card excerpts and missing metadata for enrichment.
         direct = parse_html_links(index_html, "https://humansand.ai/blogs/", src)
         self.assertEqual(len(direct), 2)
-        self.assertFalse(direct[0].needs_enrichment)
+        self.assertTrue(direct[0].needs_enrichment)
         self.assertEqual(direct[0].published_at, "2026-11-10T00:00:00Z")
         self.assertTrue(direct[1].needs_enrichment)
 
@@ -120,6 +121,11 @@ class ExtractorTests(unittest.TestCase):
             fetches.append(url)
             if url == "https://humansand.ai/blogs/":
                 return index_html
+            if url == "https://humansand.ai/blog/gpu-weight-teleport":
+                return """<html><article><h1>GPU Weight Teleportation</h1>
+                  <h2>Delta update algebra</h2>
+                  <p>Lossless GPU compression for instant RL weight sync across Blackwell nodes.</p>
+                </article></html>"""
             if url == "https://humansand.ai/blog/nvfp4-rl":
                 return article_html
             raise AssertionError(f"Unexpected fetch: {url}")
@@ -127,11 +133,19 @@ class ExtractorTests(unittest.TestCase):
         posts = fetch_source_posts(fake_get, src, seen_keys=set())
         self.assertEqual(posts[1].published_at, "2026-10-01T00:00:00Z")
         self.assertEqual(posts[1].summary, "Balancing stability in NVFP4 RL.")
-        self.assertEqual(len(fetches), 2)
+        self.assertIn("Delta update algebra", posts[0].excerpt)
+        self.assertEqual(len(fetches), 3)
 
-        # When already seen, article page should not be fetched again.
+        # When already seen, article pages should not be fetched again.
         fetches.clear()
-        fetch_source_posts(fake_get, src, seen_keys={"https://humansand.ai/blog/nvfp4-rl"})
+        fetch_source_posts(
+            fake_get,
+            src,
+            seen_keys={
+                "https://humansand.ai/blog/gpu-weight-teleport",
+                "https://humansand.ai/blog/nvfp4-rl",
+            },
+        )
         self.assertEqual(fetches, ["https://humansand.ai/blogs/"])
 
     def test_parse_sitemap_and_extract_article_metadata(self) -> None:
@@ -193,7 +207,7 @@ class ExtractorTests(unittest.TestCase):
         )
         direct = parse_html_links(index_html, "https://example.com/blog", src)
         self.assertEqual(len(direct), 2)
-        self.assertFalse(direct[0].needs_enrichment)
+        self.assertEqual(direct[0].summary, "This featured post has its own full card description.")
         self.assertEqual(direct[1].summary, "")
         self.assertTrue(direct[1].needs_enrichment)
 
@@ -263,6 +277,100 @@ class ExtractorTests(unittest.TestCase):
         self.assertEqual(posts[0].title, "AI Infrastructure at Periodic")
         self.assertEqual(posts[0].published_at, "2026-09-15T00:00:00Z")
         self.assertEqual(posts[0].summary, "Training, inference, and sandboxing infrastructure.")
+
+    def test_rich_article_excerpt_headings_boilerplate_and_webflow_figure(self) -> None:
+        html_text = """
+        <html>
+          <head>
+            <meta property="og:title" content="The path to Mojo 1.0" />
+            <meta property="og:description" content="The path to Mojo 1.0" />
+          </head>
+          <body>
+            <main>
+              <p>This website requires JavaScript in order to work properly.</p>
+              <h1>The path to Mojo 1.0</h1>
+              <figure class="text-rich-text w-richtext">
+                <h2>AI-Generated Summary</h2>
+                <h2>Link Compiler Architecture #</h2>
+                <p>Special thanks to early contributors for feedback and edits on this draft.</p>
+                <p>Mojo started with a focus on writing high-performance kernels for GPUs and CPUs across accelerators.<math>x_1</math></p>
+                <figure><figcaption><p>Small caption ignored in body prose.</p></figcaption></figure>
+                <h2>Related tags</h2>
+              </figure>
+            </main>
+          </body>
+        </html>"""
+        title, _pub, summary, excerpt = extract_article_details(
+            html_text, "https://www.modular.com/blog/the-path-to-mojo-1-0"
+        )
+        self.assertEqual(title, "The path to Mojo 1.0")
+        self.assertEqual(
+            summary,
+            "Mojo started with a focus on writing high-performance kernels for GPUs and CPUs across accelerators.",
+        )
+        self.assertIn("Sections: Compiler Architecture", excerpt)
+        self.assertNotIn("AI-Generated Summary", excerpt)
+        self.assertNotIn("Related tags", excerpt)
+        self.assertNotIn("Special thanks", excerpt)
+        self.assertNotIn("requires JavaScript", excerpt)
+        self.assertNotIn("Small caption ignored", excerpt)
+
+    def test_rss_content_encoded_and_stub_summary_enrichment(self) -> None:
+        rss_xml = """<?xml version="1.0" encoding="UTF-8"?>
+        <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+          <channel>
+            <item>
+              <title>Full Feed Post</title>
+              <link>https://example.com/blog/full-feed</link>
+              <pubDate>Thu, 12 Nov 2026 08:00:00 GMT</pubDate>
+              <description>Short RSS blurb that would normally hide the full body.</description>
+              <content:encoded><![CDATA[
+                <h2>Runtime Internals</h2>
+                <p>First detailed technical paragraph explaining CUDA graph capture across worker processes, kernel fusion boundaries, and batch size bucket selection across distributed GPU hosts.</p>
+                <p>Second detailed paragraph measuring host memory overhead, paged KV-cache fragmentation, and tail scheduler latency reductions across hundreds of inference nodes under skewed traffic.</p>
+              ]]></content:encoded>
+            </item>
+            <item>
+              <title>Modular: Stub RSS Post</title>
+              <link>https://example.com/blog/stub-feed</link>
+              <pubDate>Thu, 12 Nov 2026 09:00:00 GMT</pubDate>
+              <description>Stub RSS Post</description>
+            </item>
+          </channel>
+        </rss>"""
+        src = SourceConfig(
+            id="demo-rss",
+            name="Demo RSS",
+            homepage="https://example.com/blog",
+            mode="rss",
+            feed_url="https://example.com/feed.xml",
+        )
+        fetches: list[str] = []
+
+        def fake_get(url: str) -> str:
+            fetches.append(url)
+            if url == "https://example.com/feed.xml":
+                return rss_xml
+            if url == "https://example.com/blog/stub-feed":
+                return """<html><article>
+                  <h1>Modular: Stub RSS Post</h1>
+                  <h2>Kernel Dispatch</h2>
+                  <p>Detailed engineering walkthrough of async tensor core scheduling on modern accelerators.</p>
+                </article></html>"""
+            raise AssertionError(f"Unexpected fetch: {url}")
+
+        posts = fetch_source_posts(fake_get, src, seen_keys=set())
+        self.assertEqual(len(posts), 2)
+        # Full content:encoded avoids extra fetch while extracting section headings + paragraphs.
+        self.assertEqual(fetches, ["https://example.com/feed.xml", "https://example.com/blog/stub-feed"])
+        self.assertIn("Sections: Runtime Internals", posts[0].excerpt)
+        self.assertIn("CUDA graph capture", posts[0].excerpt)
+        # Stub RSS description is upgraded in both summary and excerpt from fetched page.
+        self.assertEqual(
+            posts[1].summary,
+            "Detailed engineering walkthrough of async tensor core scheduling on modern accelerators.",
+        )
+        self.assertIn("Sections: Kernel Dispatch", posts[1].excerpt)
 
 
 if __name__ == "__main__":

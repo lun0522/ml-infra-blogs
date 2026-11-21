@@ -53,7 +53,57 @@ INLINE_DATE_RE = re.compile(
 URL_YMD_RE = re.compile(r"/(20\d{2})[-/](\d{2})[-/](\d{2})(?:[-/]|$)")
 URL_YM_RE = re.compile(r"/(20\d{2})/(\d{2})(?:/|$)")
 SUMMARY_MAX_LEN = 420
-SKIP_PROSE_PARENTS = {"header", "nav", "footer", "aside", "figure", "figcaption", "form"}
+EXCERPT_MAX_LEN = 1600
+STUB_SUMMARY_MAX_LEN = 160
+MIN_ENRICHED_EXCERPT_LEN = 350
+SKIP_PROSE_PARENTS = {"header", "nav", "footer", "aside", "figcaption", "form"}
+LEAF_NOISE_RE = re.compile(
+    r"(?:^|[-_\s])(?:newsletter|subscribe|cookie|consent|katex-mathml|related-posts|social-share|share-buttons|modal|popup)(?:$|[-_\s])",
+    re.I,
+)
+BOILERPLATE_PHRASES = (
+    "requires javascript",
+    "enable javascript",
+    "rotate your device",
+    "sign up for our newsletter",
+    "delivered directly to your inbox",
+    "unsubscribe at anytime",
+    "thanks for signing up",
+    "your data is handled in accordance",
+    "privacy policy",
+    "cookie policy",
+    "accept all cookies",
+    "all rights reserved",
+)
+LEAD_SKIP_RE = re.compile(
+    r"^(?:special thanks to\b|thanks to .+?\bfor (?:feedback|review|edits?|comments?)|authors\s*[—:-]|this form requires javascript)",
+    re.I,
+)
+CHROME_HEADINGS = {
+    "ai-generated summary",
+    "next steps",
+    "table of contents",
+    "contents",
+    "references",
+    "footnotes",
+    "acknowledgments",
+    "acknowledgements",
+    "resources",
+    "featured",
+    "related posts",
+    "related tags",
+    "read more",
+    "share this post",
+    "subscribe",
+    "join the community",
+    "join the community and follow along!",
+}
+CHROME_HEADING_SUBSTRS = (
+    "read more from",
+    "sign up for",
+    "subscribe to receive",
+    "newsletter",
+)
 
 
 def normalize_url(url: str) -> str:
@@ -212,9 +262,36 @@ def parse_rss_entries(xml_text: str, source: SourceConfig) -> list[RawPost]:
             or extract_date_from_url(url)
         )
         raw_summary = entry.get("summary") or entry.get("description") or ""
-        if not raw_summary and entry.get("content"):
-            raw_summary = entry["content"][0].get("value", "")
-        summary = clean_text(raw_summary, max_len=SUMMARY_MAX_LEN)
+        raw_content = ""
+        if entry.get("content"):
+            candidates = [str(item.get("value") or "") for item in entry["content"]]
+            raw_content = max(candidates, key=len, default="")
+
+        summary_source = raw_summary or raw_content
+        summary = clean_text(summary_source, max_len=SUMMARY_MAX_LEN)
+        excerpt = ""
+        if raw_content:
+            content_lead, excerpt = _extract_lead_and_excerpt_from_html(raw_content, title)
+            if content_lead and _is_stub_text(summary, title, min_len=STUB_SUMMARY_MAX_LEN):
+                if len(content_lead) > len(summary):
+                    summary = content_lead
+        if len(excerpt) < len(raw_summary) and len(raw_summary) > SUMMARY_MAX_LEN:
+            _rs_lead, rich_summary_excerpt = _extract_lead_and_excerpt_from_html(raw_summary, title)
+            if len(rich_summary_excerpt) > len(excerpt):
+                excerpt = rich_summary_excerpt
+        if not excerpt:
+            excerpt = summary
+
+        needs_enrichment = (
+            _needs_article_enrichment(
+                title=title,
+                published_at=published_at,
+                summary=summary,
+                excerpt=excerpt,
+                has_heading=bool(title and title != url),
+            )
+            or (not raw_content and len(excerpt.strip()) < 1000)
+        )
 
         posts.append(
             RawPost(
@@ -222,7 +299,8 @@ def parse_rss_entries(xml_text: str, source: SourceConfig) -> list[RawPost]:
                 title=title,
                 published_at=published_at,
                 summary=summary,
-                needs_enrichment=not summary,
+                excerpt=excerpt,
+                needs_enrichment=needs_enrichment,
             )
         )
         if len(posts) >= source.max_items:
@@ -286,13 +364,21 @@ def parse_html_links(html_text: str, base_url: str, source: SourceConfig) -> lis
             anchor, url, base_url, source
         )
         seen_keys.add(key)
-        needs_enrichment = not has_heading or not title or not published_at or not summary
+        resolved_title = title or _slug_to_title(url)
+        needs_enrichment = _needs_article_enrichment(
+            title=resolved_title,
+            published_at=published_at,
+            summary=summary,
+            excerpt=summary,
+            has_heading=has_heading and bool(title),
+        )
         posts.append(
             RawPost(
                 url=url,
-                title=title or _slug_to_title(url),
+                title=resolved_title,
                 published_at=published_at,
                 summary=summary,
+                excerpt=summary,
                 needs_enrichment=needs_enrichment,
             )
         )
@@ -395,10 +481,19 @@ def extract_article_metadata(
     url: str,
 ) -> tuple[str | None, str | None, str | None]:
     """Extract (title, published_at, summary) from an article HTML page."""
+    title, published_at, summary, _excerpt = extract_article_details(html_text, url)
+    return title, published_at, summary
+
+
+def extract_article_details(
+    html_text: str,
+    url: str,
+) -> tuple[str | None, str | None, str | None, str]:
+    """Extract (title, published_at, summary, excerpt) from an article HTML page."""
     soup = BeautifulSoup(html_text, "html.parser")
     title: str | None = None
     published_at: str | None = extract_date_from_url(url)
-    summary: str | None = None
+    meta_summary: str | None = None
 
     # 1. JSON-LD structured data (TechArticle / BlogPosting / Article / NewsArticle)
     for script in soup.find_all("script", attrs={"type": "application/ld+json"}):
@@ -411,7 +506,7 @@ def extract_article_metadata(
             if any(t in {"Article", "BlogPosting", "TechArticle", "NewsArticle"} for t in types):
                 title = title or _opt_clean(obj.get("headline") or obj.get("name"), 200)
                 published_at = published_at or parse_date(str(obj.get("datePublished") or ""))
-                summary = summary or _opt_clean(obj.get("description"), SUMMARY_MAX_LEN)
+                meta_summary = meta_summary or _opt_clean(obj.get("description"), SUMMARY_MAX_LEN)
 
     # 2. Standard meta tags (OpenGraph, article:published_time, schema.org itemprop)
     meta_title = _meta_content(soup, property="og:title") or _meta_content(soup, name="twitter:title")
@@ -430,15 +525,15 @@ def extract_article_metadata(
                 published_at = parsed
                 break
 
-    if not summary:
-        summary = (
+    if not meta_summary:
+        meta_summary = (
             _meta_content(soup, property="og:description", max_len=SUMMARY_MAX_LEN)
             or _meta_content(soup, name="description", max_len=SUMMARY_MAX_LEN)
             or _meta_content(soup, name="twitter:description", max_len=SUMMARY_MAX_LEN)
             or _meta_content(soup, property="twitter:description", max_len=SUMMARY_MAX_LEN)
         )
 
-    # 3. <time>, <h1> / <title>, and opening-paragraph fallbacks
+    # 3. <time>, <h1> / <title>, and structured body extraction
     if not published_at:
         for time_tag in soup.find_all("time"):
             published_at = parse_date(str(time_tag.get("datetime") or "")) or parse_date(
@@ -454,25 +549,176 @@ def extract_article_metadata(
     if not title and soup.title:
         title = _strip_site_suffix(clean_text(soup.title.get_text(" ", strip=True), max_len=200))
 
-    if not summary:
-        summary = _extract_lead_paragraph(soup, title)
+    lead_paragraph, body_excerpt = _extract_structured_body(_select_content_root(soup), title)
+    if meta_summary and not _is_stub_text(meta_summary, title, min_len=80):
+        summary = meta_summary
+    else:
+        summary = lead_paragraph or meta_summary
+    excerpt = body_excerpt or (summary or "")
+    return title, published_at, summary, excerpt
 
-    return title, published_at, summary
+
+def _is_stub_text(text: str | None, title: str | None = None, min_len: int = STUB_SUMMARY_MAX_LEN) -> bool:
+    if not text:
+        return True
+    cleaned = text.strip()
+    if len(cleaned) < min_len:
+        return True
+    if title:
+        low_t = title.strip().lower()
+        low_c = cleaned.lower()
+        if low_c == low_t or low_t.endswith(low_c) or low_c in low_t:
+            return True
+    return False
 
 
-def _extract_lead_paragraph(soup: BeautifulSoup, title: str | None) -> str | None:
-    """Fallback summary from the first substantive prose paragraph in article/main content."""
-    root = soup.find("article") or soup.find("main") or soup.body or soup
-    for p in root.find_all("p"):
-        if any(isinstance(parent, Tag) and parent.name in SKIP_PROSE_PARENTS for parent in p.parents):
+def _needs_article_enrichment(
+    title: str | None,
+    published_at: str | None,
+    summary: str,
+    excerpt: str,
+    has_heading: bool,
+) -> bool:
+    if not has_heading or not title or not published_at:
+        return True
+    if _is_stub_text(summary, title, min_len=STUB_SUMMARY_MAX_LEN):
+        return True
+    return len(excerpt.strip()) < MIN_ENRICHED_EXCERPT_LEN
+
+
+def _select_content_root(soup: BeautifulSoup) -> Tag:
+    article = soup.find("article")
+    if article and len(clean_text(article.get_text(" ", strip=True), max_len=0)) >= 200:
+        return article
+    main = soup.find("main")
+    if main:
+        return main
+    return soup.body or soup
+
+
+def _extract_lead_and_excerpt_from_html(
+    raw_html: str,
+    title: str | None = None,
+) -> tuple[str | None, str]:
+    if not raw_html:
+        return None, ""
+    soup = BeautifulSoup(raw_html, "html.parser")
+    root = soup.body or soup
+    lead, excerpt = _extract_structured_body(root, title)
+    return lead, excerpt or clean_text(raw_html, max_len=EXCERPT_MAX_LEN)
+
+
+def _strip_hidden_and_math(root: Tag) -> None:
+    for bad in root.find_all(["script", "style", "noscript", "svg", "math"]):
+        bad.decompose()
+    for bad in root.find_all(
+        class_=lambda c: bool(c and "katex-mathml" in " ".join(c if isinstance(c, list) else [c]))
+    ):
+        bad.decompose()
+
+
+def _is_in_noise_container(tag: Tag, root: Tag) -> bool:
+    for parent in tag.parents:
+        if parent is root:
+            break
+        if not isinstance(parent, Tag):
             continue
-        text = clean_text(p.get_text(" ", strip=True), max_len=SUMMARY_MAX_LEN)
-        if len(text) < 50:
+        if parent.name in SKIP_PROSE_PARENTS:
+            return True
+        if parent.name == "figure":
+            cls = " ".join(parent.get("class") or [])
+            # Skip non-richtext <figure> blocks (image captions), while preserving Webflow richtext article bodies.
+            if "richtext" not in cls.lower() and len(clean_text(parent.get_text(" ", strip=True), max_len=300)) < 260:
+                return True
+        cls = " ".join(parent.get("class") or [])
+        elem_id = str(parent.get("id") or "")
+        if LEAF_NOISE_RE.search(cls) or LEAF_NOISE_RE.search(elem_id):
+            return True
+    return False
+
+
+def _clean_heading(raw: str) -> str:
+    text = clean_text(raw, max_len=100)
+    text = re.sub(r"^Link\s+", "", text)
+    text = re.sub(r"\s*[#¶]+$", "", text).strip()
+    return text
+
+
+def _is_chrome_heading(text: str) -> bool:
+    low = text.lower().strip(": ")
+    if not low or len(low) < 3:
+        return True
+    if low in CHROME_HEADINGS:
+        return True
+    if any(sub in low for sub in CHROME_HEADING_SUBSTRS):
+        return True
+    if low.startswith("explore ") and low.endswith(" today"):
+        return True
+    return False
+
+
+def _is_boilerplate_para(text: str, title: str | None) -> bool:
+    low = text.lower()
+    if len(text) < 45:
+        return True
+    if title:
+        low_t = title.lower()
+        if low == low_t or low_t.endswith(low) or low in low_t:
+            return True
+    if any(phrase in low for phrase in BOILERPLATE_PHRASES):
+        return True
+    if LEAD_SKIP_RE.search(text):
+        return True
+    return False
+
+
+def _extract_structured_body(root: Tag, title: str | None) -> tuple[str | None, str]:
+    """Extract (lead_paragraph, structured_excerpt) from an article container or HTML fragment."""
+    _strip_hidden_and_math(root)
+
+    headings: list[str] = []
+    seen_h: set[str] = set()
+    for heading in root.find_all(["h2", "h3"]):
+        if _is_in_noise_container(heading, root):
             continue
-        if title and text.lower() == title.lower():
+        htext = _clean_heading(heading.get_text(" ", strip=True))
+        if _is_chrome_heading(htext) or htext.lower() in seen_h:
             continue
-        return text
-    return None
+        seen_h.add(htext.lower())
+        headings.append(htext)
+        if len(headings) >= 8:
+            break
+
+    candidate_paras = [p for p in root.find_all("p") if not _is_in_noise_container(p, root)]
+    h1 = root.find("h1")
+    if h1 is not None:
+        after_h1 = [
+            p
+            for p in h1.find_all_next("p")
+            if root in p.parents and not _is_in_noise_container(p, root)
+        ]
+        if len(after_h1) >= 2:
+            candidate_paras = after_h1
+
+    paras: list[str] = []
+    seen_p: set[str] = set()
+    for p in candidate_paras:
+        ptext = clean_text(p.get_text(" ", strip=True), max_len=600)
+        if _is_boilerplate_para(ptext, title) or ptext in seen_p:
+            continue
+        seen_p.add(ptext)
+        paras.append(ptext)
+        if sum(len(x) for x in paras) >= EXCERPT_MAX_LEN:
+            break
+
+    lead = clean_text(paras[0], max_len=SUMMARY_MAX_LEN) if paras else None
+    parts: list[str] = []
+    if headings:
+        parts.append("Sections: " + " | ".join(headings))
+    if paras:
+        parts.append("\n".join(paras))
+    excerpt = clean_text("\n".join(parts), max_len=EXCERPT_MAX_LEN) if parts else ""
+    return lead, excerpt
 
 
 def _iter_json_ld_objects(raw_json: str) -> list[dict]:
@@ -527,22 +773,37 @@ def fetch_source_posts(
     extractor = MODE_EXTRACTORS[source.mode]
     raw_posts = extractor(get_text, source, seen_keys)
 
+    canonical_seen = {canonical_key(k) for k in seen_keys}
     enriched: list[RawPost] = []
     for post in raw_posts:
         key = canonical_key(post.url)
-        if post.needs_enrichment and key not in seen_keys:
+        if post.needs_enrichment and key not in canonical_seen:
             try:
                 article_html = get_text(post.url)
-                meta_title, meta_date, meta_summary = extract_article_metadata(
+                meta_title, meta_date, meta_summary, meta_excerpt = extract_article_details(
                     article_html, post.url
                 )
                 post.title = meta_title or post.title
                 post.published_at = post.published_at or meta_date
-                post.summary = post.summary or (meta_summary or "")
+                if meta_summary and (
+                    not post.summary
+                    or _is_stub_text(post.summary, post.title, min_len=STUB_SUMMARY_MAX_LEN)
+                    or bool(LEAD_SKIP_RE.search(post.summary))
+                ):
+                    if (
+                        not post.summary
+                        or len(meta_summary) > len(post.summary)
+                        or bool(LEAD_SKIP_RE.search(post.summary))
+                    ):
+                        post.summary = meta_summary
+                if meta_excerpt and len(meta_excerpt) > len(post.excerpt):
+                    post.excerpt = meta_excerpt
             except Exception:
                 # Keep card-level fallback data if an individual article fetch fails.
                 pass
             post.needs_enrichment = False
+        if not post.excerpt:
+            post.excerpt = post.summary
         enriched.append(post)
     return enriched
 
