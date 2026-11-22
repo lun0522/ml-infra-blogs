@@ -8,6 +8,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
 
+from .classifier import load_default_classifier
 from .config import load_config
 from .extractors import (
     MIN_ENRICHED_EXCERPT_LEN,
@@ -42,8 +43,10 @@ def run_update(
     export_dir: Path | None = None,
     from_archive: bool = False,
     refresh_thin_excerpts: bool = False,
+    reclassify: bool = False,
     max_workers: int = 8,
     http_get: Callable[[str], str] | None = None,
+    classifier: Any = None,
 ) -> dict[str, Any]:
     """Refresh all sources (unless from_archive=True), merge archive, and write static exports."""
     sources = load_config(config_path)
@@ -51,14 +54,18 @@ def run_update(
     existing_posts = _index_existing_posts(existing_archive.get("posts", []))
 
     if from_archive:
+        if reclassify and existing_posts:
+            _classify_posts(list(existing_posts.values()), classifier)
         payload = _rebuild_from_existing(sources, existing_archive, existing_posts)
     else:
         payload = _fetch_and_merge(
             sources=sources,
             existing_posts=existing_posts,
             refresh_thin_excerpts=refresh_thin_excerpts,
+            reclassify=reclassify,
             max_workers=max_workers,
             http_get=http_get,
+            classifier=classifier,
         )
 
     _write_json(archive_path, payload)
@@ -84,6 +91,8 @@ def _index_existing_posts(raw_posts: list[dict[str, Any]]) -> dict[str, PostReco
             summary=str(item.get("summary") or ""),
             published_at=item.get("published_at"),
             first_seen=str(item.get("first_seen") or utc_now_iso()),
+            label=str(item.get("label") or "infra"),
+            topics=[str(t) for t in (item.get("topics") or [])],
             excerpt=str(item.get("excerpt") or ""),
         )
     return indexed
@@ -129,8 +138,10 @@ def _fetch_and_merge(
     sources: list[SourceConfig],
     existing_posts: dict[str, PostRecord],
     refresh_thin_excerpts: bool,
+    reclassify: bool,
     max_workers: int,
     http_get: Callable[[str], str] | None,
+    classifier: Any = None,
 ) -> dict[str, Any]:
     run_ts = utc_now_iso()
     seen_keys = {
@@ -161,7 +172,7 @@ def _fetch_and_merge(
     merged_keys: set[str] = set()
     if http_get is not None:
         source_results, merged_keys = _execute(http_get)
-        total_new, health_by_id = _apply_source_results(
+        total_new, new_records, health_by_id = _apply_source_results(
             sources, source_results, existing_posts, run_ts
         )
         _backfill_archived_excerpts(
@@ -179,7 +190,7 @@ def _fetch_and_merge(
                 return resp.text
 
             source_results, merged_keys = _execute(client_get)
-            total_new, health_by_id = _apply_source_results(
+            total_new, new_records, health_by_id = _apply_source_results(
                 sources, source_results, existing_posts, run_ts
             )
             _backfill_archived_excerpts(
@@ -196,6 +207,10 @@ def _fetch_and_merge(
         if post.source_id in source_map:
             post.source_name = source_map[post.source_id].name
 
+    to_classify = list(existing_posts.values()) if reclassify else new_records
+    if to_classify:
+        _classify_posts(to_classify, classifier)
+
     sorted_posts = _trim_posts(list(existing_posts.values()), sources)
     counts = _count_posts_by_source(sorted_posts)
     health_list = []
@@ -210,6 +225,17 @@ def _fetch_and_merge(
         "sources": health_list,
         "posts": [p.to_dict() for p in sorted_posts],
     }
+
+
+def _classify_posts(posts: list[PostRecord], classifier: Any = None) -> None:
+    """Assign 5-pillar topic tags (empty topics => 'drop') using the active ONNX classifier."""
+    active_classifier = classifier if classifier is not None else load_default_classifier()
+    if active_classifier is None or not posts:
+        return
+    predictions = active_classifier.predict_batch([(p.title, p.excerpt or p.summary) for p in posts])
+    for post, pred in zip(posts, predictions, strict=True):
+        post.topics = list(pred.topics)
+        post.label = pred.label
 
 
 def _fetch_with_custom_getter(
@@ -240,8 +266,9 @@ def _apply_source_results(
     source_results: dict[str, tuple[list[RawPost], str | None]],
     existing_posts: dict[str, PostRecord],
     run_ts: str,
-) -> tuple[int, dict[str, SourceHealth]]:
+) -> tuple[int, list[PostRecord], dict[str, SourceHealth]]:
     total_new = 0
+    new_records: list[PostRecord] = []
     health_by_id: dict[str, SourceHealth] = {}
     for src in sources:
         raw_posts, err = source_results[src.id]
@@ -251,7 +278,7 @@ def _apply_source_results(
             if key in existing_posts:
                 _merge_existing(existing_posts[key], raw, src)
             else:
-                existing_posts[key] = PostRecord(
+                record = PostRecord(
                     id=post_id_for_url(raw.url),
                     source_id=src.id,
                     source_name=src.name,
@@ -262,6 +289,8 @@ def _apply_source_results(
                     first_seen=run_ts,
                     excerpt=raw.excerpt or raw.summary,
                 )
+                existing_posts[key] = record
+                new_records.append(record)
                 new_for_source += 1
         total_new += new_for_source
         health_by_id[src.id] = SourceHealth(
@@ -277,7 +306,7 @@ def _apply_source_results(
             total_count=0,
             last_checked=run_ts,
         )
-    return total_new, health_by_id
+    return total_new, new_records, health_by_id
 
 
 def _backfill_archived_excerpts(

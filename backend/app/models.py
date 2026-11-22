@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from typing import Any
 
 
@@ -52,6 +52,8 @@ class PostRecord:
     summary: str
     published_at: str | None
     first_seen: str
+    label: str = "infra"  # "infra" | "drop"
+    topics: list[str] = field(default_factory=list)
     excerpt: str = ""
 
     def to_dict(self) -> dict[str, Any]:

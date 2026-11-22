@@ -52,8 +52,10 @@ Daily automated aggregator and searchable static dashboard tracking AI systems, 
    - **`html_links` mode**: Plain HTML link extraction + card/article metadata parsing without needing a headless browser (`anthropic.com/engineering`, `baseten.co`, `crusoe.ai`, `fireworks.ai`, `friendli.ai`, `gimletlabs.ai`, `humansand.ai`, `nebius.com`, `periodic.com/news`, `skypilot.ai`, `thinkingmachines.ai/blog/`).
 2. **Persistent Archive (`data/posts.json`)**:
    - Preserves `first_seen` timestamps and up to the latest 50 posts per source across runs so posts remain archived even after rolling off a blog's front page, and previously seen non-RSS articles don't need re-fetching.
-3. **Static Dashboard (`frontend/`)**:
-   - Built with Vite, React, TypeScript, and Tailwind CSS v4 with light/dark mode, paginated timeline view, instant search, and source filtering.
+3. **Automated Post Classification (`backend/app/classifier.py`, [`docs/classifier.md`](docs/classifier.md))**:
+   - New posts are tagged with `0–3` topic pillars (`Inference & Serving`, `Training & RL`, `Hardware & Silicon`, `Clusters, Sandboxes & Storage`, `Agents, Harnesses & Evals`) using a quantized multi-label ONNX classifier (`BAAI/bge-small-en-v1.5`, run via `onnxruntime` + `tokenizers` in CI) over title and extracted article excerpt. Posts assigned `0` pillars are automatically marked `Filtered` and hidden by default behind a UI toggle.
+4. **Static Dashboard (`frontend/`)**:
+   - Built with Vite, React, TypeScript, and Tailwind CSS v4 with light/dark mode, MiniSearch instant search, source and multi-label topic pillar filtering.
 
 ## Running Locally
 

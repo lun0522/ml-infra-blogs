@@ -43,6 +43,11 @@ def parse_args() -> argparse.Namespace:
         help="Re-enrich archived posts whose cached excerpt is still thin or boilerplate",
     )
     parser.add_argument(
+        "--reclassify",
+        action="store_true",
+        help="Re-score all archived posts with the committed classifier instead of new posts only",
+    )
+    parser.add_argument(
         "--workers",
         type=int,
         default=8,
@@ -59,6 +64,7 @@ def main() -> int:
         export_dir=args.export_dir,
         from_archive=args.from_archive,
         refresh_thin_excerpts=args.refresh_thin_excerpts,
+        reclassify=args.reclassify,
         max_workers=args.workers,
     )
     ok_sources = sum(1 for s in payload["sources"] if s["status"] == "ok")

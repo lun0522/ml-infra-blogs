@@ -15,7 +15,7 @@ import {
   X,
 } from "lucide-react";
 import { PINNED_REFERENCES, type PinnedReference } from "./data/references";
-import type { ArchivePayload, PostRecord } from "./types";
+import type { ArchivePayload, PillarId, PostRecord } from "./types";
 import {
   effectiveTimestamp,
   formatLastUpdated,
@@ -27,6 +27,25 @@ type Theme = "light" | "dark";
 
 const THEME_STORAGE_KEY = "ml-infra-blogs-theme";
 const PAGE_SIZE = 20;
+
+const TOPIC_PILLARS: readonly { id: PillarId; label: string }[] = [
+  { id: "inference", label: "Inference & Serving" },
+  { id: "training", label: "Training & RL" },
+  { id: "hardware", label: "Hardware & Silicon" },
+  { id: "systems", label: "Clusters, Sandboxes & Storage" },
+  { id: "agents", label: "Agents, Harnesses & Evals" },
+];
+
+const TOPIC_LABEL_MAP = new Map<PillarId, string>(
+  TOPIC_PILLARS.map((item) => [item.id, item.label]),
+);
+
+function isPostFiltered(post: PostRecord): boolean {
+  if (Array.isArray(post.topics)) {
+    return post.topics.length === 0;
+  }
+  return post.label === "drop";
+}
 
 function getPaginationItems(current: number, total: number): (number | "ellipsis")[] {
   if (total <= 7) {
@@ -113,8 +132,10 @@ export function App() {
 
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedSource, setSelectedSource] = useState("all");
+  const [selectedTopics, setSelectedTopics] = useState<PillarId[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [referencesOpen, setReferencesOpen] = useState(false);
+  const [showFiltered, setShowFiltered] = useState(false);
 
   const searchInputRef = useRef<HTMLInputElement>(null);
 
@@ -177,7 +198,7 @@ export function App() {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchQuery, selectedSource]);
+  }, [searchQuery, selectedSource, selectedTopics, showFiltered]);
 
   const referenceMs = useMemo(() => {
     if (payload?.generated_at) {
@@ -197,14 +218,44 @@ export function App() {
 
   const trimmedQuery = searchQuery.trim();
 
+  const droppedCount = useMemo(
+    () => (payload?.posts ?? []).reduce((count, post) => count + (isPostFiltered(post) ? 1 : 0), 0),
+    [payload?.posts],
+  );
+
+  const visiblePosts = useMemo(() => {
+    const posts = payload?.posts ?? [];
+    if (showFiltered) return posts;
+    return posts.filter((post) => !isPostFiltered(post));
+  }, [payload?.posts, showFiltered]);
+
+  const visibleSourceCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const post of visiblePosts) {
+      counts.set(post.source_id, (counts.get(post.source_id) ?? 0) + 1);
+    }
+    return counts;
+  }, [visiblePosts]);
+
+  const visibleTopicCounts = useMemo(() => {
+    const counts = new Map<PillarId, number>();
+    for (const post of visiblePosts) {
+      if (selectedSource !== "all" && post.source_id !== selectedSource) continue;
+      for (const topic of post.topics ?? []) {
+        counts.set(topic, (counts.get(topic) ?? 0) + 1);
+      }
+    }
+    return counts;
+  }, [visiblePosts, selectedSource]);
+
   const searchIndex = useMemo(
     () =>
-      createSearchIndex(payload?.posts ?? [], ["title", "summary", "source_name"], {
+      createSearchIndex(visiblePosts, ["title", "summary", "source_name"], {
         title: 3,
         source_name: 2,
         summary: 1,
       }),
-    [payload?.posts],
+    [visiblePosts],
   );
 
   const referenceIndex = useMemo(
@@ -218,21 +269,21 @@ export function App() {
   );
 
   const filteredReferences = useMemo(() => {
-    if (selectedSource !== "all") return [];
+    if (selectedSource !== "all" || selectedTopics.length > 0) return [];
     if (!trimmedQuery) return PINNED_REFERENCES;
     return querySearchIndex(referenceIndex, trimmedQuery);
-  }, [referenceIndex, selectedSource, trimmedQuery]);
+  }, [referenceIndex, selectedSource, selectedTopics, trimmedQuery]);
 
   const filteredPosts = useMemo(() => {
     if (!payload) return [];
-    if (!trimmedQuery) {
-      if (selectedSource === "all") return payload.posts;
-      return payload.posts.filter((post) => post.source_id === selectedSource);
-    }
-    return querySearchIndex(searchIndex, trimmedQuery).filter(
-      (post) => selectedSource === "all" || post.source_id === selectedSource,
-    );
-  }, [payload, searchIndex, selectedSource, trimmedQuery]);
+    const base = trimmedQuery ? querySearchIndex(searchIndex, trimmedQuery) : visiblePosts;
+    return base.filter((post) => {
+      if (selectedSource !== "all" && post.source_id !== selectedSource) return false;
+      if (selectedTopics.length === 0) return true;
+      const postTopics = post.topics ?? [];
+      return selectedTopics.some((t) => postTopics.includes(t));
+    });
+  }, [payload, searchIndex, selectedSource, selectedTopics, trimmedQuery, visiblePosts]);
 
   const totalPages = Math.max(1, Math.ceil(filteredPosts.length / PAGE_SIZE));
   const safePage = Math.min(currentPage, totalPages);
@@ -279,9 +330,16 @@ export function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const toggleTopic = (topicId: PillarId) => {
+    setSelectedTopics((prev) =>
+      prev.includes(topicId) ? prev.filter((item) => item !== topicId) : [...prev, topicId],
+    );
+  };
+
   const clearFilters = () => {
     setSearchQuery("");
     setSelectedSource("all");
+    setSelectedTopics([]);
   };
 
   return (
@@ -331,9 +389,9 @@ export function App() {
             </button>
           </div>
 
-          <div className="mt-2.5 flex items-center gap-2.5">
+          <div className="mt-2.5 flex flex-wrap items-center gap-2 sm:flex-nowrap sm:gap-2.5">
             {/* Search Box */}
-            <div className="relative min-w-0 flex-1">
+            <div className="relative min-w-[200px] flex-1">
               <Search className="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-slate-400" />
               <input
                 ref={searchInputRef}
@@ -362,13 +420,72 @@ export function App() {
               onChange={(e) => setSelectedSource(e.target.value)}
               className="max-w-[160px] shrink-0 cursor-pointer rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs font-medium text-slate-800 focus:border-sky-500 focus:outline-none sm:max-w-none dark:border-slate-700/80 dark:bg-slate-950 dark:text-slate-200"
             >
-              <option value="all">All Sources ({payload?.posts.length ?? 0})</option>
+              <option value="all">All Sources ({visiblePosts.length})</option>
               {sortedSources.map((src) => (
                 <option key={src.id} value={src.id}>
-                  {src.name} ({src.total_count})
+                  {src.name} ({visibleSourceCounts.get(src.id) ?? 0})
                 </option>
               ))}
             </select>
+
+            {droppedCount > 0 && (
+              <button
+                type="button"
+                onClick={() => setShowFiltered((prev) => !prev)}
+                aria-pressed={showFiltered}
+                title={
+                  showFiltered
+                    ? "Hide non-AI and promotional posts"
+                    : `Show ${droppedCount} filtered non-AI/promotional posts`
+                }
+                className={`shrink-0 cursor-pointer rounded-xl border px-3 py-2 text-xs font-medium whitespace-nowrap transition ${
+                  showFiltered
+                    ? "border-sky-500/40 bg-sky-500/12 text-sky-700 dark:border-sky-400/40 dark:bg-sky-400/15 dark:text-sky-300"
+                    : "border-slate-200 bg-white text-slate-600 hover:border-sky-400 hover:text-slate-900 dark:border-slate-700/80 dark:bg-slate-950 dark:text-slate-300 dark:hover:border-sky-600 dark:hover:text-white"
+                }`}
+              >
+                {showFiltered ? `All (+${droppedCount})` : `Filtered (${droppedCount})`}
+              </button>
+            )}
+          </div>
+
+          <div
+            role="group"
+            aria-label="Filter by topic pillar"
+            className="mt-2 flex flex-wrap items-center gap-1.5"
+          >
+            <button
+              type="button"
+              onClick={() => setSelectedTopics([])}
+              aria-pressed={selectedTopics.length === 0}
+              className={`cursor-pointer rounded-lg border px-2.5 py-1 text-xs font-medium transition ${
+                selectedTopics.length === 0
+                  ? "border-sky-500/45 bg-sky-500/12 text-sky-700 dark:border-sky-400/45 dark:bg-sky-400/15 dark:text-sky-300"
+                  : "border-slate-200 bg-white text-slate-600 hover:border-sky-400 hover:text-slate-900 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-400 dark:hover:border-sky-600 dark:hover:text-slate-200"
+              }`}
+            >
+              All Topics
+            </button>
+            {TOPIC_PILLARS.map((pillar) => {
+              const active = selectedTopics.includes(pillar.id);
+              const count = visibleTopicCounts.get(pillar.id) ?? 0;
+              return (
+                <button
+                  key={pillar.id}
+                  type="button"
+                  onClick={() => toggleTopic(pillar.id)}
+                  aria-pressed={active}
+                  className={`cursor-pointer rounded-lg border px-2.5 py-1 text-xs font-medium transition ${
+                    active
+                      ? "border-sky-500/45 bg-sky-500/12 text-sky-700 dark:border-sky-400/45 dark:bg-sky-400/15 dark:text-sky-300"
+                      : "border-slate-200 bg-white text-slate-600 hover:border-sky-400 hover:text-slate-900 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-400 dark:hover:border-sky-600 dark:hover:text-slate-200"
+                  }`}
+                >
+                  {pillar.label}{" "}
+                  <span className="text-[11px] opacity-75 tabular-nums">({count})</span>
+                </button>
+              );
+            })}
           </div>
         </div>
       </header>
@@ -542,6 +659,19 @@ function PostRow({
           {isRecent && (
             <span className="rounded-full bg-emerald-500/15 px-2 py-0.5 text-[10px] font-semibold text-emerald-700 dark:bg-emerald-400/15 dark:text-emerald-300">
               New
+            </span>
+          )}
+          {(post.topics ?? []).map((topicId) => (
+            <span
+              key={topicId}
+              className="rounded-full bg-sky-500/12 px-2 py-0.5 text-[10px] font-medium text-sky-700 dark:bg-sky-400/12 dark:text-sky-300"
+            >
+              {TOPIC_LABEL_MAP.get(topicId) ?? topicId}
+            </span>
+          ))}
+          {isPostFiltered(post) && (
+            <span className="rounded-full bg-slate-500/12 px-2 py-0.5 text-[10px] font-medium text-slate-500 dark:bg-slate-400/12 dark:text-slate-400">
+              Filtered
             </span>
           )}
         </div>

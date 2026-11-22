@@ -201,6 +201,94 @@ class UpdaterTests(unittest.TestCase):
             by_id2 = {p["id"]: p for p in second["posts"]}
             self.assertIn("Full Article Section", by_id2["thin1"]["excerpt"])
 
+    def test_classifier_tags_new_posts_and_reclassify_updates_existing(self) -> None:
+        from app.classifier import ClassificationResult
+
+        class FakeClassifier:
+            def __init__(self, topics_by_title: dict[str, list[str]]) -> None:
+                self.topics_by_title = topics_by_title
+                self.calls: list[list[tuple[str, str]]] = []
+
+            def predict_batch(self, items):
+                self.calls.append(list(items))
+                return [
+                    ClassificationResult(
+                        topics=self.topics_by_title.get(title, ["inference"]),
+                        probabilities={"inference": 0.9, "training": 0.1, "hardware": 0.1, "systems": 0.1, "agents": 0.1},
+                    )
+                    for title, _summary in items
+                ]
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            cfg = root / "sources.yaml"
+            archive = root / "data" / "posts.json"
+            export_dir = root / "public" / "data"
+            cfg.write_text(
+                "\n".join(SAMPLE_CONFIG.splitlines()[:7]) + "\n",
+                encoding="utf-8",
+            )
+            responses = {
+                "https://vllm.ai/blog/rss.xml": """<?xml version="1.0"?>
+                    <rss version="2.0"><channel>
+                      <item>
+                        <title>Kernel Deep Dive</title>
+                        <link>https://vllm.ai/blog/kernel</link>
+                        <pubDate>Thu, 12 Nov 2026 08:00:00 GMT</pubDate>
+                      </item>
+                      <item>
+                        <title>Series B Funding</title>
+                        <link>https://vllm.ai/blog/funding</link>
+                        <pubDate>Wed, 11 Nov 2026 08:00:00 GMT</pubDate>
+                      </item>
+                    </channel></rss>"""
+            }
+
+            clf1 = FakeClassifier({"Kernel Deep Dive": ["inference", "hardware"], "Series B Funding": []})
+            first = run_update(
+                config_path=cfg,
+                archive_path=archive,
+                export_dir=export_dir,
+                http_get=responses.__getitem__,
+                classifier=clf1,
+            )
+            self.assertEqual(len(clf1.calls), 1)
+            self.assertEqual(len(clf1.calls[0]), 2)
+            by_url1 = {p["url"]: p for p in first["posts"]}
+            self.assertEqual(by_url1["https://vllm.ai/blog/kernel"]["label"], "infra")
+            self.assertEqual(by_url1["https://vllm.ai/blog/kernel"]["topics"], ["inference", "hardware"])
+            self.assertEqual(by_url1["https://vllm.ai/blog/funding"]["label"], "drop")
+            self.assertEqual(by_url1["https://vllm.ai/blog/funding"]["topics"], [])
+
+            # Existing posts keep persisted labels/topics when no new posts arrive.
+            clf2 = FakeClassifier({"Kernel Deep Dive": ["training"], "Series B Funding": ["systems"]})
+            second = run_update(
+                config_path=cfg,
+                archive_path=archive,
+                export_dir=export_dir,
+                http_get=responses.__getitem__,
+                classifier=clf2,
+            )
+            self.assertEqual(clf2.calls, [])
+            by_url2 = {p["url"]: p for p in second["posts"]}
+            self.assertEqual(by_url2["https://vllm.ai/blog/funding"]["label"], "drop")
+            self.assertEqual(by_url2["https://vllm.ai/blog/funding"]["topics"], [])
+
+            # Explicit reclassify=True re-scores archived posts.
+            reclassified = run_update(
+                config_path=cfg,
+                archive_path=archive,
+                export_dir=export_dir,
+                from_archive=True,
+                reclassify=True,
+                classifier=clf2,
+            )
+            self.assertEqual(len(clf2.calls), 1)
+            by_url3 = {p["url"]: p for p in reclassified["posts"]}
+            self.assertEqual(by_url3["https://vllm.ai/blog/kernel"]["topics"], ["training"])
+            self.assertEqual(by_url3["https://vllm.ai/blog/funding"]["label"], "infra")
+            self.assertEqual(by_url3["https://vllm.ai/blog/funding"]["topics"], ["systems"])
+
 
 if __name__ == "__main__":
     unittest.main()

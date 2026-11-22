@@ -1,3 +1,12 @@
+export type PillarId =
+  | "inference"
+  | "training"
+  | "hardware"
+  | "systems"
+  | "agents";
+
+export type PostLabel = "infra" | "drop";
+
 export interface SourceSummary {
   id: string;
   name: string;
@@ -13,6 +22,8 @@ export interface PostRecord {
   summary: string;
   published_at: string | null;
   first_seen: string;
+  label?: PostLabel;
+  topics?: PillarId[];
 }
 
 export interface ArchivePayload {

@@ -1,0 +1,18 @@
+{
+  "pillars": [
+    "inference",
+    "training",
+    "hardware",
+    "systems",
+    "agents"
+  ],
+  "max_length": 512,
+  "keep_threshold": 0.2,
+  "pillar_thresholds": {
+    "inference": 0.75,
+    "training": 0.75,
+    "hardware": 0.55,
+    "systems": 0.55,
+    "agents": 0.4
+  }
+}

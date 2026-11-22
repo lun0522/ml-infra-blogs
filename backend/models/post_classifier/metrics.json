@@ -1,0 +1,85 @@
+{
+  "trained_at": "2026-11-22T07:14:08Z",
+  "base_model": "BAAI/bge-small-en-v1.5",
+  "architecture": "cls_mean_5pillar_multilabel",
+  "aux_binary_weight": 0.5,
+  "aux_keep_weight": 2.0,
+  "dataset_size": 866,
+  "pillar_counts": {
+    "inference": 237,
+    "training": 110,
+    "hardware": 163,
+    "systems": 135,
+    "agents": 100
+  },
+  "filtered_count": 389,
+  "keep_threshold": 0.2,
+  "pillar_thresholds": {
+    "inference": 0.75,
+    "training": 0.75,
+    "hardware": 0.55,
+    "systems": 0.55,
+    "agents": 0.4
+  },
+  "cv": {
+    "cv_folds": 5,
+    "keep_drop_roc_auc": 0.9354,
+    "at_0_50_operating_point": {
+      "binary_keep_drop_accuracy": 0.8591
+    },
+    "binary_keep_drop_accuracy": 0.8037,
+    "keep_false_drop_rate": 0.0335,
+    "drop_recall": 0.6041,
+    "drop_precision": 0.9363,
+    "pillar_micro_f1": 0.6426,
+    "pillar_macro_f1": 0.6291,
+    "per_pillar": {
+      "inference": {
+        "threshold": 0.75,
+        "roc_auc": 0.9105,
+        "precision": 0.7468,
+        "recall": 0.7468,
+        "f1": 0.7468,
+        "support": 237
+      },
+      "training": {
+        "threshold": 0.75,
+        "roc_auc": 0.905,
+        "precision": 0.69,
+        "recall": 0.6273,
+        "f1": 0.6571,
+        "support": 110
+      },
+      "hardware": {
+        "threshold": 0.55,
+        "roc_auc": 0.8948,
+        "precision": 0.5662,
+        "recall": 0.7607,
+        "f1": 0.6492,
+        "support": 163
+      },
+      "systems": {
+        "threshold": 0.55,
+        "roc_auc": 0.8702,
+        "precision": 0.5131,
+        "recall": 0.7259,
+        "f1": 0.6012,
+        "support": 135
+      },
+      "agents": {
+        "threshold": 0.4,
+        "roc_auc": 0.8401,
+        "precision": 0.3873,
+        "recall": 0.67,
+        "f1": 0.4908,
+        "support": 100
+      }
+    }
+  },
+  "export": {
+    "model_size_mb": 44.32,
+    "quantization_keep_parity": 0.96875,
+    "quantization_topic_parity": 0.96875,
+    "quantization_max_prob_diff": 0.06935
+  }
+}
