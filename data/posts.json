@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-22T00:20:37Z",
-  "last_new_count": 3,
+  "generated_at": "2026-11-22T00:22:52Z",
+  "last_new_count": 0,
   "sources": [
     {
       "id": "vllm",
@@ -13,7 +13,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "lmsys",
@@ -26,7 +26,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "modal",
@@ -39,7 +39,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "baseten",
@@ -52,7 +52,7 @@
       "fetched_count": 12,
       "new_count": 0,
       "total_count": 16,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "fireworks",
@@ -65,7 +65,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 17,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "together",
@@ -78,7 +78,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "anyscale",
@@ -91,7 +91,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "skypilot",
@@ -104,7 +104,7 @@
       "fetched_count": 12,
       "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "crusoe",
@@ -117,7 +117,7 @@
       "fetched_count": 12,
       "new_count": 0,
       "total_count": 16,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "pytorch",
@@ -130,7 +130,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "nvidia",
@@ -143,7 +143,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "modular",
@@ -156,7 +156,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "timdettmers",
@@ -169,7 +169,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "thinkingmachines-blog",
@@ -182,7 +182,7 @@
       "fetched_count": 8,
       "new_count": 0,
       "total_count": 8,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "humansand",
@@ -195,7 +195,7 @@
       "fetched_count": 3,
       "new_count": 0,
       "total_count": 3,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "anthropic-eng",
@@ -208,7 +208,7 @@
       "fetched_count": 24,
       "new_count": 0,
       "total_count": 24,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "lilianweng",
@@ -221,7 +221,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "aleksagordic",
@@ -234,7 +234,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 15,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "semianalysis",
@@ -247,7 +247,7 @@
       "fetched_count": 20,
       "new_count": 0,
       "total_count": 20,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "cloudflare",
@@ -260,7 +260,7 @@
       "fetched_count": 20,
       "new_count": 0,
       "total_count": 26,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "netpreme",
@@ -273,7 +273,7 @@
       "fetched_count": 5,
       "new_count": 0,
       "total_count": 5,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "periodic",
@@ -286,7 +286,7 @@
       "fetched_count": 4,
       "new_count": 0,
       "total_count": 4,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "flashinfer",
@@ -297,9 +297,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 10,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "primeintellect",
@@ -312,7 +312,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "openai-eng",
@@ -325,7 +325,7 @@
       "fetched_count": 25,
       "new_count": 0,
       "total_count": 25,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "gimlet",
@@ -338,7 +338,7 @@
       "fetched_count": 16,
       "new_count": 0,
       "total_count": 16,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "cerebras",
@@ -349,9 +349,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 2,
+      "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "turbopuffer",
@@ -364,7 +364,7 @@
       "fetched_count": 17,
       "new_count": 0,
       "total_count": 17,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "friendli",
@@ -377,7 +377,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "fal",
@@ -390,7 +390,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 15,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "nebius",
@@ -403,7 +403,7 @@
       "fetched_count": 12,
       "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "lambda",
@@ -416,7 +416,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     },
     {
       "id": "e2b",
@@ -429,7 +429,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-22T00:20:37Z"
+      "last_checked": "2026-11-22T00:22:52Z"
     }
   ],
   "posts": [
