@@ -74,11 +74,23 @@ BOILERPLATE_PHRASES = (
     "cookie policy",
     "accept all cookies",
     "all rights reserved",
+    "cerebras powers the world's fastest ai inference",
 )
 LEAD_SKIP_RE = re.compile(
-    r"^(?:special thanks to\b|thanks to .+?\bfor (?:feedback|review|edits?|comments?)|authors\s*[—:-]|this form requires javascript)",
+    r"^(?:special thanks to\b|thanks to .+?\bfor (?:feedback|review|edits?|comments?)|authors\s*[—:-]|this form requires javascript|originally\s+(?:published|posted)\b|with\s+contributions?\s+from\b)",
     re.I,
 )
+BYLINE_RE = re.compile(
+    r"^By\s+[A-Z][A-Za-z.'-]+(?:\s+[A-Z][A-Za-z.'-]+){1,3}(?:\s*,\s*[^.!?\n]{2,60})?$"
+)
+
+
+def is_lead_skip_text(text: str | None) -> bool:
+    """Return True for author bylines, thank-you prefaces, or cross-post/JS notices."""
+    if not text:
+        return False
+    stripped = text.strip()
+    return bool(LEAD_SKIP_RE.search(stripped) or BYLINE_RE.match(stripped))
 CHROME_HEADINGS = {
     "ai-generated summary",
     "next steps",
@@ -291,7 +303,7 @@ def parse_rss_entries(xml_text: str, source: SourceConfig) -> list[RawPost]:
                 has_heading=bool(title and title != url),
             )
             or len(excerpt.strip()) < MIN_ENRICHED_EXCERPT_LEN
-            or bool(LEAD_SKIP_RE.search(summary))
+            or is_lead_skip_text(summary)
         )
 
         posts.append(
@@ -491,6 +503,13 @@ def extract_article_details(
     url: str,
 ) -> tuple[str | None, str | None, str | None, str]:
     """Extract (title, published_at, summary, excerpt) from an article HTML page."""
+    return _extract_article_details_with_lead(html_text, url)[:4]
+
+
+def _extract_article_details_with_lead(
+    html_text: str,
+    url: str,
+) -> tuple[str | None, str | None, str | None, str, str | None]:
     soup = BeautifulSoup(html_text, "html.parser")
     title: str | None = None
     published_at: str | None = extract_date_from_url(url)
@@ -543,24 +562,26 @@ def extract_article_details(
             if published_at:
                 break
 
-    if not title:
+    if not title or _is_brand_title(title, url):
         h1 = soup.find("h1")
-        if h1:
-            title = clean_text(h1.get_text(" ", strip=True), max_len=200)
-    if not title and soup.title:
-        title = _strip_site_suffix(clean_text(soup.title.get_text(" ", strip=True), max_len=200))
+        h1_title = clean_text(h1.get_text(" ", strip=True), max_len=200) if h1 else ""
+        if h1_title and (not title or not _is_brand_title(h1_title, url)):
+            title = h1_title
+        elif not title and soup.title:
+            title = _strip_site_suffix(clean_text(soup.title.get_text(" ", strip=True), max_len=200))
 
     lead_paragraph, body_excerpt = _extract_structured_body(_select_content_root(soup), title)
     if (
         meta_summary
         and not _is_stub_text(meta_summary, title, min_len=80)
-        and not LEAD_SKIP_RE.search(meta_summary)
+        and not is_lead_skip_text(meta_summary)
+        and not any(phrase in meta_summary.lower() for phrase in BOILERPLATE_PHRASES)
     ):
         summary = meta_summary
     else:
         summary = lead_paragraph or meta_summary
     excerpt = body_excerpt or (summary or "")
-    return title, published_at, summary, excerpt
+    return title, published_at, summary, excerpt, lead_paragraph
 
 
 def should_upgrade_summary(
@@ -569,11 +590,11 @@ def should_upgrade_summary(
     title: str | None = None,
 ) -> bool:
     """Return True if candidate_summary meaningfully improves an empty, stub, or boilerplate summary."""
-    if not candidate_summary or LEAD_SKIP_RE.search(candidate_summary):
+    if not candidate_summary or is_lead_skip_text(candidate_summary):
         return False
     if not existing_summary:
         return True
-    if LEAD_SKIP_RE.search(existing_summary):
+    if is_lead_skip_text(existing_summary):
         return True
     return _is_stub_text(existing_summary, title, min_len=STUB_SUMMARY_MAX_LEN) and len(
         candidate_summary
@@ -683,13 +704,15 @@ def _is_boilerplate_para(text: str, title: str | None) -> bool:
     low = text.lower()
     if len(text) < 45:
         return True
+    if text.count(" | ") >= 3:
+        return True
     if title:
         low_t = title.lower()
         if low == low_t or low_t.endswith(low) or low in low_t:
             return True
     if any(phrase in low for phrase in BOILERPLATE_PHRASES):
         return True
-    if LEAD_SKIP_RE.search(text):
+    if is_lead_skip_text(text):
         return True
     return False
 
@@ -733,7 +756,14 @@ def _extract_structured_body(root: Tag, title: str | None) -> tuple[str | None, 
         if sum(len(x) for x in paras) >= EXCERPT_MAX_LEN:
             break
 
-    lead = clean_text(paras[0], max_len=SUMMARY_MAX_LEN) if paras else None
+    lead: str | None = None
+    if paras:
+        merged = [paras[0]]
+        idx = 1
+        while sum(len(x) for x in merged) < 80 and idx < len(paras):
+            merged.append(paras[idx])
+            idx += 1
+        lead = clean_text(" ".join(merged), max_len=SUMMARY_MAX_LEN)
     parts: list[str] = []
     if headings:
         parts.append("Sections: " + " | ".join(headings))
@@ -775,6 +805,32 @@ def _opt_clean(value: object, max_len: int) -> str | None:
     return cleaned or None
 
 
+def _is_brand_title(title: str | None, url: str) -> bool:
+    """Detect bare single-brand titles (e.g. 'Cerebras' on cerebras.ai) that hide an h1 headline."""
+    if not title:
+        return True
+    t_norm = re.sub(r"[^a-z0-9]", "", title.lower())
+    if not t_norm:
+        return True
+    host = urllib.parse.urlsplit(url).netloc.lower()
+    if host.startswith("www."):
+        host = host[4:]
+    brand = host.split(".")[0] if host else ""
+    return bool(brand) and t_norm == brand
+
+
+def prose_lead_from_excerpt(excerpt: str, title: str | None = None) -> str | None:
+    """Return the first prose paragraph from an excerpt, skipping any 'Sections:' header."""
+    for raw_line in excerpt.splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("Sections:"):
+            continue
+        if _is_boilerplate_para(line, title):
+            continue
+        return clean_text(line, max_len=SUMMARY_MAX_LEN)
+    return None
+
+
 def _strip_site_suffix(title: str) -> str:
     return re.split(r"\s+[|\-–—\\]\s+(?=[^|\-–—\\]+$)", title, maxsplit=1)[0].strip()
 
@@ -797,13 +853,14 @@ def fetch_source_posts(
 
     canonical_seen = {canonical_key(k) for k in seen_keys}
     enriched: list[RawPost] = []
+    prose_leads: dict[str, str] = {}
     for post in raw_posts:
         key = canonical_key(post.url)
         if post.needs_enrichment and key not in canonical_seen:
             try:
                 article_html = get_text(post.url)
-                meta_title, meta_date, meta_summary, meta_excerpt = extract_article_details(
-                    article_html, post.url
+                meta_title, meta_date, meta_summary, meta_excerpt, meta_lead = (
+                    _extract_article_details_with_lead(article_html, post.url)
                 )
                 post.title = meta_title or post.title
                 post.published_at = post.published_at or meta_date
@@ -812,6 +869,8 @@ def fetch_source_posts(
                     post.summary = meta_summary
                 if meta_excerpt and len(meta_excerpt) > len(post.excerpt):
                     post.excerpt = meta_excerpt
+                if meta_lead:
+                    prose_leads[key] = meta_lead
             except Exception:
                 # Keep card-level fallback data if an individual article fetch fails.
                 pass
@@ -819,6 +878,23 @@ def fetch_source_posts(
         if not post.excerpt:
             post.excerpt = post.summary
         enriched.append(post)
+
+    # Replace sitewide boilerplate meta descriptions repeated across multiple posts.
+    summary_counts: dict[str, int] = {}
+    for post in enriched:
+        key_sum = post.summary.strip()
+        if key_sum:
+            summary_counts[key_sum] = summary_counts.get(key_sum, 0) + 1
+    dup_sums = {s for s, count in summary_counts.items() if count >= 2}
+    if dup_sums:
+        for post in enriched:
+            if post.summary.strip() in dup_sums:
+                lead = prose_leads.get(canonical_key(post.url)) or prose_lead_from_excerpt(
+                    post.excerpt, post.title
+                )
+                if lead and lead.strip() not in dup_sums:
+                    post.summary = lead
+
     return enriched
 
 

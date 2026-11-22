@@ -176,3 +176,88 @@ sources:
     url_pattern: ^https://periodic\.com/news/[^/?#]+/?$
     exclude_pattern: ^https://periodic\.com/news/?$
     max_items: 50
+
+  - id: flashinfer
+    name: FlashInfer
+    homepage: https://flashinfer.ai/
+    mode: rss
+    feed_url: https://flashinfer.ai/feed.xml
+    max_items: 50
+
+  - id: primeintellect
+    name: Prime Intellect
+    homepage: https://www.primeintellect.ai/blog
+    mode: sitemap
+    sitemap_url: https://www.primeintellect.ai/sitemap.xml
+    url_pattern: ^https://www\.primeintellect\.ai/blog/[^/?#]+/?$
+    max_items: 50
+
+  - id: openai-eng
+    name: OpenAI Engineering
+    homepage: https://openai.com/news/engineering/
+    mode: rss
+    feed_url: https://openai.com/news/engineering/rss.xml
+    max_items: 50
+
+  - id: gimlet
+    name: Gimlet Labs
+    homepage: https://gimletlabs.ai/blog
+    mode: html_links
+    index_url: https://gimletlabs.ai/blog
+    url_pattern: ^https://gimletlabs\.ai/blog/[^/?#]+/?$
+    exclude_pattern: ^https://gimletlabs\.ai/blog/?$
+    max_items: 50
+
+  - id: cerebras
+    name: Cerebras
+    homepage: https://www.cerebras.ai/blog
+    mode: sitemap
+    sitemap_url: https://www.cerebras.ai/sitemap.xml
+    url_pattern: ^https://www\.cerebras\.ai/blog/[^/?#]+/?$
+    max_items: 50
+
+  - id: turbopuffer
+    name: Turbopuffer
+    homepage: https://turbopuffer.com/blog
+    mode: rss
+    feed_url: https://turbopuffer.com/blog/rss.xml
+    exclude_pattern: ^https://turbopuffer\.com/blog/(?:video|podcast)-
+    max_items: 50
+
+  - id: friendli
+    name: FriendliAI
+    homepage: https://friendli.ai/blog
+    mode: html_links
+    index_url: https://friendli.ai/blog
+    url_pattern: ^https://(?:www\.)?friendli\.ai/blog/[^/?#]+/?$
+    exclude_pattern: ^https://(?:www\.)?friendli\.ai/blog/?$
+    max_items: 50
+
+  - id: fal
+    name: fal
+    homepage: https://blog.fal.ai/
+    mode: rss
+    feed_url: https://blog.fal.ai/rss/
+    max_items: 50
+
+  - id: nebius
+    name: Nebius
+    homepage: https://nebius.com/blog
+    mode: html_links
+    index_url: https://nebius.com/blog
+    url_pattern: ^https://nebius\.com/blog/posts/[^/?#]+/?$
+    max_items: 50
+
+  - id: lambda
+    name: Lambda
+    homepage: https://lambda.com/blog
+    mode: rss
+    feed_url: https://lambda.com/blog/rss.xml
+    max_items: 50
+
+  - id: e2b
+    name: E2B
+    homepage: https://e2b.dev/blog
+    mode: rss
+    feed_url: https://e2b.dev/rss.xml
+    max_items: 50

@@ -394,6 +394,67 @@ class ExtractorTests(unittest.TestCase):
         )
         self.assertIn("Sections: Kernel Dispatch", posts[2].excerpt)
 
+    def test_brand_title_byline_skip_and_duplicate_sitewide_summary_recovery(self) -> None:
+        sitemap_xml = """<?xml version="1.0" encoding="UTF-8"?>
+        <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+          <url><loc>https://www.cerebras.ai/blog/moe-guide-calculator</loc><lastmod>2026-10-22</lastmod></url>
+          <url><loc>https://www.cerebras.ai/blog/wafer-yield</loc><lastmod>2026-10-21</lastmod></url>
+        </urlset>"""
+        page1 = """<html><head>
+          <meta property="og:title" content="Cerebras" />
+          <meta property="og:description" content="Generic sitewide marketing slogan repeated across all pages." />
+        </head><body><article>
+          <h1>MoE Math Demystified</h1>
+          <h2>Compute Balance</h2>
+          <p>MoE Fundamentals | Router Wars | Debugging | MoE at Scale</p>
+          <p>By Ryan Lopopolo, Member of the Technical Staff</p>
+          <p>What does 8x7B actually mean when computing active parameter counts and KV-cache memory?</p>
+        </article></body></html>"""
+        page2 = """<html><head>
+          <meta property="og:title" content="Wafer-Scale Chip Yield" />
+          <meta property="og:description" content="Generic sitewide marketing slogan repeated across all pages." />
+        </head><body><article>
+          <h1>Wafer-Scale Chip Yield</h1>
+          <h2>Redundancy</h2>
+          <p>Originally published October 6th on my personal blog.</p>
+          <p>With contributions from Sherif Cherfa and Halley Chang.</p>
+          <p>MCP had a formative year. Then it had a turbulent week.</p>
+          <p>By contrast, wafer-scale integration builds redundancy directly into the die interconnect fabric.</p>
+        </article></body></html>"""
+        src = SourceConfig(
+            id="cerebras",
+            name="Cerebras",
+            homepage="https://www.cerebras.ai/blog",
+            mode="sitemap",
+            sitemap_url="https://www.cerebras.ai/sitemap.xml",
+            url_pattern=r"^https://www\.cerebras\.ai/blog/[^/?#]+/?$",
+        )
+
+        def fake_get(url: str) -> str:
+            if url == "https://www.cerebras.ai/sitemap.xml":
+                return sitemap_xml
+            if url == "https://www.cerebras.ai/blog/moe-guide-calculator":
+                return page1
+            if url == "https://www.cerebras.ai/blog/wafer-yield":
+                return page2
+            raise AssertionError(f"Unexpected fetch: {url}")
+
+        posts = fetch_source_posts(fake_get, src, seen_keys=set())
+        self.assertEqual(len(posts), 2)
+        self.assertEqual(posts[0].title, "MoE Math Demystified")
+        self.assertEqual(
+            posts[0].summary,
+            "What does 8x7B actually mean when computing active parameter counts and KV-cache memory?",
+        )
+        self.assertNotIn("MoE Fundamentals | Router Wars", posts[0].excerpt)
+        self.assertNotIn("By Ryan Lopopolo", posts[0].excerpt)
+        self.assertEqual(posts[1].title, "Wafer-Scale Chip Yield")
+        self.assertEqual(
+            posts[1].summary,
+            "MCP had a formative year. Then it had a turbulent week. By contrast, wafer-scale integration builds redundancy directly into the die interconnect fabric.",
+        )
+        self.assertNotIn("With contributions from", posts[1].excerpt)
+
 
 if __name__ == "__main__":
     unittest.main()

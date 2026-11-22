@@ -10,18 +10,18 @@ from typing import Any, Callable
 
 from .config import load_config
 from .extractors import (
-    LEAD_SKIP_RE,
     MIN_ENRICHED_EXCERPT_LEN,
     build_http_client,
     canonical_key,
     extract_article_details,
     fetch_source_posts,
+    is_lead_skip_text,
     post_id_for_url,
     should_upgrade_summary,
 )
 from .models import PostRecord, RawPost, SourceConfig, SourceHealth
 
-DEFAULT_MAX_ARCHIVE_POSTS = 1200
+DEFAULT_MAX_ARCHIVE_POSTS = 2000
 
 
 def utc_now_iso() -> str:
@@ -143,7 +143,7 @@ def _fetch_and_merge(
             not refresh_thin_excerpts
             or (
                 len(post.excerpt) >= MIN_ENRICHED_EXCERPT_LEN
-                and not LEAD_SKIP_RE.search(post.summary)
+                and not is_lead_skip_text(post.summary)
             )
         )
     }
@@ -298,7 +298,7 @@ def _backfill_archived_excerpts(
                 refresh_thin_excerpts
                 and (
                     len(post.excerpt) < MIN_ENRICHED_EXCERPT_LEN
-                    or bool(LEAD_SKIP_RE.search(post.summary))
+                    or is_lead_skip_text(post.summary)
                 )
             )
         )
