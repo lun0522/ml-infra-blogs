@@ -3,6 +3,7 @@ import MiniSearch from "minisearch";
 import {
   AlertCircle,
   Bookmark,
+  Check,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
@@ -24,6 +25,7 @@ import {
 } from "./utils/format";
 
 type Theme = "light" | "dark";
+type TopicFilter = PillarId | "all" | "filtered";
 
 const THEME_STORAGE_KEY = "ml-infra-blogs-theme";
 const PAGE_SIZE = 20;
@@ -122,6 +124,138 @@ function querySearchIndex<T extends { id: string }>(
   return matches;
 }
 
+interface SourceDropdownProps {
+  value: string;
+  totalCount: number;
+  sources: Array<{ id: string; name: string }>;
+  sourceCounts: Map<string, number>;
+  onChange: (value: string) => void;
+}
+
+function SourceDropdown({
+  value,
+  totalCount,
+  sources,
+  sourceCounts,
+  onChange,
+}: SourceDropdownProps) {
+  const [open, setOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    function handleMouseDown(e: MouseEvent) {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    }
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleMouseDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", handleMouseDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [open]);
+
+  const activeSource = value === "all" ? null : sources.find((s) => s.id === value);
+  const activeLabel = activeSource ? activeSource.name : "All Sources";
+  const activeCount = activeSource ? (sourceCounts.get(activeSource.id) ?? 0) : totalCount;
+
+  const selectOption = (nextValue: string) => {
+    onChange(nextValue);
+    setOpen(false);
+  };
+
+  return (
+    <div ref={containerRef} className="relative w-full shrink-0 sm:w-56">
+      <button
+        type="button"
+        aria-label="Filter by blog source"
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        onClick={() => setOpen((prev) => !prev)}
+        className="inline-flex h-10 w-full cursor-pointer items-center justify-between gap-2 rounded-xl border border-slate-200 bg-slate-50/70 px-3.5 text-sm font-medium text-slate-800 transition hover:border-slate-300 focus:border-sky-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 dark:border-slate-700/80 dark:bg-slate-950/70 dark:text-slate-200 dark:hover:border-slate-600 dark:focus:border-sky-400 dark:focus:bg-slate-950"
+      >
+        <span className="truncate">{activeLabel}</span>
+        <span className="flex shrink-0 items-center gap-1.5">
+          <span className="text-xs font-normal tabular-nums text-slate-400 dark:text-slate-500">
+            {activeCount}
+          </span>
+          <ChevronDown
+            className={`h-4 w-4 text-slate-400 transition-transform duration-150 ${
+              open ? "rotate-180" : ""
+            }`}
+          />
+        </span>
+      </button>
+
+      {open && (
+        <div
+          role="listbox"
+          aria-label="Blog sources"
+          className="absolute right-0 z-30 mt-1.5 w-full min-w-[240px] overflow-hidden rounded-xl border border-slate-200 bg-white p-1 shadow-lg shadow-slate-900/10 sm:w-64 dark:border-slate-700/80 dark:bg-slate-900 dark:shadow-black/40"
+        >
+          <div className="max-h-80 overflow-y-auto">
+            <button
+              type="button"
+              role="option"
+              aria-selected={value === "all"}
+              onClick={() => selectOption("all")}
+              className={`flex w-full cursor-pointer items-center justify-between gap-2 rounded-lg px-2.5 py-2 text-left text-sm transition ${
+                value === "all"
+                  ? "bg-sky-50 font-medium text-sky-700 dark:bg-sky-500/15 dark:text-sky-300"
+                  : "text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800"
+              }`}
+            >
+              <span className="flex min-w-0 items-center gap-2">
+                <Check className={`h-3.5 w-3.5 shrink-0 ${value === "all" ? "opacity-100" : "opacity-0"}`} />
+                <span className="truncate">All Sources</span>
+              </span>
+              <span className="shrink-0 text-xs tabular-nums text-slate-400 dark:text-slate-500">
+                {totalCount}
+              </span>
+            </button>
+
+            <div className="my-1 border-t border-slate-100 dark:border-slate-800" />
+
+            {sources.map((src) => {
+              const isSelected = value === src.id;
+              const count = sourceCounts.get(src.id) ?? 0;
+              return (
+                <button
+                  key={src.id}
+                  type="button"
+                  role="option"
+                  aria-selected={isSelected}
+                  onClick={() => selectOption(src.id)}
+                  className={`flex w-full cursor-pointer items-center justify-between gap-2 rounded-lg px-2.5 py-1.5 text-left text-sm transition ${
+                    isSelected
+                      ? "bg-sky-50 font-medium text-sky-700 dark:bg-sky-500/15 dark:text-sky-300"
+                      : "text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800"
+                  }`}
+                >
+                  <span className="flex min-w-0 items-center gap-2">
+                    <Check className={`h-3.5 w-3.5 shrink-0 ${isSelected ? "opacity-100" : "opacity-0"}`} />
+                    <span className="truncate">{src.name}</span>
+                  </span>
+                  <span className="shrink-0 text-xs tabular-nums text-slate-400 dark:text-slate-500">
+                    {count}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function App() {
   const [theme, setTheme] = useState<Theme>(readInitialTheme);
   const isDark = theme === "dark";
@@ -132,10 +266,9 @@ export function App() {
 
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedSource, setSelectedSource] = useState("all");
-  const [selectedTopics, setSelectedTopics] = useState<PillarId[]>([]);
+  const [selectedTopic, setSelectedTopic] = useState<TopicFilter>("all");
   const [currentPage, setCurrentPage] = useState(1);
   const [referencesOpen, setReferencesOpen] = useState(false);
-  const [showFiltered, setShowFiltered] = useState(false);
 
   const searchInputRef = useRef<HTMLInputElement>(null);
 
@@ -198,7 +331,7 @@ export function App() {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchQuery, selectedSource, selectedTopics, showFiltered]);
+  }, [searchQuery, selectedSource, selectedTopic]);
 
   const referenceMs = useMemo(() => {
     if (payload?.generated_at) {
@@ -218,16 +351,15 @@ export function App() {
 
   const trimmedQuery = searchQuery.trim();
 
-  const droppedCount = useMemo(
-    () => (payload?.posts ?? []).reduce((count, post) => count + (isPostFiltered(post) ? 1 : 0), 0),
+  const visiblePosts = useMemo(
+    () => (payload?.posts ?? []).filter((post) => !isPostFiltered(post)),
     [payload?.posts],
   );
 
-  const visiblePosts = useMemo(() => {
-    const posts = payload?.posts ?? [];
-    if (showFiltered) return posts;
-    return posts.filter((post) => !isPostFiltered(post));
-  }, [payload?.posts, showFiltered]);
+  const droppedPosts = useMemo(
+    () => (payload?.posts ?? []).filter(isPostFiltered),
+    [payload?.posts],
+  );
 
   const visibleSourceCounts = useMemo(() => {
     const counts = new Map<string, number>();
@@ -236,6 +368,14 @@ export function App() {
     }
     return counts;
   }, [visiblePosts]);
+
+  const droppedSourceCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const post of droppedPosts) {
+      counts.set(post.source_id, (counts.get(post.source_id) ?? 0) + 1);
+    }
+    return counts;
+  }, [droppedPosts]);
 
   const visibleTopicCounts = useMemo(() => {
     const counts = new Map<PillarId, number>();
@@ -248,14 +388,19 @@ export function App() {
     return counts;
   }, [visiblePosts, selectedSource]);
 
+  const filteredTopicCount = useMemo(() => {
+    if (selectedSource === "all") return droppedPosts.length;
+    return droppedSourceCounts.get(selectedSource) ?? 0;
+  }, [droppedPosts.length, droppedSourceCounts, selectedSource]);
+
   const searchIndex = useMemo(
     () =>
-      createSearchIndex(visiblePosts, ["title", "summary", "source_name"], {
+      createSearchIndex(payload?.posts ?? [], ["title", "summary", "source_name"], {
         title: 3,
         source_name: 2,
         summary: 1,
       }),
-    [visiblePosts],
+    [payload?.posts],
   );
 
   const referenceIndex = useMemo(
@@ -269,21 +414,26 @@ export function App() {
   );
 
   const filteredReferences = useMemo(() => {
-    if (selectedSource !== "all" || selectedTopics.length > 0) return [];
+    if (selectedSource !== "all" || selectedTopic !== "all") return [];
     if (!trimmedQuery) return PINNED_REFERENCES;
     return querySearchIndex(referenceIndex, trimmedQuery);
-  }, [referenceIndex, selectedSource, selectedTopics, trimmedQuery]);
+  }, [referenceIndex, selectedSource, selectedTopic, trimmedQuery]);
 
   const filteredPosts = useMemo(() => {
     if (!payload) return [];
-    const base = trimmedQuery ? querySearchIndex(searchIndex, trimmedQuery) : visiblePosts;
+    const base = trimmedQuery
+      ? querySearchIndex(searchIndex, trimmedQuery)
+      : selectedTopic === "filtered"
+        ? droppedPosts
+        : visiblePosts;
     return base.filter((post) => {
       if (selectedSource !== "all" && post.source_id !== selectedSource) return false;
-      if (selectedTopics.length === 0) return true;
-      const postTopics = post.topics ?? [];
-      return selectedTopics.some((t) => postTopics.includes(t));
+      if (selectedTopic === "filtered") return isPostFiltered(post);
+      if (isPostFiltered(post)) return false;
+      if (selectedTopic === "all") return true;
+      return (post.topics ?? []).includes(selectedTopic);
     });
-  }, [payload, searchIndex, selectedSource, selectedTopics, trimmedQuery, visiblePosts]);
+  }, [droppedPosts, payload, searchIndex, selectedSource, selectedTopic, trimmedQuery, visiblePosts]);
 
   const totalPages = Math.max(1, Math.ceil(filteredPosts.length / PAGE_SIZE));
   const safePage = Math.min(currentPage, totalPages);
@@ -330,16 +480,14 @@ export function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const toggleTopic = (topicId: PillarId) => {
-    setSelectedTopics((prev) =>
-      prev.includes(topicId) ? prev.filter((item) => item !== topicId) : [...prev, topicId],
-    );
+  const selectTopic = (topicId: Exclude<TopicFilter, "all">) => {
+    setSelectedTopic((prev) => (prev === topicId ? "all" : topicId));
   };
 
   const clearFilters = () => {
     setSearchQuery("");
     setSelectedSource("all");
-    setSelectedTopics([]);
+    setSelectedTopic("all");
   };
 
   return (
@@ -399,7 +547,7 @@ export function App() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Filter posts (press / to focus)"
-                className="w-full rounded-xl border border-slate-200 bg-slate-50/70 py-2 pr-9 pl-9 text-sm text-slate-900 placeholder:text-slate-400 focus:border-sky-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 dark:border-slate-700/80 dark:bg-slate-950/70 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-sky-400 dark:focus:bg-slate-950"
+                className="h-10 w-full rounded-xl border border-slate-200 bg-slate-50/70 pr-9 pl-9 text-sm text-slate-900 placeholder:text-slate-400 focus:border-sky-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 dark:border-slate-700/80 dark:bg-slate-950/70 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-sky-400 dark:focus:bg-slate-950"
               />
               {searchQuery && (
                 <button
@@ -414,39 +562,13 @@ export function App() {
             </div>
 
             {/* Source Dropdown */}
-            <select
-              aria-label="Filter by blog source"
+            <SourceDropdown
               value={selectedSource}
-              onChange={(e) => setSelectedSource(e.target.value)}
-              className="max-w-[160px] shrink-0 cursor-pointer rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs font-medium text-slate-800 focus:border-sky-500 focus:outline-none sm:max-w-none dark:border-slate-700/80 dark:bg-slate-950 dark:text-slate-200"
-            >
-              <option value="all">All Sources ({visiblePosts.length})</option>
-              {sortedSources.map((src) => (
-                <option key={src.id} value={src.id}>
-                  {src.name} ({visibleSourceCounts.get(src.id) ?? 0})
-                </option>
-              ))}
-            </select>
-
-            {droppedCount > 0 && (
-              <button
-                type="button"
-                onClick={() => setShowFiltered((prev) => !prev)}
-                aria-pressed={showFiltered}
-                title={
-                  showFiltered
-                    ? "Hide non-AI and promotional posts"
-                    : `Show ${droppedCount} filtered non-AI/promotional posts`
-                }
-                className={`shrink-0 cursor-pointer rounded-xl border px-3 py-2 text-xs font-medium whitespace-nowrap transition ${
-                  showFiltered
-                    ? "border-sky-500/40 bg-sky-500/12 text-sky-700 dark:border-sky-400/40 dark:bg-sky-400/15 dark:text-sky-300"
-                    : "border-slate-200 bg-white text-slate-600 hover:border-sky-400 hover:text-slate-900 dark:border-slate-700/80 dark:bg-slate-950 dark:text-slate-300 dark:hover:border-sky-600 dark:hover:text-white"
-                }`}
-              >
-                {showFiltered ? `All (+${droppedCount})` : `Filtered (${droppedCount})`}
-              </button>
-            )}
+              totalCount={selectedTopic === "filtered" ? droppedPosts.length : visiblePosts.length}
+              sources={sortedSources}
+              sourceCounts={selectedTopic === "filtered" ? droppedSourceCounts : visibleSourceCounts}
+              onChange={setSelectedSource}
+            />
           </div>
 
           <div
@@ -456,10 +578,10 @@ export function App() {
           >
             <button
               type="button"
-              onClick={() => setSelectedTopics([])}
-              aria-pressed={selectedTopics.length === 0}
+              onClick={() => setSelectedTopic("all")}
+              aria-pressed={selectedTopic === "all"}
               className={`cursor-pointer rounded-lg border px-2.5 py-1 text-xs font-medium transition ${
-                selectedTopics.length === 0
+                selectedTopic === "all"
                   ? "border-sky-500/45 bg-sky-500/12 text-sky-700 dark:border-sky-400/45 dark:bg-sky-400/15 dark:text-sky-300"
                   : "border-slate-200 bg-white text-slate-600 hover:border-sky-400 hover:text-slate-900 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-400 dark:hover:border-sky-600 dark:hover:text-slate-200"
               }`}
@@ -467,13 +589,13 @@ export function App() {
               All Topics
             </button>
             {TOPIC_PILLARS.map((pillar) => {
-              const active = selectedTopics.includes(pillar.id);
+              const active = selectedTopic === pillar.id;
               const count = visibleTopicCounts.get(pillar.id) ?? 0;
               return (
                 <button
                   key={pillar.id}
                   type="button"
-                  onClick={() => toggleTopic(pillar.id)}
+                  onClick={() => selectTopic(pillar.id)}
                   aria-pressed={active}
                   className={`cursor-pointer rounded-lg border px-2.5 py-1 text-xs font-medium transition ${
                     active
@@ -486,6 +608,19 @@ export function App() {
                 </button>
               );
             })}
+            <button
+              type="button"
+              onClick={() => selectTopic("filtered")}
+              aria-pressed={selectedTopic === "filtered"}
+              className={`cursor-pointer rounded-lg border px-2.5 py-1 text-xs font-medium transition ${
+                selectedTopic === "filtered"
+                  ? "border-amber-500/45 bg-amber-500/12 text-amber-800 dark:border-amber-400/45 dark:bg-amber-400/15 dark:text-amber-300"
+                  : "border-slate-200 bg-white text-slate-500 hover:border-slate-300 hover:text-slate-800 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-400 dark:hover:border-slate-700 dark:hover:text-slate-200"
+              }`}
+            >
+              Filtered{" "}
+              <span className="text-[11px] opacity-75 tabular-nums">({filteredTopicCount})</span>
+            </button>
           </div>
         </div>
       </header>
@@ -661,18 +796,19 @@ function PostRow({
               New
             </span>
           )}
-          {(post.topics ?? []).map((topicId) => (
-            <span
-              key={topicId}
-              className="rounded-full bg-sky-500/12 px-2 py-0.5 text-[10px] font-medium text-sky-700 dark:bg-sky-400/12 dark:text-sky-300"
-            >
-              {TOPIC_LABEL_MAP.get(topicId) ?? topicId}
-            </span>
-          ))}
-          {isPostFiltered(post) && (
-            <span className="rounded-full bg-slate-500/12 px-2 py-0.5 text-[10px] font-medium text-slate-500 dark:bg-slate-400/12 dark:text-slate-400">
+          {isPostFiltered(post) ? (
+            <span className="rounded-full bg-amber-500/12 px-2 py-0.5 text-[10px] font-medium text-amber-800 dark:bg-amber-400/15 dark:text-amber-300">
               Filtered
             </span>
+          ) : (
+            (post.topics ?? []).map((topicId) => (
+              <span
+                key={topicId}
+                className="rounded-full bg-sky-500/12 px-2 py-0.5 text-[10px] font-medium text-sky-700 dark:bg-sky-400/12 dark:text-sky-300"
+              >
+                {TOPIC_LABEL_MAP.get(topicId) ?? topicId}
+              </span>
+            ))
           )}
         </div>
 
