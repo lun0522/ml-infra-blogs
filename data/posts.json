@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-24T01:32:15Z",
-  "last_new_count": 10,
+  "generated_at": "2026-11-24T23:25:46Z",
+  "last_new_count": 8,
   "sources": [
     {
       "id": "vllm",
@@ -11,9 +11,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 1,
+      "new_count": 2,
       "total_count": 50,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "lmsys",
@@ -26,7 +26,7 @@
       "fetched_count": 50,
       "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "modal",
@@ -39,7 +39,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "baseten",
@@ -49,10 +49,10 @@
       "monitor_url": "https://www.baseten.co/blog/",
       "status": "ok",
       "error": null,
-      "fetched_count": 13,
-      "new_count": 1,
-      "total_count": 17,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "fetched_count": 11,
+      "new_count": 2,
+      "total_count": 19,
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "fireworks",
@@ -65,7 +65,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 17,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "together",
@@ -78,7 +78,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "anyscale",
@@ -89,9 +89,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 0,
+      "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "skypilot",
@@ -104,7 +104,7 @@
       "fetched_count": 12,
       "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "crusoe",
@@ -117,7 +117,7 @@
       "fetched_count": 12,
       "new_count": 0,
       "total_count": 16,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "pytorch",
@@ -128,9 +128,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 10,
-      "new_count": 0,
-      "total_count": 12,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "new_count": 1,
+      "total_count": 13,
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "nvidia",
@@ -141,9 +141,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 2,
+      "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "modular",
@@ -156,7 +156,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "timdettmers",
@@ -169,7 +169,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "thinkingmachines-blog",
@@ -182,7 +182,7 @@
       "fetched_count": 8,
       "new_count": 0,
       "total_count": 8,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "humansand",
@@ -195,7 +195,7 @@
       "fetched_count": 3,
       "new_count": 0,
       "total_count": 3,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "anthropic-eng",
@@ -208,7 +208,7 @@
       "fetched_count": 24,
       "new_count": 0,
       "total_count": 24,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "lilianweng",
@@ -221,7 +221,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "aleksagordic",
@@ -234,7 +234,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 15,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "semianalysis",
@@ -247,7 +247,7 @@
       "fetched_count": 20,
       "new_count": 0,
       "total_count": 20,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "cloudflare",
@@ -258,9 +258,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 20,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 27,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "netpreme",
@@ -273,7 +273,7 @@
       "fetched_count": 5,
       "new_count": 0,
       "total_count": 5,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "periodic",
@@ -286,7 +286,7 @@
       "fetched_count": 4,
       "new_count": 0,
       "total_count": 4,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "flashinfer",
@@ -299,7 +299,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "primeintellect",
@@ -312,7 +312,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "openai-eng",
@@ -325,7 +325,7 @@
       "fetched_count": 25,
       "new_count": 0,
       "total_count": 25,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "gimlet",
@@ -338,7 +338,7 @@
       "fetched_count": 16,
       "new_count": 0,
       "total_count": 16,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "cerebras",
@@ -351,7 +351,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "turbopuffer",
@@ -364,7 +364,7 @@
       "fetched_count": 17,
       "new_count": 0,
       "total_count": 17,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "friendli",
@@ -375,9 +375,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 10,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 11,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "fal",
@@ -390,7 +390,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 15,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "nebius",
@@ -401,9 +401,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 12,
-      "new_count": 2,
-      "total_count": 14,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "new_count": 1,
+      "total_count": 15,
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "lambda",
@@ -416,7 +416,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     },
     {
       "id": "e2b",
@@ -427,12 +427,112 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-24T01:32:15Z"
+      "last_checked": "2026-11-24T23:25:46Z"
     }
   ],
   "posts": [
+    {
+      "id": "245eefc7db303c4a",
+      "source_id": "pytorch",
+      "source_name": "PyTorch Blog",
+      "url": "https://pytorch.org/blog/executorch-tensorrt-pytorch-robot-policies-at-nvidia-tensorrt-speed/",
+      "title": "ExecuTorch-TensorRT: PyTorch Robot Policies at NVIDIA TensorRT Speed",
+      "summary": "TL;DR With Torch-TensorRT 2.15 and ExecuTorch 1.6 you can compile a PyTorch model with TensorRT, save it as an ExecuTorch program, and run it from C++ or Python without loading... The post ExecuTorch-TensorRT: PyTorch Robot Policies at NVIDIA TensorRT Speed appeared first on PyTorch .",
+      "published_at": "2026-11-24T20:31:02Z",
+      "first_seen": "2026-11-24T23:25:46Z",
+      "label": "infra",
+      "topics": [
+        "inference",
+        "hardware"
+      ],
+      "excerpt": "Sections: TL;DR | Why is it hard to run a PyTorch model with TensorRT on a robot? | How it works | Getting started | Install | Export, in Python | Run, in Python, without torch | Run, in C++ We talked about this work at PyTorch Conference 2026: Deploying Robot Policies Across Many Targets with ExecuTorch . GR00T 1.7 (3B) on a Jetson Orin Nano 8GB: about 200 ms per action chunk. A robot runs its models on its own computer, like NVIDIA Jetson AGX Thor or a custom board, and they have to finish on time. A policy, the model that decides what the robot does next, returns a short plan at a time, called an action chunk, say 50 actions. If the next chunk isn’t ready when the robot finishes the current one, the robot stops and waits. And everything shares the same memory: the CPU, the GPU, the cameras and every model. Offloading to a server adds a network round trip, which can easily take 100 ms, over a link the robot can’t always count on. On NVIDIA hardware the fastest way to run a model is TensorRT , NVIDIA’s inference compiler. Until now, getting a PyTorch model into TensorRT meant one of four things: Today we’re adding a new way: Torch-TensorRT 2.15 compiles the model with TensorRT and saves it as an ExecuTorch 1.6 program that runs without libtorch. It skips ONNX and captures the model with PyTorch’s own torch.export . If TensorRT can’t convert part of the model, preprocessing included, you can send that part to ExecuTorch’s CUDA backend, which runs it on the GPU in the same program on the same CUDA stream instead of failing the build. The TensorRT parts are ordinary TensorRT…"
+    },
+    {
+      "id": "634c828883291f8f",
+      "source_id": "baseten",
+      "source_name": "Baseten Blog",
+      "url": "https://www.baseten.co/blog/deploy-private-hugging-face-models-without-sharing-your-access-token/",
+      "title": "Deploy private Hugging Face models without sharing your access token",
+      "summary": "Baseten partnered with Hugging Face to ship read-only Trusted Publishers, and is the first inference provider to pull private weights with short-lived tokens.",
+      "published_at": "2026-11-24T19:27:51Z",
+      "first_seen": "2026-11-24T23:25:46Z",
+      "label": "drop",
+      "topics": [],
+      "excerpt": "Sections: The problem with long-lived Hugging Face tokens | The solution: temporary, read-only tokens via OIDC | Building secure defaults for AI infrastructure Baseten partnered with Hugging Face to ship read-only Trusted Publishers, and is the first inference provider to pull private weights with short-lived tokens. Many teams store fine-tuned and proprietary model weights in private Hugging Face repos. Deploying those models on an external platform has usually meant handing over a long-lived access token that works until someone deletes it. Hugging Face Trusted Publishers improved on this by issuing short-lived tokens at deploy time, but until recently, those tokens could also write to your repo, which is more access than a deployment needs. To maintain a high bar for security, we wanted to go further: no long-lived credentials anywhere, and no access beyond pulling the weights. We asked Hugging Face for a read-only option, and they shipped it within days. Trusted Publishers now supports read-only access, so inference providers get a 1-hour token that can only pull from a single repo and can't modify it. We're proud to be the first inference provider to support read-only Trusted Publishers, joining our existing OIDC support for pulling weights from S3 and GCS. We'll keep working with partners across the industry to make workload identity and scoped access controls the default for AI infrastructure. Before Trusted Publishers, the standard way to give a provider like Baseten access to a private model was a long-lived Hugging Face token. A long-lived token has three issues…"
+    },
+    {
+      "id": "d8b1b131e8eb089e",
+      "source_id": "baseten",
+      "source_name": "Baseten Blog",
+      "url": "https://www.baseten.co/blog/open-weight-models-beat-the-closed-frontier-on-legal-tasks-with-harvey/",
+      "title": "Open-weight models beat the closed frontier on legal tasks with Harvey",
+      "summary": "Results from training Muse Spark Open, Nemotron 3.5 Super VL, Beam 1.0, and Inkling 2 Small on agentic legal work",
+      "published_at": "2026-11-24T15:51:26Z",
+      "first_seen": "2026-11-24T23:25:46Z",
+      "label": "infra",
+      "topics": [
+        "agents"
+      ],
+      "excerpt": "Sections: Generalization and learning across domains | Results | Own your weights | Appendix Results from training Muse Spark Open, Nemotron 3.5 Super VL, Beam 1.0, and Inkling 2 Small on agentic legal work It’s been a big year for American open-source intelligence. Teams from Meta, NVIDIA, Reflection, Thinking Machines, and others have released frontier models of varying sizes and capabilities, giving enterprises many more ways to control their intelligence. Post-training is a big part of that: customizing model weights on your specific task or domain is a relatively low-cost way to outperform the frontier. Today we’re releasing our results with the Harvey team on how much post-training can improve success rate on complex, multi-step legal tasks, showing that post-trained US open-weight models… We post-trained four recently released open-weight models from US labs, covering different sizes and architectures. Before this study, no model—closed or open—had reached a 30% all-pass rate (satisfying every rubric criterion on a task) on the Legal Agent Benchmark (LAB). After post-training, Muse Spark Open reached 30.3%, and all four US open-weight models scored higher than GPT-6.2 Astra and Claude Fable 5.2. We also found that post-training provides improvement over each base model at every reasoning effort so the gains come from training rather than simply letting the model think longer. In addition to evaluating each model on LAB, we also benchmarked each model on LAB Contracts , which evaluates each model's capacity to draft, review, and negotiate routine business contracts…"
+    },
+    {
+      "id": "65839a56829d7b09",
+      "source_id": "anyscale",
+      "source_name": "Anyscale / Ray",
+      "url": "https://www.anyscale.com/blog/mid-epoch-resumption-ray-train",
+      "title": "Enabling Mid-Epoch Training Resumption with Ray Train",
+      "summary": "Mid-epoch resumption in Ray Train saves the data loader's state with each checkpoint, so a restarted job resumes mid-epoch instead of starting over.",
+      "published_at": "2026-11-24T00:00:00Z",
+      "first_seen": "2026-11-24T23:25:46Z",
+      "label": "infra",
+      "topics": [
+        "systems"
+      ],
+      "excerpt": "Sections: The cost of mid-epoch training failures | How it works | Saving progress | Restoring progress | Using mid-epoch resumption | Requirements | Evaluating the impact | Summary Training failures are increasingly common at scale, and effective training infrastructure is judged by how quickly it recovers from them. Mid-epoch resumption lets Ray Train and Ray Data checkpoint your data loader alongside your model, so your restarted run picks up where its last checkpoint left off without breaking exactly-once training. Here's what it gives you: Less repeated work: a restarted job picks up from its last checkpoint, instead of starting the epoch over. Correct data coverage: every row is still trained on exactly once per epoch, even across failures. Simple adoption: it works with your existing Ray Train checkpoints and requires minimal changes to your training script. In our benchmark, with mid-epoch resumption, a training job that failed 75% of the way through an epoch achieved 9% faster overall runtime and 9% lower dollar cost than when it skipped batches to resume. The bigger your epochs, the more it saves you on failure. Mid-epoch resumption will ship with Ray 2.61 and is currently available in the Anyscale Runtime starting with Ray version 2.50. Mid-epoch training failures can be costly. Picture a run whose latest checkpoint was saved 75% of the way through an epoch, followed by a worker failure at 80%: The model restores from the 75% checkpoint, but the data loader has no record of where it was. The typical recovery approach is to restart the epoch from the beginning…"
+    },
+    {
+      "id": "19ba5446bf3c2d9f",
+      "source_id": "vllm",
+      "source_name": "vLLM Blog",
+      "url": "https://vllm.ai/blog/2026-11-24-vllm-gr-announcement",
+      "title": "Announcing vLLM-GR: Efficient Inference for Generative Recommendation",
+      "summary": "vLLM-GR extends vLLM to serve generative recommendation models with accelerator-side beam search, catalog constraints, and shared KV caching across candidate paths.",
+      "published_at": "2026-11-24T00:00:00Z",
+      "first_seen": "2026-11-24T23:25:46Z",
+      "label": "infra",
+      "topics": [
+        "systems"
+      ],
+      "excerpt": "Sections: About | Why vLLM-GR? | Inside the Architecture | Key Features | Performance Evaluation | Future Roadmap | Getting Started | Installation Today we’re introducing vLLM-GR , an open-source inference and serving framework built on vLLM for generative recommendation models. Consider a video feed. Given a viewer’s history, a model such as OneRec can generate a semantic ID (SID) for a video the viewer might watch next. To assemble a feed, the application needs a set of candidates. vLLM-GR extends vLLM’s model execution and paged key-value (KV) cache with beam search that explores multiple candidate IDs in one request. The overview shows how recommendation models generate item IDs or score supplied candidates. The OneRec-1.7B example below follows the generation path, from a viewer’s history to 128 candidate SIDs. A recommendation service has to turn a long interaction history into a set of candidates within a single request’s latency budget. Generating each item ID may take only a few tokens, yet the engine must explore many paths and return items the application can serve. vLLM-GR builds its recommendation search into the vLLM engine. vLLM supplies the scheduler, model execution, and paged KV cache. vLLM-GR adds a beam session that spans the whole search and keeps track of how candidate paths branch. EngineCore owns each beam session from admission to completion. The scheduler dispatches prefill and decode stages to a worker. At each stage, the model runner scores the next token and beam selection records the score and parent of each surviving path. The next decode…"
+    },
+    {
+      "id": "6ff7c3a619f93aaf",
+      "source_id": "vllm",
+      "source_name": "vLLM Blog",
+      "url": "https://vllm.ai/blog/2026-11-24-ernie-5-5-flash-preview",
+      "title": "vLLM Day-0 Support for ERNIE 5.5 Flash Preview: Plugin Deployment and E2E Inference Acceleration",
+      "summary": "vLLM supports Baidu's ERNIE 5.5 Flash Preview on day 0 through the vLLM-ERNIE plugin on the released vllm==0.32.0 wheel, with structure-aware kernel fusion, FlashIndexer, W4A8 QAT and DSpark speculative decoding.",
+      "published_at": "2026-11-24T00:00:00Z",
+      "first_seen": "2026-11-24T23:25:46Z",
+      "label": "drop",
+      "topics": [],
+      "excerpt": "Sections: Highlights | Usage | Model Architecture Overview | Kernel Fusion for ERNIE 5.5 Flash's Architecture | Plug-and-Play Sparse Indexer Routing | FP4 Quantization-Aware Training | Multi-Stage DSpark Speculative Decoding Training | Supporting New Models Efficiently with a vLLM Plugin The Baidu ERNIE team has worked with vLLM to bring day-0 support for ERNIE 5.5 Flash Preview to vLLM. ERNIE 5.5 Flash Preview is a sparse mixture-of-experts (MoE) model with 280B total parameters and 14B activated per token. It supports a 1M-token context, thinks before it answers, and uses tool calling to carry out long-horizon Agent tasks. vLLM supports the model on release day through the vLLM-ERNIE plugin, a standalone package that you install into the same environment as the official vllm==0.32.0 wheel. Install the released vLLM wheel and the plugin into the same environment. vLLM discovers the plugin automatically through its vllm.general_plugins entrypoint, so there is nothing to import or configure. The following command serves the default FP4 weights on a single 4-GPU node, with DSpark speculative decoding drafting 7 tokens per step: Send a request to the Chat Completions endpoint: To turn off thinking for a request, pass \"chat_template_kwargs\": {\"enable_thinking\": false} . Launch commands for 1M context, attention TP and PD disaggregation are in the vLLM-ERNIE README and the vLLM recipe . ERNIE 5.5 Flash was designed with inference cost as a primary goal from the start, weighing activated compute, KV cache size and long-context overhead together. Every component, from the…"
+    },
+    {
+      "id": "a51d9f66f9dbd7e9",
+      "source_id": "nebius",
+      "source_name": "Nebius",
+      "url": "https://nebius.com/blog/posts/production-ai-agents-generative-media-course",
+      "title": "Production AI Agents for Generative Media: a free course from Nebius and DataTalks.Club",
+      "summary": "Introducing Production AI Agents for Generative Media, a free, open-source course from Nebius and DataTalks.Club for engineers who need media generation to work at production scale. Over four modules and a capstone, you build an agent that creates an image and a voice or video asset, checks quality, retries failures, and scales to more than 1,000 records while tracking the cost of every asset.",
+      "published_at": "2026-11-24T00:00:00Z",
+      "first_seen": "2026-11-24T23:25:46Z",
+      "label": "drop",
+      "topics": [],
+      "excerpt": "Sections: At production scale, every generated asset costs money and can fail At production scale, every… | The solution: Production AI Agents for Generative Media, a free course by Nebius and DataTalks.Club… | AI engineers adding media generation to real projects — sign up today AI engineers adding media… | Course structure: Four modules and a capstone Course structure: Four modules and a capstone | Module 1: Consistent Media Generation on Serverless GPUs Module 1: Consistent Media Generation on… | Module 2: Multi-Agent Media Workflows Module 2: Multi-Agent Media Workflows | Module 3: Batch Media Generation at Scale Module 3: Batch Media Generation at Scale | Module 4: Evals, Tracing and SLOs Module 4: Evals, Tracing and SLOs An agent that generates an image and a voice or video asset for 1,000 records has to check the quality of every asset, regenerate the ones that fail, and track what each one cost. Production AI Agents for Generative Media is a free and open-source course we built with DataTalks.Club to teach that pipeline, from one record to more than 1,000, with the first cohort starting now and over 1500 learners already enrolled. Read on to discover why we built this course now, who it’s for, what it teaches, the course structure, and how to sign up. Today you can generate an image with a single API call. There are dozens of models available: open-weight models that you can run yourself and well-known proprietary services. For a prototype or a single image, this works well. But it gets harder when media generation becomes part of your business, or of any project…"
+    },
     {
       "id": "351b174892b509ca",
       "source_id": "friendli",
@@ -494,6 +594,22 @@
         "systems"
       ],
       "excerpt": "Sections: A little background | What is Flamingo? | Being delightful | Using Flamingo to probe DNS | Catching bugs (SLO and steady) | The road ahead Imagine this: you’ve just pushed a release. All the unit tests passed and your dashboards are green. You sit back to relax but then suddenly your phone starts blowing up: prod is broken. This is something the Cloudflare DNS team has experienced firsthand. In one rollout of the service that publishes DNS records to our edge, a scheduling bug let some record changes sit unpublished for hours. The service stayed up and was healthy, but new hostnames were slow to resolve and certificates couldn't be issued until the bug was squashed. DNS failures are hard to catch because they are slow, spread across the network, and partial in where they cause impact. We needed to figure out a way to test DNS the way customers experience it: constantly, from every data center, and against production. For us, the answer was to extend Flamingo, the end-to-end testing framework we were already using to run hundreds of millions of tests a day against Cloudflare's edge. This post covers how Flamingo's modular design lets us add DNS support, how we measure propagation, and how those measurements now decide whether a release goes ahead or gets rolled back. At Cloudflare we’re obsessed with improving performance and safety for our customers. It’s crucial that our code is tested constantly, both at scale and against the real Cloudflare edge that our users operate in. That’s one reason why we created a tool called Flamingo: to measure the behavior of our…"
+    },
+    {
+      "id": "05ddaa151cd550c0",
+      "source_id": "lmsys",
+      "source_name": "LMSYS / SGLang",
+      "url": "https://www.lmsys.org/blog/2026-11-23-ernie55-flash-low-latency",
+      "title": "Toward the Decode Limit: ERNIE 5.5 Flash at 1074 tokens/s on SGLang",
+      "summary": "We have added low-latency decoding support for ERNIE 5.5 Flash to SGLang and optimized it end to end. On four SM100 GPUs, BS=1, 55K input tokens and 1K output tokens, we introduced low-latency GEMM and tensor parallelism, integrated DSpark speculative decoding, iteratively tuned compute-communication fusion, multi-stream execution and PDL, and completed optimizations including MegaLLMoE, attention dataflow…",
+      "published_at": "2026-11-23T00:00:00Z",
+      "first_seen": "2026-11-24T23:25:46Z",
+      "label": "infra",
+      "topics": [
+        "inference",
+        "hardware"
+      ],
+      "excerpt": "Sections: The Bottlenecks of Low-Latency Decoding | A Low-Latency Foundation: Parallelism, Hardware Utilization, Operator Fusion and Kernel Overlap | Attention Dataflow Restructuring: Keeping Sparse Operations off the Critical Path | MegaLLMoE: A Low-Latency MoE Megakernel | One-Pass mHC: Breaking the Serial Dependency with Bilinear Expansion | DSpark Speculative Decoding: Multiple Tokens per Forward Pass | Performance Data and Reproduction We have added low-latency decoding support for ERNIE 5.5 Flash to SGLang and optimized it end to end. On four SM100 GPUs, BS=1, 55K input tokens and 1K output tokens, we introduced low-latency GEMM and tensor parallelism, integrated DSpark speculative decoding, iteratively tuned compute-communication fusion, multi-stream execution and PDL, and completed optimizations including MegaLLMoE, attention dataflow restructuring and One-Pass mHC. With the final configuration of attention TP4 and MoE TP4, decoding reaches 1074 tokens/s at a simulated mean DSpark acceptance length of 5.5, and about 1310… Each point shows the end-to-end decoding speed after an optimization was merged, in merge order, with several key optimizations annotated. The first point is the naive DP/EP implementation, and TP4 is used from the second point on. All measurements after DSpark is enabled use a simulated acceptance length of 5.5. LLM decoding is autoregressive: each step depends on the output of the previous one. Pushing decoding speed to its limit generally means optimizing aggressively for low concurrency, where very few tokens take part in each step: one in…"
     },
     {
       "id": "36f022345c966eba",
@@ -6765,22 +6881,6 @@
       "excerpt": "Sections: Start an agent, walk away | Dispatch work, don’t just watch it | Parallel agents that can’t step on each other | Know which agent needs you | Pause the compute, keep the session | On your infrastructure, with your GPUs | Reproducible agent environments with recipes | Takeaways Coding agents have quietly created a new job: babysitting them. An agent working through a real task runs for minutes or hours, and it needs you at unpredictable moments: a permission prompt here, a design decision there. So you keep a terminal open, you don’t close your laptop, and once you’re running a few agents in parallel, most of your day is spent figuring out which one is stuck on you . Agent Sessions fix this: persistent sessions for your coding agents, with a fleet dashboard on top. We’ll walk the workflow end to end: the CLI, worktree-backed parallel sessions, the fleet dashboard, and what running on your own clusters buys you. Sessions live in a SkyPilot devspace: a persistent, pausable dev environment on your Kubernetes cluster. Create one and you land in a persistent shell: Then press Ctrl-] and walk away. The session lives in the devspace, not in your terminal: the agent keeps working after you detach, after your laptop sleeps, after your wifi drops. Reattach from any machine and recent scrollback replays: The connection goes over a websocket through the SkyPilot API server, so it works from anywhere your CLI can reach it. No kubeconfig, no SSH setup. Sessions are plain shells, so this works with whatever agent you run (Claude Code, Codex, Gemini, Aider, Goose, Amp, OpenCode…"
     },
     {
-      "id": "6319318a253473b3",
-      "source_id": "vllm",
-      "source_name": "vLLM Blog",
-      "url": "https://vllm.ai/blog/2026-09-01-minimax-h3-production-serving",
-      "title": "MiniMax H3 on vLLM-Omni: From System-Wide Optimization to Real-Time Serving with FastVideo’s FastH3",
-      "summary": "How vLLM-Omni optimizes and scales the complete MiniMax H3 stack, then integrates FastVideo’s four-step FastH3 for generation faster than playback.",
-      "published_at": "2026-09-01T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z",
-      "label": "infra",
-      "topics": [
-        "inference",
-        "hardware"
-      ],
-      "excerpt": "Sections: 1. Why MiniMax H3 serving is a system-wide problem | 2. Benchmark contract and evidence boundaries | 2.1 Frozen controls | 3. System-wide optimization with vLLM-Omni | 3.1 Long-sequence attention and communication | 3.2 Fused DiT operators | 3.3 Parallel and fused VAE decoding | 3.4 GPU output preparation, transport, and MP4 A two-stage optimization story: first reduce overhead across the complete MiniMax H3 serving stack, then integrate FastVideo's four-step FastH3 for complete-MP4 generation faster than playback. MiniMax H3 serving is a system problem. One request crosses a large Qwen3-VL encoder, a long-sequence audio-video DiT, separate video and audio VAEs, device and process boundaries, and finally H.264/AAC construction. Optimizing only the DiT leaves substantial latency elsewhere. vLLM-Omni therefore starts with the complete resident pipeline: attention and communication, fused DiT operators, parallel VAE decoding, compact output transport, and parallel MP4 construction. FastVideo 's FastH3 then attacks the remaining dominant term by replacing 49 DiT forwards with four. On the measured eight-B300 profile, FastH3 produced a complete 10.125-second MP4 in 8.678-8.710 seconds . Throughout this post, real-time means the complete response is ready faster than its playback duration. It does not mean streaming delivery or time to first frame. MiniMax H3 jointly generates video and synchronized audio from text, images, videos, and audio references. Its components have different compute, memory, and placement requirements: Figure 1: Text uses the H3/Qwen3-VL…"
-    },
-    {
       "id": "943d06f36bca555a",
       "source_id": "cerebras",
       "source_name": "Cerebras",
@@ -7121,22 +7221,6 @@
         "systems"
       ],
       "excerpt": "Sections: Why we need this level of observability | Creating a single pane of glass at the source | How does it work? | Fleet-level view: for platform operators | Job-level view: for ML engineers | Beyond jobs and workspaces: the same lens for inference | What's Coming Next A GPU that is quietly failing looks, from the outside, exactly like a training script that is quietly broken. That single ambiguity is responsible for more wasted engineering hours on GPU clusters than almost any other failure class, and it is the gap we are closing today. Today we're announcing the private preview of Anyscale GPU Health Observability , the newest layer in Anyscale's full stack observability vision, compatible with KubeRay and VM’s with future support for K8s Anyscale Operator. It surfaces the GPU hardware signals engineers have always needed (XID errors, ECC memory error counts, SM Clock, and per GPU memory) and, critically, attaches them to the exact Ray job and workspace that are running on each GPU. Ask any team running large scale jobs across clusters running on multi-GPU nodes how they found the root cause of their last hardware failure, and the answer is rarely as simple as a dashboard. It is usually a person, manually opening multiple different tools and stitching together a timeline by hand. When a fatal XID error degrades the performance of a workload, Ray has no way to know that hardware was involved, so it reports a generic worker failure and sends the engineer straight into the training code, which doesn’t contain the actual problem. GPUs accumulating correctable memory…"
-    },
-    {
-      "id": "8fb31a39b25a9cb6",
-      "source_id": "vllm",
-      "source_name": "vLLM Blog",
-      "url": "https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus",
-      "title": "Exploring Speculative Decoding in vLLM on AMD GPUs",
-      "summary": "A practical guide to speculative decoding in vLLM on AMD GPUs, covering draft-and-verify mechanics, MTP, EAGLE-3, DFlash, DSpark, configuration, tuning, and benchmark results.",
-      "published_at": "2026-08-23T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z",
-      "label": "infra",
-      "topics": [
-        "inference",
-        "hardware"
-      ],
-      "excerpt": "Sections: Introduction | The autoregressive decoding baseline | Core idea of speculative decoding | A simple accept/reject example | How the drafting methods work | Native MTP | Gemma 4 MTP | EAGLE-3 TL;DR: Speculative decoding allows vLLM to verify multiple drafted tokens in a single target-model pass. In our experiments, its effect on output-token throughput varied across drafting methods and proposal lengths, and also depended on the model family, draft checkpoint, workload, and acceptance behavior. Large language models support a wide range of applications, but serving them at scale requires careful optimization. Standard autoregressive decoding is the baseline used by most LLM serving systems: the model generates one token, appends it to the sequence, and then uses the updated sequence to generate the next token. This process is simple and reliable, but the serving loop still advances one committed token at a time because output tokens must be produced in strict left-to-right order. Speculative decoding [1] builds on this baseline through a draft-and-verify mechanism. A lightweight draft component proposes candidate future tokens, and the target model verifies those candidates before they are committed. When several draft tokens are accepted, the system can commit multiple output tokens from a single target-model verification step while preserving the target model's output behavior. This post explores how speculative decoding works in vLLM and shares measurements from our test environment. We first review the autoregressive decoding baseline and the draft-and-verify…"
     },
     {
       "id": "44d20b9afbbb08be",
@@ -7916,19 +8000,6 @@
       "excerpt": "Sections: The K3 architecture | How it compares | Serving Kimi K3 on your GPUs with SkyPilot | SkyPilot YAML for Kimi K3 | Try it out Today, on July 27, Moonshot AI open-sourced the weights for Kimi K3 . It’s the biggest open model we’ve seen so far, the first to approach the 3-trillion-parameter mark. On most benchmarks it sits right behind the top closed models. The weights are there, but can you serve it yourself? K3 has 2.8 trillion parameters, and even in its native 4-bit (MXFP4) format the weights run about 1.4 TB. That rules out a single GPU and pretty much any GPU node you have sitting around. The weights alone just barely fit on one top-end 8-GPU node, but that leaves nothing for the 1M-token KV cache or the headroom real throughput needs. To serve it in practice you need many GPUs across several nodes, usually across whatever clouds and clusters you can scrape capacity from. We built SkyPilot Endpoints to simplify setting up production-grade serving on your GPUs. This post covers what K3 is, how it stacks up against the current frontier models, and how to serve it on your own fleet with a single YAML. K3 is a Mixture-of-Experts model: 2.8T parameters total, with 16 of 896 experts plus 2 shared experts firing on each token, which works out to about 104B active parameters. It takes text, images, and video in, carries a 1M-token context, and writes text out. It’s a reasoning model, with the effort level configurable across low , high , and max (the default). Under the hood it uses Kimi Delta Attention , a linear/hybrid attention scheme, with roughly three…"
     },
     {
-      "id": "a2a90feaf49fd32b",
-      "source_id": "lmsys",
-      "source_name": "LMSYS / SGLang",
-      "url": "https://www.lmsys.org/blog/2026-07-27-kimi-k3-day0-support",
-      "title": "SGLang and Miles Add Day-0 Support for Kimi K3",
-      "summary": "We are excited to announce Day-0 support for Kimi K3 in SGLang and Miles. K3 is the first open-source model in the 3-trillion-parameter class, and its hybrid architecture departs from convention in almost every place a serving stack has assumptions.",
-      "published_at": "2026-07-27T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z",
-      "label": "drop",
-      "topics": [],
-      "excerpt": "Sections: Bringing up Kimi K3 | Hybrid KDA Memory Management | Safe and efficient state reuse | Unified memory: one pool for both kinds of state | Speculative decoding with DSpark | Verify only what is worth verifying | ReplaySSM: raw-input replay for the KDA state | Kernels We are excited to announce Day-0 support for Kimi K3 in SGLang and Miles. K3 is the first open-source model in the 3-trillion-parameter class, and its hybrid architecture departs from convention in almost every place a serving stack has assumptions. In collaboration with the Moonshot AI and NVIDIA teams, the two cover K3 in full on launch day: SGLang for inference, Miles for RL training. This post covers what it took. Launch commands and per-workload configuration guidance live in the Kimi K3 cookbook . Kimi K3 is the first open-source model in the 3-trillion-parameter class: 2.8T parameters, a 1M-token context window, and native visual understanding. Its predecessor K2.5 was architecturally a close relative of models SGLang already served well, so most of the stack simply applied. K3 is not like that — it departs from convention in several independent places at once: Each of these rows is a serving problem. The hybrid attention stack is what makes the 1M context affordable, but it means the server holds two kinds of state at once: one fixed-size KDA state per request next to MLA’s per-token KV — the memory-management sections below are about exactly this. Attention Residuals thread a bank of attention outputs through the whole stack, which breaks the assumptions SGLang’s standard layer plumbing makes…"
-    },
-    {
       "id": "af29de6f562635dd",
       "source_id": "modal",
       "source_name": "Modal Blog",
@@ -8550,21 +8621,6 @@
         "systems"
       ],
       "excerpt": "Sections: First Use Case: Online Distributed Computation | Why Ray? | Other Online Use Cases | Design goals of generic online computation / learning framework) | Overall architecture | Some Key Designs | Summary | Future plans Ant Group has developed Ant Ray Serving which is an online service framework based on Ray , which provides users with a Serverless platform to publish Java/Python code as online services. The platform provides users with basic capabilities such as deployment, scaling, traffic routing, and monitoring. This allows users to focus on their own business logic and use Ray's distributed capabilities to develop online applications. Ray provides a simple and easy-to-use distributed API, flexible scheduling and other capabilities, so that Ant Ray Serving and its users can quickly build a distributed application on this basis, and provide reliable services. Up to now, 5 different usage scenarios have been supported within Ant and Alibaba. Ant Ray Serving has reached a scale of 60,000 cores and 5,000 nodes, and has participated in many years of Double Eleven, Double Twelve, and Chineses New Year’s promotion scenarios. In this article, we will introduce how Ant's Ray Serving team designed this framework, what work has been done to make it highly available and easy to expand, and its relationship with Ray Serve . Let us first introduce the first problem we encountered. In 2018 or so, our colleagues in the Ant payment department encountered some computational problems. They developed a system to calculate the indicators and strategies for payment institutions which…"
-    },
-    {
-      "id": "555f6cd09d513faf",
-      "source_id": "anyscale",
-      "source_name": "Anyscale / Ray",
-      "url": "https://www.anyscale.com/blog/autoscaling-clusters-with-ray",
-      "title": "Autoscaling clusters with Ray",
-      "summary": "Learn how Ray clusters automatically scale compute resources to match workload demand, reducing costs while simplifying distributed application deployment.",
-      "published_at": "2026-07-10T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z",
-      "label": "infra",
-      "topics": [
-        "systems"
-      ],
-      "excerpt": "Sections: The Ray Cluster | Configuring a Ray Cluster | Ray Cluster lifecycle | Demo app | Adding Ray Clusters | Conclusion This post explores how The Ray Cluster works. To demonstrate how to speed up compute by using Ray Clusters, this post will perform a compute-intensive image processing task (palette extraction) on a large dataset (thousands of movie posters). Over the last few decades, the computational demand of applications has grown exponentially. This has been enabled by Moore’s law , which suggests that hardware compute capacity doubles every two years. Nevertheless, in recent years, growth in this capacity has slowed down dramatically to the point that Moore’s law is now considered dead. On the other hand, with the rise of big data and machine learning, applications need more resources than ever before. Because scaling up vertically is no longer an option, modern data systems rely on horizontal scaling to meet the demand, and distributed… Writing and deploying a distributed application in a self-managed cluster is hard. To tackle this problem, Ray provides a simple, universal API for building distributed applications. Applications that use Ray can also benefit from Ray Clusters , which provide users with a serverless experience. Clusters can automatically scale up and down based on an application’s resource demands while maximizing utilization and minimizing costs. This enables efficient resource allocation — compute capacity in Ray is provisioned to match the exact resource demands of the user’s application. Figure 1 shows a… Unlike proprietary serverless…"
     },
     {
       "id": "6cac9653c9424a94",
