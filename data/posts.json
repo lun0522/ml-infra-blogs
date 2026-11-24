@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-22T20:37:20Z",
-  "last_new_count": 0,
+  "generated_at": "2026-11-24T01:32:15Z",
+  "last_new_count": 10,
   "sources": [
     {
       "id": "vllm",
@@ -11,9 +11,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 0,
+      "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "lmsys",
@@ -24,9 +24,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 0,
+      "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "modal",
@@ -39,7 +39,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "baseten",
@@ -49,10 +49,10 @@
       "monitor_url": "https://www.baseten.co/blog/",
       "status": "ok",
       "error": null,
-      "fetched_count": 12,
-      "new_count": 0,
-      "total_count": 16,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "fetched_count": 13,
+      "new_count": 1,
+      "total_count": 17,
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "fireworks",
@@ -65,7 +65,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 17,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "together",
@@ -78,7 +78,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "anyscale",
@@ -91,7 +91,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "skypilot",
@@ -104,7 +104,7 @@
       "fetched_count": 12,
       "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "crusoe",
@@ -117,7 +117,7 @@
       "fetched_count": 12,
       "new_count": 0,
       "total_count": 16,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "pytorch",
@@ -130,7 +130,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "nvidia",
@@ -141,9 +141,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 0,
+      "new_count": 2,
       "total_count": 50,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "modular",
@@ -156,7 +156,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "timdettmers",
@@ -169,7 +169,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "thinkingmachines-blog",
@@ -182,7 +182,7 @@
       "fetched_count": 8,
       "new_count": 0,
       "total_count": 8,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "humansand",
@@ -195,7 +195,7 @@
       "fetched_count": 3,
       "new_count": 0,
       "total_count": 3,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "anthropic-eng",
@@ -208,7 +208,7 @@
       "fetched_count": 24,
       "new_count": 0,
       "total_count": 24,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "lilianweng",
@@ -221,7 +221,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "aleksagordic",
@@ -234,7 +234,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 15,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "semianalysis",
@@ -247,7 +247,7 @@
       "fetched_count": 20,
       "new_count": 0,
       "total_count": 20,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "cloudflare",
@@ -258,9 +258,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 20,
-      "new_count": 0,
-      "total_count": 26,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "new_count": 1,
+      "total_count": 27,
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "netpreme",
@@ -273,7 +273,7 @@
       "fetched_count": 5,
       "new_count": 0,
       "total_count": 5,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "periodic",
@@ -286,7 +286,7 @@
       "fetched_count": 4,
       "new_count": 0,
       "total_count": 4,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "flashinfer",
@@ -299,7 +299,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "primeintellect",
@@ -312,7 +312,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "openai-eng",
@@ -325,7 +325,7 @@
       "fetched_count": 25,
       "new_count": 0,
       "total_count": 25,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "gimlet",
@@ -338,7 +338,7 @@
       "fetched_count": 16,
       "new_count": 0,
       "total_count": 16,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "cerebras",
@@ -351,7 +351,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "turbopuffer",
@@ -364,7 +364,7 @@
       "fetched_count": 17,
       "new_count": 0,
       "total_count": 17,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "friendli",
@@ -375,9 +375,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 10,
-      "new_count": 0,
-      "total_count": 10,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "new_count": 1,
+      "total_count": 11,
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "fal",
@@ -390,7 +390,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 15,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "nebius",
@@ -401,9 +401,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 12,
-      "new_count": 0,
-      "total_count": 12,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "new_count": 2,
+      "total_count": 14,
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "lambda",
@@ -416,7 +416,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     },
     {
       "id": "e2b",
@@ -427,12 +427,132 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 0,
+      "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-22T20:37:20Z"
+      "last_checked": "2026-11-24T01:32:15Z"
     }
   ],
   "posts": [
+    {
+      "id": "351b174892b509ca",
+      "source_id": "friendli",
+      "source_name": "FriendliAI",
+      "url": "https://friendli.ai/blog/llm-inference-pricing-explained",
+      "title": "What You’re Actually Paying For in an LLM Token",
+      "summary": "Why are input, output, and cached LLM tokens priced differently, and why do prices vary so much across models? This post breaks down how prefill, decode, model architecture, GPU hardware, and inference engines shape cost per token, and uses a 30-turn coding agent example to show that cache reuse, not headline token prices, decides the bill.",
+      "published_at": "2026-11-24T00:00:00Z",
+      "first_seen": "2026-11-24T01:32:15Z",
+      "label": "infra",
+      "topics": [
+        "agents"
+      ],
+      "excerpt": "Sections: Input vs. Output Tokens: Different Computations, Different Costs | Why Cached Tokens Are So Cheap | Why Prices Vary So Much Across Models | How Caching Affects Agent Costs | The Price List, Demystified | General FAQ | What is FriendliAI? | How does FriendliAI reduce inference costs? Say you are choosing a model, a provider, or both. Maybe you are building an agent or configuring an existing one. The agent might be a coding agent that edits a repository and runs its tests, a general-purpose assistant, or something customized to your product. Where do you even start, and what does it cost? Most people start on a discovery page with a dashboard that shows the available models, what they are good at, and pricing. You may see a lengthy list of models that each carry three separate quotes (input, output, cached), with prices that swing by orders of magnitude between the rows. One model's tokens go for pennies per million, and the next model listing charges dollars for the same million. It's tempting to read such a list as pure market dynamics: launch-week discounts, hype pricing, or whatever the traffic will bear. Some of that is real, but most of the spread is not arbitrary. Each quote comes down to the same few questions. How much computation does a token cost on this model, on this silicon, and under this serving stack? Answer those questions, and the price list starts to make more sense. In this post, we will explore what influences model pricing. The three prices per model exist because three different computations sit behind them. Input, output, and cached tokens…"
+    },
+    {
+      "id": "3546565e78c41505",
+      "source_id": "baseten",
+      "source_name": "Baseten Blog",
+      "url": "https://www.baseten.co/blog/post-train-your-own-medical-asr-model-to-outperform-the-frontier/",
+      "title": "Post-train your own medical ASR model to outperform the frontier",
+      "summary": "How Besimple adapted Nemotron 3.5 Transcribe and Qwen3-ASR to medical terminology using Baseten Training.",
+      "published_at": "2026-11-23T22:34:04Z",
+      "first_seen": "2026-11-24T01:32:15Z",
+      "label": "infra",
+      "topics": [
+        "training",
+        "agents"
+      ],
+      "excerpt": "Sections: Evaluation: MedTerm, MedDictate, and FLEURS | Learning new medical terms | An iterative training loop to learn the entire dictionary | Impact of human speech on training results | Impact of fine-tuning on overall transcription | Train, Deploy, and Evaluate on Baseten | Try it yourself | Appendix How Besimple adapted Nemotron 3.5 Transcribe and Qwen3-ASR to medical terminology using Baseten Training. Unlike standard transcription use cases, voice agents in healthcare need to transcribe specific drug names, procedures, and diagnoses correctly. But general-purpose ASR models often miss rare medical terms, and the closed medical models that do better don't let teams control the weights or adapt them to their own vocabulary. Besimple used Baseten Training to fine-tune open transcription models for medical terminology recognition—critical for voice agent deployment in healthcare, pharmaceutical, and medical domains—and outperformed every frontier ASR model we tested. Using MedDictate, a public third-party benchmark of human-spoken medical dictation, fine-tuned Nemotron 3.5 Transcribe scored a medical term word error rate (Term-WER) of 0.87% (lower is better; this is also a 69% improvement over the vanilla model). Using the same training recipe on Qwen3-ASR, it also achieved a low WER of 2.05% (a 64% improvement over the vanilla model), placing it roughly in the middle of the pack among the models we benchmarked and showing the recipe's robustness. Using 813 hours of speech data and only $500 worth of GPU hours (for both models combined!), this shows that teams can…"
+    },
+    {
+      "id": "bc760996ce3c26e7",
+      "source_id": "nvidia",
+      "source_name": "NVIDIA Data Center & Cloud",
+      "url": "https://developer.nvidia.com/blog/get-started-with-gpu-accelerated-duckdb-analytics-using-the-sirius-core-extension/",
+      "title": "Get Started with GPU-Accelerated DuckDB Analytics Using the Sirius Core Extension",
+      "summary": "As datasets grow, analytical queries can take longer to run, slowing down data exploration, pipelines, and applications. For developers using DuckDB, reducing...",
+      "published_at": "2026-11-23T17:09:28Z",
+      "first_seen": "2026-11-24T01:32:15Z",
+      "label": "infra",
+      "topics": [
+        "systems",
+        "hardware"
+      ],
+      "excerpt": "Sections: Accelerate DuckDB queries without rewriting SQL | Run your first GPU query | Create a sample dataset | Install and load Sirius | Run an analytical query | Understand how Sirius executes queries | Compare Sirius GPU and DuckDB CPU benchmark results | Get started with Sirius Learn how to install Sirius, run supported DuckDB SQL queries on NVIDIA GPUs, and compare analytical query performance and compute costs. As datasets grow, analytical queries can take longer to run, slowing down data exploration, pipelines, and applications. For developers using DuckDB, reducing query times helps keep analytics responsive and can lower compute costs. NVIDIA and DuckLabs collaborated to release Sirius as a DuckDB core extension, bringing GPU acceleration to DuckDB’s analytical query engine. With two SQL commands, you can install and load Sirius to accelerate supported analytical queries on NVIDIA GPUs without rewriting your SQL or changing database schemas. Sirius, developed through a collaboration between the University of Wisconsin–Madison and NVIDIA, is an open-source, GPU-native SQL engine. This post introduces the core extension, shows you how to run your first GPU query, and explains how Sirius integrates with DuckDB. Sirius accelerates supported queries as a whole. DuckDB handles SQL parsing and optimization, while Sirius executes the resulting query plans on the GPU. The core extension brings this capability into DuckDB’s standard workflow: install Sirius, load it, and run your queries. Start with a small example, then apply the same workflow to your own analytical…"
+    },
+    {
+      "id": "9f50a7fbeba1dd18",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/probing-dns-at-cloudflare/",
+      "title": "Probing DNS at Cloudflare",
+      "summary": "At Cloudflare we’ve built tools to enable teams to extend our internal testing framework and build test tooling for networking protocols. This is the story of how this was used for DNS.",
+      "published_at": "2026-11-23T14:00:00Z",
+      "first_seen": "2026-11-24T01:32:15Z",
+      "label": "infra",
+      "topics": [
+        "systems"
+      ],
+      "excerpt": "Sections: A little background | What is Flamingo? | Being delightful | Using Flamingo to probe DNS | Catching bugs (SLO and steady) | The road ahead Imagine this: you’ve just pushed a release. All the unit tests passed and your dashboards are green. You sit back to relax but then suddenly your phone starts blowing up: prod is broken. This is something the Cloudflare DNS team has experienced firsthand. In one rollout of the service that publishes DNS records to our edge, a scheduling bug let some record changes sit unpublished for hours. The service stayed up and was healthy, but new hostnames were slow to resolve and certificates couldn't be issued until the bug was squashed. DNS failures are hard to catch because they are slow, spread across the network, and partial in where they cause impact. We needed to figure out a way to test DNS the way customers experience it: constantly, from every data center, and against production. For us, the answer was to extend Flamingo, the end-to-end testing framework we were already using to run hundreds of millions of tests a day against Cloudflare's edge. This post covers how Flamingo's modular design lets us add DNS support, how we measure propagation, and how those measurements now decide whether a release goes ahead or gets rolled back. At Cloudflare we’re obsessed with improving performance and safety for our customers. It’s crucial that our code is tested constantly, both at scale and against the real Cloudflare edge that our users operate in. That’s one reason why we created a tool called Flamingo: to measure the behavior of our…"
+    },
+    {
+      "id": "36f022345c966eba",
+      "source_id": "lmsys",
+      "source_name": "LMSYS / SGLang",
+      "url": "https://www.lmsys.org/blog/2026-11-23-miles-true-on-policy",
+      "title": "True On-Policy RL: Bit-Exact Rollout and Training with SGLang and Miles",
+      "summary": "True on-policy RL (TOP): in SGLang and Miles, the trainer reproduces the rollout's log-probabilities bit for bit.",
+      "published_at": "2026-11-23T00:00:00Z",
+      "first_seen": "2026-11-24T01:32:15Z",
+      "label": "infra",
+      "topics": [
+        "training"
+      ],
+      "excerpt": "Sections: Intro | Exact across models | Training runs | Staleness: separating weight lag from kernel mismatch | Design | The cost of exactness | Rollout speed | A whole training step Reinforcement learning (RL) on large language models (LLMs) samples responses with an inference engine (the rollout) and updates the weights with a separate trainer. On-policy methods such as PPO and GRPO assume the samples came from exactly the policy being updated: the trainer should give each sampled token the same probability the rollout did. In practice the two sides run different kernels on different batch shapes , sometimes at different precision, and in mixture-of-experts (MoE) models a small numerical difference can route a token to different experts. So the trainer scores each token… This post explains what that involves and what it costs, on DeepSeek-V4-Flash and V4.1, GLM-5.2/5.3 and 5.3-Flash, and Qwen3, 3.5/3.6/3.8 and 3.8-Flash-Next. We compare against the common alternative, which we call standard: the usual rollout and training kernels. The mismatch is corrected separately by R3 (the trainer replays the rollout's MoE routing) and TIS (truncated importance sampling). Six takeaways: Code: the SGLang and Miles changes, the model-support skill, and the gate tests, and launch recipes for the experiments will be released as branches of the SGLang and Miles repositories. Every family below passes bitwise forward parity at full depth. \"Exact\" means the trainer's FP32 log-prob bytes equal the rollout's on every token. This holds with speculative decoding on, for every family that uses…"
+    },
+    {
+      "id": "a62042fc9f5e9e03",
+      "source_id": "vllm",
+      "source_name": "vLLM Blog",
+      "url": "https://vllm.ai/blog/2026-11-23-skip-the-dram-tier",
+      "title": "Skip the DRAM Tier: MoRI UMBP Runs the Agentic KV Cache on NVMe",
+      "summary": "On AMD Instinct™ MI355X GPUs, a MoRI UMBP KV pool on NVMe matched a DRAM pool of the same size within 1% for Kimi-K3 on vLLM, and drives that hold a day of agent KV cost less than DRAM that holds 31 minutes.",
+      "published_at": "2026-11-23T00:00:00Z",
+      "first_seen": "2026-11-24T01:32:15Z",
+      "label": "infra",
+      "topics": [
+        "inference",
+        "hardware",
+        "agents"
+      ],
+      "excerpt": "Sections: TL;DR | How a KV pool works on vLLM | At the same size, NVMe matched DRAM | DRAM only buffers writes and stages reads | Longer prompts | Why NVMe keeps up | What NVMe buys: retention | What it costs: DRAM per TB held, NVMe per TB written Most of the traffic in agentic serving is multi-turn sessions that resend long prefixes. In the AgentX benchmark replaying real Claude Code sessions, the median turn is 142K input tokens, and over 96% of those tokens are a prefix the server has already seen [3] . A KV cache hit means the prefill node only has to process the small delta. A miss forces a full recomputation of the prefix, which burns GPU time and delays the first token. In our 42 runs of Kimi-K3 on vLLM, raising the KV cache hit rate by 1% of prompt tokens, for example from 95% to 96%, was worth about 10% more throughput (Figure 3). A KV cache hit needs the session’s prefix to still be in memory when its next turn arrives. With dozens of sessions open at once, memory runs out. GPU memory goes first, and host DRAM is the usual next tier. But DRAM fills too: Kimi-K3 wrote 2.3 to 4.6 TB of KV to the pool an hour in our runs, so a 1.8 TB DRAM pool, which lists at about $76,000, holds only the last 23 to 47 minutes of it. That led us to a simple question: why not skip the DRAM tier and put vLLM’s KV pool straight on NVMe? We tried it on AMD Instinct™ MI355X GPUs with UMBP, the KV cache pool in AMD’s open-source MoRI library. At the same size, NVMe matched DRAM’s throughput within 1% on Kimi-K3, in two sets of runs on different machines (Figure 1). On a second workload…"
+    },
+    {
+      "id": "538cbd955ae92579",
+      "source_id": "nebius",
+      "source_name": "Nebius",
+      "url": "https://nebius.com/blog/posts/retail-inference",
+      "title": "What your retail inference bill looks like at peak season and how to keep it under control",
+      "summary": "As retail AI traffic spikes during peak shopping seasons, inference costs can quickly eat into margins. In this article, we explore where those costs come from and how retailers can control them by optimizing models, agent harnesses and the systems around them — while meeting their applications’ quality and latency requirements.",
+      "published_at": "2026-11-23T00:00:00Z",
+      "first_seen": "2026-11-24T01:32:15Z",
+      "label": "drop",
+      "topics": [],
+      "excerpt": "Sections: Customer-facing retail AI runs on inference, and inference sits in your margin Customer-facing… | Who controls the model behind your customer experience? Who controls the model behind your customer… | Where retail inference costs actually come from (and how they can spiral) Where retail inference… | How we help retail businesses control inference costs How we help retail businesses control… | 1. The model 1. The model | 2. The harness 2. The harness | 3. The system 3. The system | From open weights to a production endpoint From open weights to a production endpoint In Black Friday week, search traffic climbs. Recommendation calls multiply, and the shopping assistant you shipped in spring is suddenly holding thousands of conversations at once. AI serving can run at 10 to 20 times its normal baseline for a handful of days, and those few days carry a disproportionate share of the year’s margin. A stalled response usually means an abandoned basket. Tokens that cost more than you planned eat into the margin on every order that does go through. Almost everything retail teams run in production is inference. Training happens in bursts, while search, recommendations, catalog enrichment, and shopping assistants run all day across millions of interactions. Shopify, a Nebius customer , gives a sense of the scale. Fine-tuned multimodal models classify and enrich its product metadata at hundreds of millions of inferences a day , and its search and recommendation systems draw on vector representations covering billions of products. All of it runs while a customer waits. Search…"
+    },
+    {
+      "id": "f09bfb2586045c3c",
+      "source_id": "e2b",
+      "source_name": "E2B",
+      "url": "https://e2b.dev/resources/run-ai-generated-code-safely",
+      "title": "How to Run AI-Generated Code Safely in an AI Agent Sandbox",
+      "summary": "Run AI-generated code safely in an AI agent sandbox. E2B gives each session its own microVM and kernel, no secrets, allowlisted egress, and a timeout.",
+      "published_at": "2026-11-23T00:00:00Z",
+      "first_seen": "2026-11-24T01:32:15Z",
+      "label": "drop",
+      "topics": [],
+      "excerpt": "Sections: Why is AI-generated code untrusted? | Is Docker enough to run AI-generated code? | 8 controls for running AI-generated code safely | How to run AI-generated code in an offline sandbox with E2B | How to run untrusted code from an AI agent with E2B | Worked example: credential injection at the sandbox boundary | What doesn't a sandbox protect against? | FAQ To run AI-generated code safely, treat it as untrusted and execute it in a disposable sandbox that: Say a customer gives an AI agent a CSV and asks a question. The agent writes and runs a Python script to find the answer. That script can be influenced by other content the model is reading, including support tickets or web pages your team doesn’t control. If the script runs directly on your application server, it inherits the permissions of the process running it, potentially giving it access to application data, credentials, and connected services. With E2B, every sandbox runs its own kernel, shuts down on a timeout, and accepts no public inbound traffic. This guide explains why options like Docker are not enough to contain model-written code and how your company can safely run AI-generated code. AI-generated code is untrusted because the model writes it from input you do not control, and often nobody reviews it before it runs. Your engineers' code goes through review and CI before it ships. An agent's code usually runs within seconds of being written, and in most products no person ever reads it. Prompt injection is the best-known way this goes wrong. An agent reading a web page, an email, a README, or an…"
+    },
     {
       "id": "329b54ad7ed6f9bd",
       "source_id": "together",
@@ -557,6 +677,22 @@
       "label": "drop",
       "topics": [],
       "excerpt": "Sections: The short version | What was disclosed | Why Cloudflare's proxy protects your origin | Where the protection does not apply | What to do now | Technical deep dive | One pattern, in four places | CVE-2026-123007: two flow-control pieces that each look correct On November 18, 2026, F5 and nginx.org disclosed ten vulnerabilities in nginx. Five of them, detailed by the Xint research team and published under the name nginx2root , are memory corruption flaws that an unauthenticated attacker can use to crash an nginx worker or, per Xint's research, run commands on the server. Xint also found a Linux kernel bug that turns that foothold into root on the host, including from inside a Docker container. Other teams found the two HTTP/2 bugs independently: F5 also credits Rapid7, Wiz Research and Ikotas Labs for CVE-2026-123007, and Metnir, Wiz Research, and… nginx is an HTTP web server that also serves as reverse proxy, content cache, load balancer, TCP/UDP proxy server, and mail proxy server. nginx runs a large share of the world's web servers, so this is a patch-now event. But if your nginx server is reachable only through Cloudflare's proxy, attackers cannot reach the vulnerable code paths for the most serious of these bugs, giving you protection while you update your servers. Here is where Cloudflare stands, what that protection covers, where it stops, and how the bugs work. nginx2root is five independent bugs. Each one works on its own and each one needs a different configuration. Integer overflow leading to out-of-bounds heap read/write HTTP/2 with proxy_pass to a…"
+    },
+    {
+      "id": "d02ae26fa1308aad",
+      "source_id": "nebius",
+      "source_name": "Nebius",
+      "url": "https://nebius.com/blog/posts/cross-rack-nixl-ep-gb300-dma-buf",
+      "title": "Running Cross-rack NIXL-EP on GB300",
+      "summary": "Cross-rack NIXL-EP over InfiniBand on GB300 failed during setup on SGLang 0.5.12 and 0.5.16, with a log that blamed a missing nvidia_peermem module. The real cause was a DMA-BUF registration failure inside the older NIXL packages. An image that bundles NIXL 1.4.0 or later, plus UCX_TLS=^cuda_ipc, fixed it; the post shows how to prove DMA-BUF is in use.",
+      "published_at": "2026-11-20T00:00:00Z",
+      "first_seen": "2026-11-24T01:32:15Z",
+      "label": "infra",
+      "topics": [
+        "hardware",
+        "inference"
+      ],
+      "excerpt": "Sections: NIXL Background NIXL Background | NIXL-EP and DMA-BUF NIXL-EP and DMA-BUF | What was failing What was failing | What worked What worked | Resolution in layers Resolution in layers | Verifying DMA-BUF Verifying DMA-BUF | Other users of NIXL device API Other users of NIXL device API | What to set before running cross-rack NIXL-EP What to set before running cross-rack NIXL-EP Cross-rack NIXL-EP over InfiniBand on GB300 failed during setup on SGLang v0.5.12-cu130 and v0.5.16-cu130 . The managed node image has nvidia_peermem disabled and the NIXL packages in those images cannot register GPU memory with the NIC through DMA-BUF. With an image that bundles NIXL 1.4.0 or later ( lmsysorg/sglang:v0.5.20 ships NIXL 1.4.1 on UCX 1.22.0) and UCX_TLS=^cuda_ipc set, NIXL-EP initialized on every rank on stock managed nodes with no host module and no privileged pod. Cross-rack NIXL-EP (SGLang MOE_A2A_BACKEND=nixl ) over InfiniBand on GB300 works on stock managed nodes with no host module and no privileged pod. Two things are required: Use an image bundling NIXL 1.4.0 or later (i.e. SGLang 0.5.20+). Earlier NIXL packages cannot use DMA-BUF and the managed GB300 node image has nvidia_peermem disabled on purpose: NVIDIA recommends using DMA-BUF when it is supported… [it] does not require the GPU Operator to build and load the legacy nvidia-peermem kernel module. Set UCX_TLS=^cuda_ipc to avoid setting up an IPC path in the device memory. NIXL (NVIDIA Inference Xfer Library) is a general point-to-point transfer library for inference, sitting over UCX and friends. Its headline use is…"
     },
     {
       "id": "af212a7ce83c6fff",
@@ -758,6 +894,22 @@
       "label": "drop",
       "topics": [],
       "excerpt": "Sections: A new version of Clairic: redesigned after the preview release | But is it fast? | Better extraction for images and PDFs | Promotional pricing on Clairic for a limited time | Clairic and Clairic-flash (new) are open-weight | Try them out Cloudflare has become a neolab. We’re building our own frontier AI models for our customers and the open-source community. Today, we’re announcing two open-weight model releases: Both extraction models are hosted on Workers AI and full open weights are available on Hugging Face . We’re also excited to re-introduce ourselves as the Workers AI superintelligence team, the frontier AI research team behind Clef , Clairic, and lots more in the works. This team is working quickly to push the AI frontier and build useful models for Cloudflare’s customers and the open source community. Since announcing Clairic in preview, we have received a ton of use cases and helpful feedback on how customers wanted to use an extraction model. We heard about use cases ranging from extracting data from images like receipts to reading values from support tickets. We knew that we wanted extraction to be the clear focus for the model, so it had to excel at reading from unstructured data. We decided to go back to the drawing board with Clairic and redesigned our architecture, differentiating this new version of Clairic from our preview release. For ordinary text and number extraction fields, we now use parallel slot autoregressive generation instead of a single forward pass. Each field uses the tokens it has already written to choose its next token, then…"
+    },
+    {
+      "id": "20366a8571e65177",
+      "source_id": "nvidia",
+      "source_name": "NVIDIA Data Center & Cloud",
+      "url": "https://developer.nvidia.com/blog/connecting-energy-use-to-scientific-output-with-science-per-joule/",
+      "title": "Connecting Energy Use to Scientific Output with Science per Joule",
+      "summary": "For high-performance computing (HPC) centers operating under a fixed power budget, every joule spent computing needs to translate into useful scientific work....",
+      "published_at": "2026-11-18T21:26:33Z",
+      "first_seen": "2026-11-24T01:32:15Z",
+      "label": "infra",
+      "topics": [
+        "inference",
+        "hardware"
+      ],
+      "excerpt": "Sections: Test setup | Molecular dynamics: LAMMPS | Climate and weather: ICON | Below TDP on average | The metric stack: measuring where the work happens | NVIDIA maximizes science per joule through full-stack innovation | Tags | About the Authors For high-performance computing (HPC) centers operating under a fixed power budget, every joule spent computing needs to translate into useful scientific work. Performance alone tells only part of the story: how much energy does it take to complete a simulation, predict a protein structure, or generate a protein design? Floating-point operations per second (FLOPS) per watt measures computational efficiency, while power usage effectiveness (PUE) describes facility overhead. Both are useful, but neither directly measures application output. Science per joule makes that connection: atom-timesteps per joule for molecular dynamics, simulated days per joule for climate models, or predictions and designs per joule for AI biology workloads. The idea builds on established energy-to-solution metrics, including those described for the Coupled Model Intercomparison Project Phase 6 (CMIP6) . The challenge is making fair comparisons across platforms, which requires running the same scientific workload on each, defining the measurement boundary, measuring power throughout the same execution phase on each platform, and relating the energy consumed to scientific output. This post uses LAMMPS and ICON to compare energy efficiency on NVIDIA HGX H100 and GB200 NVL72 systems. Single-GPU results from OpenFold3 and RFD4-Proteina then show how workload…"
     },
     {
       "id": "af17318c693b84ad",
@@ -6600,22 +6752,6 @@
       "excerpt": "Sections: In search of a cloud built for AI workloads | A 100-terabyte data pipeline with no orchestrator | Enabling rapid cutting edge research | Inference that scales with demand | The cloud that gets out of the way Botika builds agentic e-commerce teams that automate visual production for global fashion brands. Powered by custom models researched and trained in-house, Botika handles the entire pipeline - from 4K image generation to real-time personalization at scale. Behind that product is a full-stack AI operation: proprietary foundation models with tens of billions of parameters, a data pipeline processing a 100-terabyte image dataset, and roughly 15 models serving production inference. All of it runs on Modal. Dagan and his co-founder started building in generative AI in 2018, years before the tooling existed to support it. So they built the tooling themselves: node autoscaling, cold start mitigation, Docker image optimization, GPU fleet management. In 2023, Dagan went looking for something better. He evaluated the major GPU cloud options and found them either too rigid or too custom. Then he spotted Modal on an AI infrastructure landscape chart, the one name he didn't recognize, and asked for beta access. Now, Botika runs an end-to-end operation on Modal, from their data pipeline to production inference. Botika's data pipeline turns raw fashion imagery into training data: generating features, filtering, tagging, clustering, and aggregating across dozens of steps. It runs about a dozen different AI models, from open-source VLMs doing zero-shot tagging to classifiers…"
     },
     {
-      "id": "7b4316ed7c3b3625",
-      "source_id": "nvidia",
-      "source_name": "NVIDIA Data Center & Cloud",
-      "url": "https://developer.nvidia.com/blog/how-to-size-gpus-for-ai-inference-and-tco-without-overspending/",
-      "title": "How to Size GPUs for AI Inference and TCO Without Overspending",
-      "summary": "The surge in AI adoption is transforming everything from chatbots to content generation. Still, a common pain point remains: How can organizations confidently...",
-      "published_at": "2026-09-01T15:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z",
-      "label": "infra",
-      "topics": [
-        "inference",
-        "hardware"
-      ],
-      "excerpt": "Sections: Know your use case: Where sizing and TCO begin | Key sizing inputs for smarter TCO | Implementing a core-and-flex model: De-risk and optimize spend | Don’t forget the practical factors | Sample scenarios | Optimizing models for a better TCO | Quantization: The quick win | Pruning and distillation: Going further The surge in AI adoption is transforming everything from chatbots to content generation. Still, a common pain point remains: How can organizations confidently size GPU resources for inference workloads and optimize Total Cost of Ownership (TCO)? With a dizzying mix of latency targets, model choices, quirky traffic patterns, and budget constraints, it’s easy to feel lost in the weeds, even before you’ve deployed a single model. Today’s inference landscape is shaped by more than just hardware specs or “tokens per second.” Teams face an ever-growing list of sizing decisions: What kind of latency actually matters, Time to First Token (TTFT) average, 99th percentile latency, intertoken latency, or something else? How will your use case’s token patterns drive GPU memory and compute needs? What’s the right balance between on-prem core capacity and cloud-based elasticity? This post offers a practical framework for mapping your use case to the right GPU footprint, sizing inference GPU infrastructure around real workload behavior rather than guesswork. We’ll walk through the inputs that matter most, including use case, token patterns, latency targets, concurrency, cache hit rate, model choice, and deployment strategy. Along the way, developers and infrastructure…"
-    },
-    {
       "id": "18f031730df125ba",
       "source_id": "skypilot",
       "source_name": "SkyPilot Blog",
@@ -6688,22 +6824,6 @@
         "hardware"
       ],
       "excerpt": "Sections: 1. Introduction: turning a VRAM problem into a storage problem | MoE computation is sparse, but model capacity is not | The capacity-cost difference | SGLang’s SSD Expert Pack approach | 2. Why the native GGUF loading path is not enough | Why native GGUF cannot directly use expert-level O_DIRECT | 3. Expert Pack: organizing weights by expert | Contiguous expert layout SGLang brings the core idea of SSD-LLaMA to MoE inference: keep routed experts that do not fit in VRAM and host RAM on an NVMe SSD, load only the experts selected by the router, and use Expert Pack layout, direct I/O, pinned staging, asynchronous H2D transfers, and a GPU cache to turn SSD capacity into a practical backing tier. The total parameter capacity of DeepSeek-V4-Flash and Kimi-K3 is far beyond the VRAM of a single consumer GPU. A conventional deployment therefore needs multiple GPUs or hundreds of gigabytes, and sometimes terabytes, of host memory. That capacity requirement creates a large barrier between frontier model capability and local hardware. SGLang’s SSD-backed Expert Pack path takes a different approach. Routed expert weights remain on an NVMe SSD. The router activates only a small subset of experts for each token, so the runtime moves only the selected experts that are not already cached to the GPU. Expert Pack reorganizes the weights of each layer/expert pair into a directly addressable contiguous expert block. The runtime reads that expert block into an aligned pinned host buffer using direct I/O, then transfers it to a GPU cache asynchronously. This path changes how model…"
-    },
-    {
-      "id": "503090151ea568b4",
-      "source_id": "nvidia",
-      "source_name": "NVIDIA Data Center & Cloud",
-      "url": "https://developer.nvidia.com/blog/deploy-an-open-model-from-checkpoint-to-inference-in-two-commands-with-nvidia-tensorrt-model-connect/",
-      "title": "Deploy an Open Model from Checkpoint to Inference in Two Commands with NVIDIA TensorRT Model Connect",
-      "summary": "Open AI models are evolving faster than ever, but bringing them into native applications can still require model-specific conversion, preprocessing, post-processing, and runtime code. NVIDIA TensorRT Model Connect open collection of reference implementations helps to address this challenge. TensorRT Model Connect shows you how to run supported models with NVIDIA TensorRT in native C++…",
-      "published_at": "2026-08-28T17:06:28Z",
-      "first_seen": "2026-11-15T07:22:28Z",
-      "label": "infra",
-      "topics": [
-        "inference",
-        "hardware"
-      ],
-      "excerpt": "Sections: How to deploy a model from model ID to native C++ inference in two commands | 1. Build the bundle (Python CLI) | 2. Load and run (C++) | Two API levels, one starting point | Extend TensorRT Model Connect with custom kernels | Reference implementations for the open model ecosystem | Built AI-natively to keep pace with open models | Delivering the complete TensorRT workflow Open AI models are evolving faster than ever, but bringing them into native applications can still require model-specific conversion, preprocessing, post-processing, and runtime code. NVIDIA TensorRT Model Connect open collection of reference implementations helps to address this challenge. TensorRT Model Connect shows you how to run supported models with NVIDIA TensorRT in native C++ applications. You can use, inspect, modify, and extend the implementations. Model Connect is designed to support the open model ecosystem wherever TensorRT runs. This post explains what NVIDIA TensorRT Model Connect is and how to deploy a model from Hugging Face model ID to native C++ inference in two commands. It also covers the two API levels TensorRT Model Connect provides, how to integrate custom GPU kernels, and how the project is built to keep pace with the open model ecosystem. Getting a model into production should not require deep compiler expertise. Model Connect splits deployment into two phases with a single artifact between them. For a supported model, the first phase is building a deployment bundle from a Hugging Face model ID or local checkpoint: The bundle contains the TensorRT engines and the…"
     },
     {
       "id": "906c6e4610087fef",
@@ -7017,22 +7137,6 @@
         "hardware"
       ],
       "excerpt": "Sections: Introduction | The autoregressive decoding baseline | Core idea of speculative decoding | A simple accept/reject example | How the drafting methods work | Native MTP | Gemma 4 MTP | EAGLE-3 TL;DR: Speculative decoding allows vLLM to verify multiple drafted tokens in a single target-model pass. In our experiments, its effect on output-token throughput varied across drafting methods and proposal lengths, and also depended on the model family, draft checkpoint, workload, and acceptance behavior. Large language models support a wide range of applications, but serving them at scale requires careful optimization. Standard autoregressive decoding is the baseline used by most LLM serving systems: the model generates one token, appends it to the sequence, and then uses the updated sequence to generate the next token. This process is simple and reliable, but the serving loop still advances one committed token at a time because output tokens must be produced in strict left-to-right order. Speculative decoding [1] builds on this baseline through a draft-and-verify mechanism. A lightweight draft component proposes candidate future tokens, and the target model verifies those candidates before they are committed. When several draft tokens are accepted, the system can commit multiple output tokens from a single target-model verification step while preserving the target model's output behavior. This post explores how speculative decoding works in vLLM and shares measurements from our test environment. We first review the autoregressive decoding baseline and the draft-and-verify…"
-    },
-    {
-      "id": "a61e472806db18fe",
-      "source_id": "vllm",
-      "source_name": "vLLM Blog",
-      "url": "https://vllm.ai/blog/2026-08-22-rdt-weight-transfer",
-      "title": "Large-Scale Sharded Weight Transfer with Ray Direct Transport (RDT) in vLLM",
-      "summary": "We implement a native sharded weight transfer engine in vLLM utilizing Ray Direct Transport (RDT), achieving weight transfer for the Kimi K2 model in BF16 on 48 8xH100 nodes in 7.53s",
-      "published_at": "2026-08-22T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z",
-      "label": "infra",
-      "topics": [
-        "inference",
-        "systems"
-      ],
-      "excerpt": "Sections: Introduction | Background | Weight loading in vLLM | The journey of a weight | Custom weight loading behaviors | Solution: a “recording tensor” dry run | A sharded weight-transfer engine with RDT | At initialization In online RL setups, model weights must be synced periodically to ensure that rollouts are generated from a recent weight version. As open source models continue to scale to trillion+ parameter counts, efficient weight transfer becomes important to bound memory consumption and transfer time. In this blog, we detail a sharded weight transfer implementation in vLLM leveraging Ray Direct Transport (RDT). Our contributions are as follows: We are able to achieve sharded weight transfer for the Kimi K2 model in BF16 in 7.53 seconds on 48 8xH100 nodes (32 nodes for the trainer, 16 for inference). The implementation is available in vLLM with an end-to-end example in SkyRL . The standard weight sync is a NCCL broadcast. The trainer all-gathers each parameter into the HuggingFace format and broadcasts it to every inference worker. For models at modest scale this is fine, but as models grow it has the following drawbacks: While there’s previous work in large-scale sharded weight transfer ( 1 , 2 ), our primary focus is generality on two axes: When a new weight tensor in HuggingFace format arrives at a vLLM worker, it must undergo the following operations: Operations 1-5 happen in vLLM’s weight loader, via layerwise reloading . Layerwise reloading helps ensure that weight updates preserve CUDA graphs while keeping memory usage bounded. Ideally, during weight…"
     },
     {
       "id": "44d20b9afbbb08be",
@@ -7981,22 +8085,6 @@
       "label": "drop",
       "topics": [],
       "excerpt": "Sections: Compute has become the biggest bottleneck | Flexible, dedicated access to compute | A natural fit | What's next Today, Together AI and Y Combinator (YC) are announcing a partnership to deliver the first dedicated YC GPU cluster , giving YC's portfolio of AI-native startups easier access to the compute they need to build and scale. Breakthroughs in AI have led to a new generation of companies building AI applications, and a key input to building any of these apps is access to compute. More and more startups struggle to get this access in a timely, cost-effective way. It used to be simple. A startup could spin up GPU instances on demand and scale from there. Today, as model quality and token value keep rising, just securing capacity is one of the hardest problems a young company faces, let alone getting good pricing on it. For many startups, the upfront cost to secure two years of compute exceeds their entire cash balance, forcing a choice: Raise a round just to fund a compute contract, or go without the capacity to compete. Together AI and Y Combinator have partnered to solve that specific problem. Together AI has built a dedicated cluster and developer experience just for YC Portfolio companies to quickly and cost-effectively get access to compute for their AI needs across inference and training. Instead of long-term commitments, startups can spin up GPUs for short-term sprints while benefiting from long-term rates. The cluster supports the full range of needs across YC's portfolio, from teams requiring single-node compute to companies scaling up as their needs…"
-    },
-    {
-      "id": "ddefac2254003871",
-      "source_id": "lmsys",
-      "source_name": "LMSYS / SGLang",
-      "url": "https://www.lmsys.org/blog/2026-07-18-opd-support-in-miles",
-      "title": "OPD Support in Miles",
-      "summary": "We recently implemented On-Policy Distillation (OPD) as an important feature in Miles. OPD is now integrated into Miles rollout and training flow, so users can train a student model either solely with a teacher model's guidance, or combine teacher guidance with GRPO/PPO-style reinforcement learning objectives.",
-      "published_at": "2026-07-18T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z",
-      "label": "infra",
-      "topics": [
-        "training",
-        "agents"
-      ],
-      "excerpt": "Sections: OPD as a Miles Primitive | Top-k OPD | Sparse Student-to-Teacher Scoring | Validation: Qwen3.5 Self-Distillation on NVIDIA B200 | Results: Shorter Reasoning Without Performance Degradation | Why This Matters for Miles | What’s Next | Summary We recently implemented On-Policy Distillation (OPD) as an important feature in Miles . OPD is now integrated into Miles rollout and training flow, so users can train a student model either solely with a teacher model’s guidance, or combine teacher guidance with GRPO/PPO-style reinforcement learning objectives. In this post, we describe the OPD implementation in Miles, the sparse teacher-scoring workflow we added to avoid unnecessary dense logprob payloads, and an initial Qwen3.5-35B-A3B self-distillation experiment validated on a single 8×NVIDIA B200 node. The experiment shows that without any task-specific reward, OPD can transfer a teacher model’s shorter-reasoning behavior to a base student model while preserving the student model’s performance. Miles now supports OPD as an additive reverse-KL training signal. This enables OPD to support two important modes. On the rollout side, Miles supports both sampled-token OPD and top-k OPD through an SGLang-hosted teacher. In sampled-token OPD, the teacher scores the token actually sampled by the student at each response position. Because sampling may be stochastic, this token is not necessarily the student’s highest-probability token. Top-k OPD extends this workflow by retaining multiple candidate tokens and their student logprobs at each position. The teacher scores those same…"
     },
     {
       "id": "697e17a247216ada",
@@ -11958,19 +12046,6 @@
         "agents"
       ],
       "excerpt": "Sections: Pre-training Data Issues | Fine-tuning New Knowledge | Retrieval-Augmented Evaluation | Sampling-Based Detection | Calibration of Unknown Knowledge | Indirect Query | RAG → Edits and Attribution | Chain of Actions Hallucination in large language models usually refers to the model generating unfaithful, fabricated, inconsistent, or nonsensical content. As a term, hallucination has been somewhat generalized to cases when the model makes mistakes. Here, I would like to narrow down the problem of hallucination to cases where the model output is fabricated and not grounded by either the provided context or world knowledge. This post focuses on extrinsic hallucination. To avoid hallucination, LLMs need to be (1) factual and (2) acknowledge not knowing the answer when applicable. Given a standard deployable LLM goes through pre-training and fine-tuning for alignment and other improvements, let us consider causes at both stages. The volume of the pre-training data corpus is enormous, as it is supposed to represent world knowledge in all available written forms. Data crawled from the public Internet is the most common choice and thus out-of-date, missing, or incorrect information is expected. As the model may incorrectly memorize this information by simply maximizing the log-likelihood, we would expect the model to make mistakes. Fine-tuning a pre-trained LLM via supervised fine-tuning and RLHF is a common technique for improving certain capabilities of the model like instruction following. Introducing new knowledge at the fine-tuning stage is hard to avoid. Fine-tuning…"
-    },
-    {
-      "id": "a3af46e88a4131b0",
-      "source_id": "e2b",
-      "source_name": "E2B",
-      "url": "https://e2b.dev/resources/langgraph-with-code-interpreter-guide-with-code",
-      "title": "Give LangGraph code execution capabilities",
-      "summary": "This example shows how to add code interpreting to an LLM using the Code Interpreter SDK and LangGraph.",
-      "published_at": "2024-06-17T00:00:00Z",
-      "first_seen": "2026-11-22T00:12:34Z",
-      "label": "drop",
-      "topics": [],
-      "excerpt": "Sections: Why Code Interpreter SDK | Key links | Overview | Setup | 1. Install dependencies | 2. Define API keys, prompt, and tools | 3. Implement the method for code interpreting | 4. Implement the methods for calling tool, create workflow and invoke the LangGraph app This example shows how to add code interpreting to an LLM using the Code Interpreter SDK and LangGraph . The E2B Code Interpreter SDK quickly creates a secure cloud sandbox powered by Firecracker . Inside this sandbox is a running Jupyter server that the LLM can use. In general, the Code Interpreter SDK allows you to build custom code interpreters. For example, you can install custom packages , have access to the internet, use the filesystem , or connect your cloud storage . The Code Interpreter SDK works with any LLM , in this example, we are using OpenAI's GPT-⁠3.5 Turbo to plot a sine wave. We start by installing the E2B code interpreter SDK and LangChain Python SDK . Now we store your the E2B API KEY and OPENAI API KEY . This part includes the tool definition that uses the E2B Code Interpreter SDK . We'll be using this to get the E2B code interpreter tool and to format the output of the tool. Then we define classes to allow the LLM use a code interpreter as a tool. The class LangchainCodeInterpreterToolInput defines the input schema for the tool using Pydantic , specifying that the input will be a string of Python code. The class CodeInterpreterFunctionTool calls arbitrary code against a Python Jupyter notebook. It requires an E2B_API_KEY to create a sandbox. We define the format_to_tool_messages…"
     },
     {
       "id": "48c02b55680128dc",
