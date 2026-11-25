@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-24T23:25:46Z",
-  "last_new_count": 8,
+  "generated_at": "2026-11-25T22:59:09Z",
+  "last_new_count": 12,
   "sources": [
     {
       "id": "vllm",
@@ -11,9 +11,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 2,
+      "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "lmsys",
@@ -24,9 +24,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "modal",
@@ -39,7 +39,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "baseten",
@@ -49,10 +49,10 @@
       "monitor_url": "https://www.baseten.co/blog/",
       "status": "ok",
       "error": null,
-      "fetched_count": 11,
-      "new_count": 2,
-      "total_count": 19,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "fetched_count": 10,
+      "new_count": 1,
+      "total_count": 20,
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "fireworks",
@@ -63,9 +63,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 15,
-      "new_count": 0,
-      "total_count": 17,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "new_count": 1,
+      "total_count": 18,
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "together",
@@ -76,9 +76,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 0,
+      "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "anyscale",
@@ -89,9 +89,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "skypilot",
@@ -104,7 +104,7 @@
       "fetched_count": 12,
       "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "crusoe",
@@ -115,9 +115,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 12,
-      "new_count": 0,
-      "total_count": 16,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "new_count": 1,
+      "total_count": 17,
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "pytorch",
@@ -129,8 +129,8 @@
       "error": null,
       "fetched_count": 10,
       "new_count": 1,
-      "total_count": 13,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "total_count": 14,
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "nvidia",
@@ -141,9 +141,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 0,
+      "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "modular",
@@ -156,7 +156,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "timdettmers",
@@ -169,7 +169,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "thinkingmachines-blog",
@@ -182,7 +182,7 @@
       "fetched_count": 8,
       "new_count": 0,
       "total_count": 8,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "humansand",
@@ -195,7 +195,7 @@
       "fetched_count": 3,
       "new_count": 0,
       "total_count": 3,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "anthropic-eng",
@@ -206,9 +206,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 24,
-      "new_count": 0,
-      "total_count": 24,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "new_count": 1,
+      "total_count": 25,
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "lilianweng",
@@ -221,7 +221,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "aleksagordic",
@@ -234,7 +234,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 15,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "semianalysis",
@@ -247,7 +247,7 @@
       "fetched_count": 20,
       "new_count": 0,
       "total_count": 20,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "cloudflare",
@@ -258,9 +258,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 20,
-      "new_count": 0,
-      "total_count": 27,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "new_count": 1,
+      "total_count": 28,
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "netpreme",
@@ -273,7 +273,7 @@
       "fetched_count": 5,
       "new_count": 0,
       "total_count": 5,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "periodic",
@@ -286,7 +286,7 @@
       "fetched_count": 4,
       "new_count": 0,
       "total_count": 4,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "flashinfer",
@@ -299,7 +299,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "primeintellect",
@@ -312,7 +312,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "openai-eng",
@@ -325,7 +325,7 @@
       "fetched_count": 25,
       "new_count": 0,
       "total_count": 25,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "gimlet",
@@ -338,7 +338,7 @@
       "fetched_count": 16,
       "new_count": 0,
       "total_count": 16,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "cerebras",
@@ -351,7 +351,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "turbopuffer",
@@ -364,7 +364,7 @@
       "fetched_count": 17,
       "new_count": 0,
       "total_count": 17,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "friendli",
@@ -374,10 +374,10 @@
       "monitor_url": "https://friendli.ai/blog",
       "status": "ok",
       "error": null,
-      "fetched_count": 10,
-      "new_count": 0,
-      "total_count": 11,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "fetched_count": 13,
+      "new_count": 2,
+      "total_count": 13,
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "fal",
@@ -390,7 +390,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 15,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "nebius",
@@ -402,8 +402,8 @@
       "error": null,
       "fetched_count": 12,
       "new_count": 1,
-      "total_count": 15,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "total_count": 16,
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "lambda",
@@ -414,9 +414,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 10,
-      "new_count": 0,
-      "total_count": 10,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "new_count": 1,
+      "total_count": 11,
+      "last_checked": "2026-11-25T22:59:09Z"
     },
     {
       "id": "e2b",
@@ -429,10 +429,143 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-24T23:25:46Z"
+      "last_checked": "2026-11-25T22:59:09Z"
     }
   ],
   "posts": [
+    {
+      "id": "f816184fb930b235",
+      "source_id": "pytorch",
+      "source_name": "PyTorch Blog",
+      "url": "https://pytorch.org/blog/vllm-singapore-meetup-faster-prefill-agent-written-kernels-and-the-road-to-vera-rubin/",
+      "title": "vLLM Singapore Meetup: Faster Prefill, Agent-Written Kernels and the Road to Vera Rubin",
+      "summary": "TL;DR At the Singapore vLLM meetup, engineers from Inferact, NVIDIA, and Alibaba Cloud showcased how the community is advancing open source AI inference through pipeline parallelism optimizations, agent-written kernels, real-time... The post vLLM Singapore Meetup: Faster Prefill, Agent-Written Kernels and the Road to Vera Rubin appeared first on PyTorch .",
+      "published_at": "2026-11-25T18:03:15Z",
+      "first_seen": "2026-11-25T22:59:09Z",
+      "label": "infra",
+      "topics": [
+        "inference"
+      ],
+      "excerpt": "Sections: TL;DR | Introduction | Highlights from the Meetup | 1. Optimizing Pipeline Parallelism for High-Throughput Prefill in vLLM | 2. vLLM on SM12x: From Usable to Efficient | 3. Making World Models Interactive: Real-Time Inference with vLLM-Omni | 4. Finish RL Training Faster: Zero-Mismatch Kernels and Simple Async RL | 5. vLLM on NVIDIA Vera Rubin: Architecture, Locality Domains and Kernels At the Singapore vLLM meetup, engineers from Inferact, NVIDIA, and Alibaba Cloud showcased how the community is advancing open source AI inference through pipeline parallelism optimizations, agent-written kernels, real-time multimodal world models, and day-zero support for next-generation hardware like NVIDIA’s Vera Rubin platform. On November 13, 2026, the vLLM community gathered at SGInnovate in Singapore for a half-day technical meetup hosted by Inferact and NVIDIA. Engineers from Inferact, NVIDIA and Alibaba Cloud, together with vLLM-Omni contributors, shared what they are building right now, from high-throughput prefill and RL training to running vLLM on workstation-class Blackwell GPUs and NVIDIA’s Vera Rubin platform. vLLM, born at UC Berkeley and now hosted under the PyTorch Foundation, serves hundreds of model architectures across a wide range of accelerators. Two themes ran through the day: squeezing throughput out of communication-bound layouts, and using AI agents to write and tune kernels. Thien Tran, Member of Technical Staff from Inferact made the case for pipeline parallelism (PP) as a throughput layout for prefill. In agentic traffic, one turn carries roughly 100K…"
+    },
+    {
+      "id": "7674983f5c36c618",
+      "source_id": "lambda",
+      "source_name": "Lambda",
+      "url": "https://lambda.com/blog/sequence-level-rl-diffusion-language-models",
+      "title": "Sequence-level RL for diffusion language models",
+      "summary": "Diffusion large language models (dLLMs) are emerging as a promising alternative to traditional autoregressive LLMs. Unlike autoregressive models, which generate text one token at a time, diffusion models iteratively refine sequences through a denoising process, offering the potential for parallel generation and more flexible decoding.",
+      "published_at": "2026-11-25T17:00:00Z",
+      "first_seen": "2026-11-25T22:59:09Z",
+      "label": "infra",
+      "topics": [
+        "training"
+      ],
+      "excerpt": "Sections: Rethinking reinforcement learning for diffusion LLMs | Experimental results: major gains in planning and reasoning | Advancing the next generation of language models Diffusion large language models (dLLMs) are emerging as a promising alternative to traditional autoregressive LLMs. Unlike autoregressive models, which generate text one token at a time, diffusion models iteratively refine sequences through a denoising process, offering the potential for parallel generation and more flexible decoding. However, most existing reinforcement learning (RL) methods are designed for autoregressive models, making them challenging to adapt effectively to the distinct generation process of diffusion LLMs. In the collaborative paper Principled RL for Diffusion LLMs Emerges from a Sequence-Level Perspective , accepted to ICLR 2026, researchers from Lambda, Stanford University, Renmin University of China, and Tsinghua University introduce ELBO-based Sequence-level Policy Optimization (ESPO), a principled RL framework designed specifically for diffusion language models. ESPO delivers substantial improvements across planning, mathematical reasoning, and coding benchmarks while promoting stable and effective training. Traditional RL methods for language models, such as Group Relative Policy Optimization (GRPO), typically rely on token-level probability estimates. While well suited to autoregressive generation, these approaches do not naturally align with diffusion models, which iteratively predict and refine tokens across an entire sequence. ESPO addresses this mismatch through…"
+    },
+    {
+      "id": "3e221e5da41efad0",
+      "source_id": "baseten",
+      "source_name": "Baseten Blog",
+      "url": "https://www.baseten.co/blog/least-privilege-access-for-inference-workloads/",
+      "title": "Least-privilege access for inference workloads",
+      "summary": "Give each deployment only the cloud access and network connections it needs, with short-lived credentials, sealed volumes, and egress restrictions.",
+      "published_at": "2026-11-25T16:49:42Z",
+      "first_seen": "2026-11-25T22:59:09Z",
+      "label": "infra",
+      "topics": [
+        "systems"
+      ],
+      "excerpt": "Sections: Invoking least-privilege access across the deployment lifecycle | Build: replace long-lived cloud keys with OIDC to mirror weights | Deploy from a sealed volume | Serve adapters with runtime credentials | Allow only the outbound connections a model needs | Workload controls must be part of a broader security approach | Apply least privilege to your deployments Give each deployment only the cloud access and network connections it needs, with short-lived credentials, sealed volumes, and egress restrictions. Inference workloads often need to connect securely to external data or services, like loading private weights from cloud storage or fetching LoRA adapters at request time. The easiest way to set that up is with a permanent cloud key and open internet access, but that gives the model far more access than it needs—and it's easy to exploit. Each deployment should access only the resources it needs, without risking exposure of credentials or data. Baseten gives you controls to set boundaries on that access. OpenID Connect (OIDC) replaces permanent cloud keys with short-lived tokens tied to a specific deployment, so each credential works only for the job it was issued for and expires automatically. The Baseten Delivery Network (BDN) mirrors your weights once into a read-only volume, so serving replicas never need access to your bucket. Egress restrictions also limit outbound connections to the hosts a model actually calls, so a compromised container can't reach anywhere else. Together, they let teams apply least-privilege access to… This blog outlines how to use…"
+    },
+    {
+      "id": "170ba12c1bada862",
+      "source_id": "cloudflare",
+      "source_name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/search-for-agents/",
+      "title": "Introducing Search for Agents",
+      "summary": "AI Search , our service that indexes your content and lets you add search to any application or agent without having to build an entire retrieval infrastructure, has supported adding your website as a data source for a while now, automatically crawling, converting and indexing its pages.",
+      "published_at": "2026-11-25T14:00:00Z",
+      "first_seen": "2026-11-25T22:59:09Z",
+      "label": "drop",
+      "topics": [],
+      "excerpt": "Sections: How it works | Discoverability | Searching content | Supporting a new HTTP method: QUERY | See it in action | It’s still an AI Search instance | Start using Search for Agents AI Search , our service that indexes your content and lets you add search to any application or agent without having to build an entire retrieval infrastructure, has supported adding your website as a data source for a while now, automatically crawling, converting and indexing its pages. Still, setting up an AI Search instance for your website requires manually creating and configuring it initially, and then doing all the integration work to get the search endpoints available from your domain and to make sure that agents know where to find the index and know how to use it. Today we're introducing Search for Agents , which puts that setup behind a toggle in your Cloudflare dashboard. Turn it on for your zone, and our service will create your AI Search instance, start indexing your content, and make search discoverable and available from your own domain. The idea follows naturally from Markdown for Agents , where Cloudflare's network converts any HTML page to Markdown in real time for enabled zones using content negotiation headers. Similarly, Search for Agents leverages the power of AI Search by automatically creating an index for your zone and exposing APIs that any AI agent can discover and use to search your website, under your domain, all done at the network level. You can enable Search for Agents using the API, or by going to the dashboard in your zone page, under Quick Actions : Search…"
+    },
+    {
+      "id": "320d72e607c3ccbc",
+      "source_id": "together",
+      "source_name": "Together AI",
+      "url": "https://www.together.ai/blog/introducing-hurdle-run-agent-evals-on-your-api-skills-and-docs",
+      "title": "Introducing Hurdle: Run agent evals on your API, skills, and docs",
+      "summary": "Hurdle is an open-source npm library for agent evals. Run Claude Code and Codex against real tasks on your API, score each run with code checks, guards and an LLM judge, and see which models and conditions pass.",
+      "published_at": "2026-11-25T00:00:00Z",
+      "first_seen": "2026-11-25T22:59:09Z",
+      "label": "drop",
+      "topics": [],
+      "excerpt": "Sections: How Hurdle works | Example task: Find the cheapest GPU cluster | The eval suite | Run and view results | Local runs | Sandboxed runs | Try it yourself | 1. Set up your project If you’re building for developers, you already know that coding agents are one of the main ways devs access your API, SDK, and docs. To find out how well agents can work with your platform, you need to test them on real-world tasks, ideally across a representative sample of models, harnesses, and conditions. Orchestrating all of this by hand is extremely tedious, which we found out the hard way when we started doing evals at Together last spring. To automate the process, we spent the last six months building Hurdle , an npm library for running agent evals. Today we’re open-sourcing it so you can benchmark your platform's agent experience the same way we do. Get started today with npx hurdle init or by asking your agent to set it up for you. Hurdle lets you test how well Claude Code and Codex can use your platform. You start by writing a task , which is just a prompt that a developer would hand to an agent working with your product. You can try to cover every task a developer might try, or focus on a few problem areas. Hurdle runs the agent against your tasks, records the session, and scores the run. Exactly how scoring works is up to you. You can pick one method, or mix and match: You can also run each task under different conditions , which set the context the agent starts with. For example, you can run the same task on two fresh agents, one with and one without your MCP server installed…"
+    },
+    {
+      "id": "e2ea24d70079e9ab",
+      "source_id": "crusoe",
+      "source_name": "Crusoe Blog",
+      "url": "https://www.crusoe.ai/resources/blog/rdma-memory-registration-overhead-gpu-vms",
+      "title": "RDMA memory registration overhead in GPU VMs explained",
+      "summary": "RDMA memory registration uses host memory your VM never sees. Learn where it goes, how Crusoe caps it per VF, and when to trade guest RAM for headroom.",
+      "published_at": "2026-11-25T00:00:00Z",
+      "first_seen": "2026-11-25T22:59:09Z",
+      "label": "infra",
+      "topics": [
+        "systems",
+        "hardware"
+      ],
+      "excerpt": "Sections: Where the hidden memory goes | Why RDMA memory registration overhead grows with GPU scale | Which workloads drive the cost | How Crusoe keeps every tenant safe | Measuring the hidden memory allocation | Size the budget from fleet data | Enforcing limits on NIC firmware | Apply it on every host Every GPU buffer registered for RDMA costs host memory outside your VM, and at GPU scale that can reach gigabytes per NIC. Crusoe bounds the cost with a per-VF budget in NIC firmware, and a few changes keep most workloads well within it. Your workload registers GPU memory (HBM) for remote direct memory access (RDMA) inside a VM. Each call succeeds and returns a key, and inside the guest nothing else changes. On the host, the network card takes memory to keep track of what you registered, and no process shows it. RDMA lets a network card read and write a buffer directly, without involving the remote CPU or operating system, so the card keeps a record of every buffer it may touch and every connection it serves. Its on-chip memory is far too small to hold that record, so the record lives in host RAM that your VM cannot see. Most workloads in our fleet keep this RDMA memory registration overhead under about 1 GiB per NIC, but RDMA-heavy ones, like disaggregated inference and mixture-of-experts (MoE) training, have pushed a single NIC to between 4 and 6 GiB. This post follows that memory from the registration call down to the host and shows why the cost grows with the amount of GPU memory you register. It then explains how Crusoe keeps one VM's registrations from affecting…"
+    },
+    {
+      "id": "9e640d54cb607240",
+      "source_id": "anthropic-eng",
+      "source_name": "Anthropic Engineering",
+      "url": "https://www.anthropic.com/research/migrating-api-to-rust",
+      "title": "Migrating our Messages API to Rust",
+      "summary": "How we used the existing Messages API to verify the new one, with teams of Claude agents tracking down and fixing differences between the Python and Rust versions.",
+      "published_at": "2026-11-25T00:00:00Z",
+      "first_seen": "2026-11-25T22:59:09Z",
+      "label": "infra",
+      "topics": [
+        "systems",
+        "agents"
+      ],
+      "excerpt": "Sections: 01 Why migrate? | Why migrate? | Incremental or all at once? | How we verified the migration | General approaches | Tests | Detecting parity with production | Verification loops Many problems have a generator–verifier gap: it’s often far easier to verify that a solution is correct than to come up with one. Sudoku is a classic example. It’s simple to check the solution (just count the numbers in each row, column, and box), but finding that solution can take a long time. Many ambitious Claude projects have relied on this gap: formalizing proofs in mathematics or migrating large, well-tested codebases are tasks Claude can take on as long as it has a reliable way to verify its work. But as Claude has become more capable, it’s begun to take on projects in live systems, where generating the work is easier than verifying it. In these systems, users often rely on edge cases and quirks that fall outside the test suite , and it’s hard to write a definition of “correct” that covers everything . Without a reliable way to check Claude’s work, the migration of a live system is hard to trust—however quickly Claude can generate the code for it. We ran into this problem when we migrated our Messages API from Python to Rust. This API is the primary way that customers—as well as our own apps, like Claude Code and Cowork—reach Claude. From early 2024 to fall 2026, API traffic grew roughly 1,800 times. Rust would allow us to use far less CPU per request. Claude wrote a first version of the API’s core request path in about a week. But building trust in the migration required us to…"
+    },
+    {
+      "id": "b50e27de0cb7494f",
+      "source_id": "nebius",
+      "source_name": "Nebius",
+      "url": "https://nebius.com/blog/posts/layerstream-moe-fine-tuning",
+      "title": "LayerStream: faster MoE fine-tuning on fewer or cheaper GPUs",
+      "summary": "Fine-tuning a large MoE model can require extra GPUs just to hold the training state. LayerStream moves state through GPU memory one layer at a time. See how the Nebius training engine delivers faster iteration, uses fewer or lower-priced GPUs, and compares with our Megatron-based trainer across three models.",
+      "published_at": "2026-11-25T00:00:00Z",
+      "first_seen": "2026-11-25T22:59:09Z",
+      "label": "infra",
+      "topics": [
+        "training",
+        "inference",
+        "hardware"
+      ],
+      "excerpt": "Sections: Why a sparse model still needs so much memory Why a sparse model still needs so much memory | How LayerStream works How LayerStream works | Layer-at-a-time state Layer-at-a-time state | In-pass updates In-pass updates | Tokens stay local Tokens stay local | Reuse intermediate results Reuse intermediate results | Training kernels Training kernels | Results across three MoE models Results across three MoE models When you fine-tune a large mixture-of-experts (MoE) model , you can end up adding GPUs just to fit the training state. LayerStream, our training engine at Nebius, reduces that memory burden so more of your GPU budget goes into training. It keeps optimizer state and saved activations in host memory, then streams each layer’s working state through the GPU when that layer runs. On the same 16 NVIDIA H200 GPUs, Qwen3.8-Flash-Next completed a pass over our 25.8-million-token dataset in 7.1 minutes instead of 22.4 . Training throughput was 3.15× that of our tuned Megatron-LM-based trainer, with 68% lower GPU cost per token. Other tested configurations used fewer B300 GPUs or lower-priced H100 GPUs. The comparisons and their limits are below. Figure 1. LayerStream compared with our tuned Megatron-based trainer. GPU cost uses Nebius on-demand rates dated November 16, 2026. The GLM throughput baseline uses different data; see the results below for the conditions. MoE models have hundreds of billions of parameters, but each token uses only a small fraction of them. Training still needs to store state for the full model. Under the conventional layout used for our…"
+    },
+    {
+      "id": "66442c030ca761df",
+      "source_id": "fireworks",
+      "source_name": "Fireworks AI",
+      "url": "https://fireworks.ai/blog/hy4-flash-on-fireworks/",
+      "title": "Hy4 Flash on Fireworks: Tencent's open model for cost-efficient professional work",
+      "summary": "Hy4 Flash from Tencent is live on Fireworks serverless. It's on the score-cost Pareto frontier for every Specialized Intelligence Index benchmark we ran.",
+      "published_at": "2026-11-25T00:00:00Z",
+      "first_seen": "2026-11-25T22:59:09Z",
+      "label": "drop",
+      "topics": [],
+      "excerpt": "Sections: Hy4 Flash keeps pace with Claude Opus on professional work | Validated against Tencent’s official endpoint | Start building today Hy4 Flash , Tencent’s new open weights model, is now available on Fireworks serverless. It’s a mixture-of-experts model with about 220B total parameters and about 12B active per token, a 1M-token context window (512K on Fireworks at launch), and text and image input. Tencent built it for document processing, research, office work and agent workflows. Hy4 Flash is on the score-cost Pareto frontier for every Specialized Intelligence Index benchmark where we recorded cost. On those boards, no model scores higher for less. The clearest example is Epiq’s CorporateBench, where it edged out Claude Opus 5.5 at over 200x less per task ($0.013 vs $2.80). It also tied Claude Opus 5 on Rogo’s Big Finance Benchmark and matched it on Sierra’s τ³-Banking, again for over 200x less. Hy4 Flash runs on Fireworks serverless at $0.07 per million uncached input tokens, $0.003 per million cached input tokens and $0.281 per million output tokens on the Standard tier, with a Priority tier also available. It’s served globally. We ran Hy4 Flash on seven Specialized Intelligence Index benchmarks, using the same harness as every other model on each board, at high reasoning. Cost is the recorded tokens at Fireworks serverless prices. Three results stand out: Hy4 Flash was the lowest-cost model on every board where we recorded cost, except Big Finance. It ranks lower on HealthBench Professional (16th of 18) and DeepSWE (19th of 22), and for long-horizon software…"
+    },
     {
       "id": "245eefc7db303c4a",
       "source_id": "pytorch",
@@ -835,6 +968,22 @@
       "label": "drop",
       "topics": [],
       "excerpt": "Sections: TL;DR | The Loop | Serving the Loop in vLLM | Variable-Loop Research Checkpoint | Accuracy Evals Thinking Machines announced Inkling 2 Mini today. vLLM supports it and its variable-loop research checkpoint, TML-d24-varloop-research , on day 0 on NVIDIA Blackwell, Hopper and DGX Spark. Inkling 2 Mini is a looped model: its middle 12 layers run three times per token with shared weights, each pass with its own KV cache and gated messages from the pass before. It is a multimodal MoE with 26B total and 3.5B active parameters, up to 1M tokens of context and a native DSpark speculator. We provide a Docker image with Inkling 2 Mini support, vllm/vllm-openai:inkling-2-mini . You can serve the model with: And the variable-loop research checkpoint, here with 2 passes and one KV cache shared across passes: Figure 1. The prelude and coda run once; the loop core runs three passes, each reading messages from the one before. Prelude, core, coda. The 24 layers split into a prelude (layers 0–5), a loop core (layers 6–17) and a coda (layers 18–23). The prelude and coda run once each; the core runs three passes with shared weights, and the coda continues from the last pass. Each group of six layers is one block of the block attention residuals used in Inkling 2 Small, so one pass of the core produces exactly two blocks. Every pass starts from the prelude's output. A plain looped model feeds pass p's output into pass p + 1. Here, all three passes start from that same output, and pass p + 1 sees pass p only through messages. Messages are read at every sublayer. From the second pass…"
+    },
+    {
+      "id": "5b20defc070c0cf9",
+      "source_id": "nvidia",
+      "source_name": "NVIDIA Data Center & Cloud",
+      "url": "https://developer.nvidia.com/blog/manage-liquid-cooled-ai-factories-with-nvidia-mission-control/",
+      "title": "Manage Liquid-Cooled AI Factories with NVIDIA Mission Control",
+      "summary": "Managing AI infrastructure such as NVIDIA Vera Rubin NVL72 requires coordinated operation of compute, power, and cooling systems. In liquid-cooled AI factories,...",
+      "published_at": "2026-11-19T22:02:30Z",
+      "first_seen": "2026-11-25T22:59:09Z",
+      "label": "infra",
+      "topics": [
+        "hardware",
+        "systems"
+      ],
+      "excerpt": "Sections: IT and OT convergence in liquid-cooled environments | Flexible configuration for enterprise AI factories | Configurable MQTT for BMS integration | Configurable leak action policies | How to use advanced rack management commands | Observability integration | Get started with planning for liquid-cooled AI factories | Tags Managing AI infrastructure such as NVIDIA Vera Rubin NVL72 requires coordinated operation of compute, power, and cooling systems. In liquid-cooled AI factories, a leak response may require operational teams to stop workloads, isolate affected nodes, and control power circuits and cooling valves. AI factory operations span two domains that have historically operated separately. Information technology (IT) teams manage compute resources, workload orchestration, and application performance. Operational technology (OT) teams handle physical building systems—power distribution, cooling infrastructure, and environmental safety. This post explains how NVIDIA Mission Control connects IT and OT systems to coordinate leak responses and monitor compute and facility conditions. Liquid cooling creates interdependencies between IT and OT systems that require coordinated responses. When a leak sensor triggers, IT systems may need to stop workloads and isolate affected compute nodes, while a building management system (BMS) manages power circuits and cooling valves. The response sequence depends on the configured policies and facility requirements. The challenge is coordinating these actions across systems quickly and reliably. Figure 1 shows the leak detection…"
     },
     {
       "id": "31618e0c886ff009",
@@ -6210,6 +6359,21 @@
       "excerpt": "Sections: AgentX Engram DRAM Offloading Improving Performance | SSD Offloading DeepSeek did not release the original paper’s two trained Engram models. We replicated its setup on fineweb-edu using the released code and training hyperparameters, at an estimated 6E18 FLOPs per run. We observed the same U-shape scaling: Engram improved performance over pure MoE baselines. We also reproduced DeepSeek’s results, where earlier-layer representations with Engram resembled those of later layers. Like the original Engram paper, it is possible to probe Engram’s gate scores to see what n-grams DeepSeek-V4.1-Flash makes the most use of. Our gate scan finds names, code fragments, relational phrasing, and boilerplate. These examples prioritize interesting-ness over gate strength. One unexpected result was Wright : Ace Attorney . These examples suggest learned memory optimizes the training objective, not a judgment of which facts deserve storage. Licenses, bibliography fragments, API scaffolding, and website furniture can provide prediction shortcuts, so the value of additional Engram capacity may depend on what survives data preparation. This does not show that table capacity is “wasted”: the evaluation-corpus scan establishes neither training exposure nor the capacity occupied by each category. For offloading, strong gates do not identify cache-hot rows. Low gates do not automatically save reads either: computing the gate requires the retrieved key and undoes the performance gain of a fused kernel. Skipping reads would require a separate usefulness predictor before retrieval. In the…"
     },
     {
+      "id": "70a5a23942c6b9ff",
+      "source_id": "friendli",
+      "source_name": "FriendliAI",
+      "url": "https://friendli.ai/blog/open-vs-closed-model",
+      "title": "When Open Models Beat Astra and Fable and When They Don’t?",
+      "summary": "Compare GLM-5.3 and Kimi K3 with GPT-6 Astra and Claude Fable across coding accuracy, cost, speed, and design tasks to find the right model for your workload.",
+      "published_at": "2026-09-18T00:00:00Z",
+      "first_seen": "2026-11-25T22:59:09Z",
+      "label": "infra",
+      "topics": [
+        "inference"
+      ],
+      "excerpt": "Sections: Recreating Manhattan with GLM-5.3 and Astra | Accuracy, Cost, and Speed Favor Different Models | Similar Scores Hide Different Strengths | Open-Weight Models Deliver Competitive Design Results | The Right Model Depends on the Workload | General FAQ | What is FriendliAI? | How does FriendliAI reduce inference costs? Open-weight models such as GLM-5.3 and Kimi K3 can offer better value than Astra or Fable when they meet a workload’s quality requirements at a lower cost. We evaluated 12 configurations of nine models on SWE-bench Verified and Terminal-Bench 2.1, comparing accuracy, mean cost per task, completion time, and task-level behavior. On SWE-bench Verified, GLM-5.3-Flash achieved 89.6% accuracy at approximately $0.02 per task, compared with Astra’s 87.0% at $1.00. GLM-5.3 reached 94.2% at $0.18, while Kimi K3 reached 93.8% at $0.77. The picture changes on Terminal-Bench 2.1, where Astra and Fable… Aggregate benchmark scores hide as much as they show, so we also break down the results by problem type to highlight models’ relative strengths. We also compare output quality across four design tasks, examining how models translate the same requirements into different visual and interactive experiences. Together, these comparisons show where GLM-5.3 and Kimi K3 match or beat Astra and Fable, and where a proprietary model’s advantages still justify its price. For application builders, the goal is not to pick a universal winner, but to find the model that meets a specific workload’s quality… A model’s capabilities are easier to appreciate through the work it…"
+    },
+    {
       "id": "89aaad01e2a40407",
       "source_id": "vllm",
       "source_name": "vLLM Blog",
@@ -6681,6 +6845,21 @@
       "excerpt": "Sections: TL;DR | The road to specialized intelligence | Stage 1: Renting the closed frontier | Stage 2: AI engineering - prompts, context & harnesses, oh my! | Stage 3: Adding open models into the mix | Stage 4: Training - owning your specialized intelligence | “Teach the model our taxonomy” | “Write the way we write” Teams decide to train their own models for a handful of reasons: Underneath all of these is the same instinct: to own the specialized intelligence that defines their business. This piece is about the road that gets you there. You start by renting the most powerful (usually the most expensive) closed LLM available to you, engineering specialized harnesses, systems, and components around that model to improve its performance on your task. Once those components max out, you migrate to cheaper, yet still effective, open models to cut down on cost while maximizing utility. Finally, if the problem is truly yours, you decide to own the intelligence outright by training a custom model. Almost everyone starts with a closed frontier model behind an API. It makes sense : those providers spend enormous sums marketing their models everywhere they can , trying to get you on board. These models are powerful and because someone else carries the cost of training and serving them, you are paying by usage through token costs. The downsides are deep but here are three main ones you might run into: The model is far too general and demands prompting on top to be able to do anything in a specialized way. When it works, it works, but the model is molded by someone else, for…"
     },
     {
+      "id": "102a7941a46f7619",
+      "source_id": "friendli",
+      "source_name": "FriendliAI",
+      "url": "https://friendli.ai/blog/glm-5.3-vs-5.3-flash",
+      "title": "GLM-5.3 and GLM-5.3-Flash Lower Cost per Task in Different Ways",
+      "summary": "GLM-5.3 and GLM-5.3-Flash both lower cost per task compared to GLM-5.2, but through different mechanisms: cheaper tokens for Flash, fewer agent turns for GLM-5.3. Rank the apps each model built from the same one-shot prompt, then see the accuracy, cost, and trajectory results — both models are available with day-0 support on FriendliAI Model APIs.",
+      "published_at": "2026-09-08T00:00:00Z",
+      "first_seen": "2026-11-25T22:59:09Z",
+      "label": "infra",
+      "topics": [
+        "agents"
+      ],
+      "excerpt": "Sections: Can You Tell Which Model Built Each App? | Higher Accuracy at a Lower Cost per Task | Efficient Agent Trajectories Reduce Cost per Task | What You May Have Missed | Evaluate Coding Models by Cost per Task | General FAQ | What is FriendliAI? | How does FriendliAI reduce inference costs? GLM-5.3 and GLM-5.3-Flash both achieve higher accuracy than GLM-5.2 while reducing the average cost per task across three agentic software benchmarks. However, their savings arise from different mechanisms. GLM-5.3-Flash benefits primarily from lower token prices, whereas GLM-5.3 achieves lower task-level costs at the same token prices as GLM-5.2 by completing tasks through shorter agent trajectories. We compare benchmark accuracy, token usage, and problem-solving trajectories to distinguish these two sources of cost reduction. Because actual cost combines token prices with trajectory behavior, it does not directly reveal how efficiently a model uses those tokens. We therefore also report a normalized cost: what each task would have cost if every model charged the same price per input token. Under this normalization, GLM-5.3 becomes the lowest-cost model, replacing GLM-5.3-Flash at the top of the ranking. This reversal reveals two distinct paths to lower agent cost: GLM-5.3-Flash benefits primarily from cheaper tokens, whereas GLM-5.3 reduces the cost of the trajectory itself. Before diving into the benchmark results, compare the models yourself. We gave GLM-5.2, GLM-5.3, and GLM-5.3-Flash the same one-shot prompts to build three different applications: Explore the applications…"
+    },
+    {
       "id": "17a985a894408798",
       "source_id": "vllm",
       "source_name": "vLLM Blog",
@@ -6825,21 +7004,6 @@
       "label": "drop",
       "topics": [],
       "excerpt": "Sections: The challenge | Isolating thousands of RL rollouts | Latency is a GPU bill | Build vs. buy on Firecracker | The solution | Cutting cold-start and command latency | Driving faster startup with snapshots | Developer experience for humans and agents Paper Instruments trains frontier models to do knowledge work: consulting, finance, investment banking, and law. They partnered with Perplexity to develop DRACO , a benchmark for its flagship Advanced Deep Research product. Most recently, they released DiligenceBench with Thoughtful Lab, which is a benchmark that grades agents against equity-research tasks with rubrics built from thousands of weighted criteria. Training frontier models against these benchmarks requires infrastructure that can scale. In practice, that means running thousands of concurrent rollouts, each one with an agent operating on its own file system and external application state over many steps. These rollouts need to be isolated from each other to keep training signals clean. Additionally, the data generated by rollouts (the agent's actions, file changes, intermediate outputs, rewards/grades from the benchmark rubrics) is wired directly into the pipeline in a structured and traceable way so that there is visibility into how… Each RL rollout needs its own file system and persistent state for the length of the trajectory, and it’s important that the solver and the grader are completely isolated from one another to prevent reward hacking. Additionally, rollouts running in parallel must not affect each other. Cross-contamination between rollouts, or…"
-    },
-    {
-      "id": "b28b532a9c4831dd",
-      "source_id": "nvidia",
-      "source_name": "NVIDIA Data Center & Cloud",
-      "url": "https://developer.nvidia.com/blog/co-designing-ai-models-using-speculative-decoding-for-faster-llm-inference/",
-      "title": "Co-Designing AI Models Using Speculative Decoding for Faster LLM Inference",
-      "summary": "This post is the third in a series on AI model co-design. It explores how to accelerate LLM inference while maintaining accuracy using speculative decoding and...",
-      "published_at": "2026-09-02T16:04:19Z",
-      "first_seen": "2026-11-15T07:22:28Z",
-      "label": "infra",
-      "topics": [
-        "inference"
-      ],
-      "excerpt": "Sections: What is speculative decoding? | Selecting the optimal draft length | Draft length and performance of linear layers | Draft length and attention performance | Draft length at the far right of the Pareto curve | Selecting a draft mechanism | Tags | About the Authors This post is the third in a series on AI model co-design. It explores how to accelerate LLM inference while maintaining accuracy using speculative decoding and offers five guidelines for selecting draft length and draft mechanism across the Pareto frontier. For a discussion of how model design choices impact both throughput and interactivity without sacrificing accuracy, see AI Model Co-Design: Hardware-Friendly LLM Design (Part 1). For an explanation of how group size (query heads per KV head), head dimension, and sequence length shape the performance of dense attention, see Co-Designing AI Model Attention for Fast, Interactive Long-Context Inference (Part 2). Speculative decoding is a technique for accelerating the autoregressive decoding phase of LLM inference by predicting multiple tokens per iteration. A small draft model first predicts several likely next tokens. These tokens are then verified in parallel with a single pass through the larger target model. This approach reduces the total number of decoding iterations while increasing the arithmetic intensity of the target model, without requiring higher concurrency. The target model accepts the proposed tokens in sequence until it encounters the first mismatch. The next prediction cycle then resumes from that position. Because only tokens accepted…"
     },
     {
       "id": "4f36a747f32bfbac",
@@ -9371,21 +9535,6 @@
       "label": "drop",
       "topics": [],
       "excerpt": "Sections: Evaluations evolved over time | Evaluations are becoming infrastructure challenges | Future Directions Today, we are releasing Hosted Evaluations, giving everyone access to scalable infrastructure to test models on their own evaluations. Evaluations are the cornerstone of LLM research and the subsequent deployment of the models. They make us able to figure out what the model can, and, more importantly, can't do. Without them, we'd be stuck with vibes, single prompt tests and cherry-picked examples from model vendors. Evaluations give us insights into the strengths (and weaknesses) of different models in a range of domains and capabilities. The set of capabilities we care about has changed a lot over the years. Consequently, the benchmarks have evolved, guiding the development of the next generation of models. In the early phases of LLM research, we mostly cared about knowledge-based benchmarks such as MMLU-Pro to assess whether a model has picked up facts from across the internet texts it was trained on. These benchmarks were graded as multiple choice, which makes them easy to evaluate. Evaluating these benchmarks is relatively simple: You take the question from the task set, give it to the model, and then score the model's answer with a regular expression (or any other grading function) to obtain the final score. Benchmarks like SimpleQA (and its verified version with cleaned tasks) were a natural extension of these knowledge‑based tests, as the models need to string multiple facts together to answer a question. Benchmarks like these are evaluated using a second…"
-    },
-    {
-      "id": "ba4768a59b6e39f7",
-      "source_id": "together",
-      "source_name": "Together AI",
-      "url": "https://www.together.ai/blog/how-together-ai-built-the-worlds-fastest-speech-to-text-stack",
-      "title": "How Together AI built the world’s fastest speech-to-text stack",
-      "summary": "Together AI built the fastest speech-to-text stack on Artificial Analysis by treating ASR as a full-path systems problem, not just a GPU inference problem.",
-      "published_at": "2026-05-29T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z",
-      "label": "infra",
-      "topics": [
-        "inference"
-      ],
-      "excerpt": "Sections: Modality matters | Compile the encoder for real audio shapes | Remove the CPU from the decoder loop | Stop copying audio bytes | Use evented I/O for streaming | Freeze startup state to remove GC tail latency | Voice latency is an end-to-end systems problem A 1M-token text prompt can fit the entire Harry Potter series and still only weigh around 5 MB. That scale sounds enormous, but the input itself is compact. Text also arrives almost ready for inference: tokenize it, batch it, and move it through the model. Audio changes the shape of the problem. The same Harry Potter corpus as audiobooks is 5 to 10 GB, roughly three orders of magnitude larger than the text. Before any of it reaches the GPU, the server has to decode the container, resample, filter noise, run VAD, segment speech, and compute audio features. The model side flips too. LLMs these days have hundreds of billions or trillions of parameters, so serving work naturally concentrates inside the GPU: quantization, KV cache, attention kernels, batching, and parallelism. Speech-to-text models are much smaller, often in the hundreds of millions to low billions of parameters, so the surrounding data path matters much more. That makes ASR serving a full-path systems problem spanning GPU execution, CPU preprocessing, memory movement, transport, connection scheduling, and runtime behavior. The same stack also has to serve two different regimes: offline transcription, where throughput matters most, and streaming transcription, where latency and jitter dominate. Together’s ASR stack serves the two lowest-latency…"
     },
     {
       "id": "09ed50e84a2d57fc",
