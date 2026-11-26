@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T22:59:09Z",
+  "generated_at": "2026-11-26T22:53:08Z",
   "last_new_count": 12,
   "sources": [
     {
@@ -13,7 +13,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "lmsys",
@@ -26,7 +26,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "modal",
@@ -39,7 +39,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "baseten",
@@ -50,9 +50,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 10,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 20,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "fireworks",
@@ -63,9 +63,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 15,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 18,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "together",
@@ -76,9 +76,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 1,
+      "new_count": 9,
       "total_count": 50,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "anyscale",
@@ -91,7 +91,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "skypilot",
@@ -104,7 +104,7 @@
       "fetched_count": 12,
       "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "crusoe",
@@ -115,9 +115,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 12,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 17,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "pytorch",
@@ -129,8 +129,8 @@
       "error": null,
       "fetched_count": 10,
       "new_count": 1,
-      "total_count": 14,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "total_count": 15,
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "nvidia",
@@ -141,9 +141,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "modular",
@@ -156,7 +156,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "timdettmers",
@@ -169,7 +169,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "thinkingmachines-blog",
@@ -182,7 +182,7 @@
       "fetched_count": 8,
       "new_count": 0,
       "total_count": 8,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "humansand",
@@ -195,7 +195,7 @@
       "fetched_count": 3,
       "new_count": 0,
       "total_count": 3,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "anthropic-eng",
@@ -206,9 +206,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 24,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 25,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "lilianweng",
@@ -221,7 +221,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "aleksagordic",
@@ -234,7 +234,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 15,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "semianalysis",
@@ -245,9 +245,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 20,
-      "new_count": 0,
-      "total_count": 20,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "new_count": 1,
+      "total_count": 21,
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "cloudflare",
@@ -258,9 +258,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 20,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 28,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "netpreme",
@@ -273,7 +273,7 @@
       "fetched_count": 5,
       "new_count": 0,
       "total_count": 5,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "periodic",
@@ -286,7 +286,7 @@
       "fetched_count": 4,
       "new_count": 0,
       "total_count": 4,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "flashinfer",
@@ -299,7 +299,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "primeintellect",
@@ -312,7 +312,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "openai-eng",
@@ -325,7 +325,7 @@
       "fetched_count": 25,
       "new_count": 0,
       "total_count": 25,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "gimlet",
@@ -338,7 +338,7 @@
       "fetched_count": 16,
       "new_count": 0,
       "total_count": 16,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "cerebras",
@@ -351,7 +351,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "turbopuffer",
@@ -364,7 +364,7 @@
       "fetched_count": 17,
       "new_count": 0,
       "total_count": 17,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "friendli",
@@ -375,9 +375,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 13,
-      "new_count": 2,
+      "new_count": 0,
       "total_count": 13,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "fal",
@@ -390,7 +390,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 15,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "nebius",
@@ -402,8 +402,8 @@
       "error": null,
       "fetched_count": 12,
       "new_count": 1,
-      "total_count": 16,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "total_count": 17,
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "lambda",
@@ -414,9 +414,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 10,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 11,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     },
     {
       "id": "e2b",
@@ -429,10 +429,67 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-25T22:59:09Z"
+      "last_checked": "2026-11-26T22:53:08Z"
     }
   ],
   "posts": [
+    {
+      "id": "c1f121daf679bed7",
+      "source_id": "pytorch",
+      "source_name": "PyTorch Blog",
+      "url": "https://pytorch.org/blog/explore-the-pytorch-day-china-2026-schedule/",
+      "title": "Explore the PyTorch Day China 2026 Schedule",
+      "summary": "The next wave of AI innovation is happening now. Join the developers, researchers, engineers, and industry leaders driving that progress at PyTorch Day China 2026, taking place December 12 in... The post Explore the PyTorch Day China 2026 Schedule appeared first on PyTorch .",
+      "published_at": "2026-11-26T02:44:16Z",
+      "first_seen": "2026-11-26T22:53:08Z",
+      "label": "drop",
+      "topics": [],
+      "excerpt": "Sections: Featured Sessions | Why Attend? | Be Part of the Conversation The next wave of AI innovation is happening now. Join the developers, researchers, engineers, and industry leaders driving that progress at PyTorch Day China 2026 , taking place December 12 in Beijing. Co-hosted by Alibaba Cloud, AMD, and the PyTorch Foundation, this community-driven event brings together the people and technologies shaping the future of open source AI. Whether you’re building AI applications, optimizing models, advancing hardware acceleration, or contributing to open source projects, PyTorch Day China offers valuable opportunities to gain new insights, exchange ideas, and connect with the community. Register now to explore cutting-edge advancements in training, inference, responsible AI, and more. Get inspired by technical presentations from leading experts and innovators. A few featured sessions include: Discover new approaches to model training, post-training, inference optimization, and agentic AI. Deepen your technical knowledge, connect with industry peers, and contribute to the open source community at PyTorch Day China. This is your chance to exchange ideas and help shape what’s next. Join us in Beijing on December 12 and be part of the innovation. Register for free now. The post Explore the PyTorch Day China 2026 Schedule appeared first on PyTorch ."
+    },
+    {
+      "id": "cb78c13a330959ed",
+      "source_id": "semianalysis",
+      "source_name": "SemiAnalysis",
+      "url": "https://newsletter.semianalysis.com/p/evaluating-recent-model-releases",
+      "title": "Evaluating Recent Model Releases on GDPx",
+      "summary": "GPT-6.2 Astra takes the crown but bad at software engineering, Gemini 4 Neon is an impressive improvement from Google but still overrated, Fable 5.2 is smart but expensive, and new Chinese models as well",
+      "published_at": "2026-11-26T00:05:35Z",
+      "first_seen": "2026-11-26T22:53:08Z",
+      "label": "drop",
+      "topics": [],
+      "excerpt": "Since launching GDPx on November 1st, both Anthropic and OpenAI have released new frontier models. Google made a dramatic resurgence with the Gemini 4 series, and we’ve seen notable releases from Alibaba and Moonshot as well. The GDPx leaderboard now looks like this: It’s worth emphasizing that certain models like Fable 5.2 and GPT-6.2 Astra have sandbagged overall scores due to their safety classifiers. If we exclude cyber, biology, and alignment, the three domains where safety classifiers sometimes kick in, and switch to partial grading to get more signal from the extremely difficult legal and finance domains (which default to binary grading), we get the following leaderboard instead. We think you can argue either of these is the “correct” GDPx leaderboard. On one hand, safety classifiers truly limit the usefulness of models in domains like cyber and bio. On the other hand, if the goal is to measure a model’s intelligence, penalizing it for refusing to attempt a task due to safety concerns feels quite unfair. As an aside, we did find that 6.2 Astra’s classifiers are weaker than 6 Astra’s, but the model itself will refuse to do tasks that 6 Astra’s classifiers previously blocked. Either way, OpenAI is the current king of GDPx . Going off the main leaderboard, which covers all domains, 6.2 Astra ranks first with a score of 19.3%. Fable 5.2 ranks second at 16.4%, and the best non-OpenAI/Anthropic model, Gemini 4 Carbon, ranks fifth at 10.9%. Carbon just barely edges out the highly lauded Gemini 4 Neon, which ranks sixth with a score of 10.1%. The cost-performance Pareto…"
+    },
+    {
+      "id": "d46aff2bf273817a",
+      "source_id": "together",
+      "source_name": "Together AI",
+      "url": "https://www.together.ai/blog/distilling-kimi-into-qwen",
+      "title": "Distilling Kimi-K3.1-Pro into Qwen3.8-27B: Teaching a model a new language",
+      "summary": "Qwen3.8-27B answered in Thai when asked for Lao. We distilled Kimi-K3.1-Pro's Lao translation into it with Together Post-Training: 93% of the teacher's score, with Thai intact. Code and costs included.",
+      "published_at": "2026-11-26T00:00:00Z",
+      "first_seen": "2026-11-26T22:53:08Z",
+      "label": "infra",
+      "topics": [
+        "training"
+      ],
+      "excerpt": "Sections: Finding the gap | The plan: off-policy distillation | The Thai surprise | Fixing Thai | Closing the rest of the Lao gap | Results | Training on five languages | If you have a gap like this While running some experiments we found out that Qwen3.8-27B , one of the most popular small language models (SLMs), can't write Lao, a Southwestern Tai language and the official language of Laos. If you ask it to translate an English sentence into Lao, it answers in Thai, Lao's closest relative, which uses an entirely different script. On the FLORES-200 Lao test set, the model scores 5.5 chrF++, a 0 to 100 score for how closely a translation matches a human reference, and only 11% of its outputs are in Lao script. Kimi-K3.1-Pro scores 47.5 on the same test. Admittedly, this is a niche use case, but the pattern is quite common: a small language model displays jagged intelligence, falling flat on a narrow task you care about while a larger, more expensive model handles it with ease. To fix this, we used Kimi-K3.1-Pro as a teacher and distilled its Lao translation ability into Qwen3.8-27B using Together Post-Training. After training on about 3,800 of Kimi-K3.1-Pro's translations, the 27B student answers in Lao on every test sentence and scores 44.3, which is 93% of the teacher's score. It also kept its Thai translation ability, which interestingly turned out to be the hardest part. Our first attempt fixed Lao within 25 training steps but also lost Thai translating capabilities along with it. This post walks through how we found the gap and what ended up working. The code…"
+    },
+    {
+      "id": "c346fa855c843f97",
+      "source_id": "nebius",
+      "source_name": "Nebius",
+      "url": "https://nebius.com/blog/posts/gb300-to-vera-rubin-migration",
+      "title": "Most of what you build for Nebius-hosted NVIDIA Grace Blackwell NVL72 carries over to NVIDIA Vera Rubin NVL72",
+      "summary": "Teams planning NVIDIA Vera Rubin NVL72 ask us what we had to ask ourselves: we built for NVIDIA Grace Blackwell rack-scale systems, so how much must be done again? We tested both platforms, and most of it carried over: the Arm image family, node layout, and scheduling stay; images need a newer NVIDIA CUDA base, and kernels compiled only for Blackwell Ultra need a rebuild. Here is what we ran, what we found, and what…",
+      "published_at": "2026-11-26T00:00:00Z",
+      "first_seen": "2026-11-26T22:53:08Z",
+      "label": "infra",
+      "topics": [
+        "hardware",
+        "systems"
+      ],
+      "excerpt": "Sections: Assessment: most of the Grace Blackwell port carries over Assessment: most of the Grace Blackwell… | Planning: for Grace Blackwell teams, Vera Rubin is closer to a replatform than a refactor Planning… | Preparation: kernels compiled only for Blackwell Ultra need a rebuild Preparation: kernels compiled… | Validation: retune for Vera, then measure against your Grace Blackwell baseline Validation: retune… | Transfer: a new node group on the same storage Transfer: a new node group on the same storage | Optimization: the bottleneck moves Optimization: the bottleneck moves | Start the assessment on your current images today Start the assessment on your current images today | Explore Nebius AI Cloud A new GPU generation has usually meant new work for software teams. Kernels compiled only for the NVIDIA Hopper GPU architecture did not run on the NVIDIA Blackwell architecture; FlashAttention-3 is one example. Teams that adopt NVIDIA GB300 NVL72 port their container images to Arm, learn how memory is shared across compute trays, and arrange their communication-heavy ranks inside a single NVIDIA NVLink domain. Since Nebius announced that NVIDIA Vera Rubin NVL72 is coming to Nebius AI Cloud , those teams have been asking us a version of the same question: how much of that has to be done again? Our experience so far is that most of it does not. We have brought up and tested Nebius systems with NVIDIA GB300 NVL72 and with NVIDIA Vera Rubin NVL72, and we submitted results from both to MLPerf® Inference v6.1 : 72 GPUs across 18 nodes on GB300 NVL72, and 36 GPUs across 9 nodes on…"
+    },
     {
       "id": "f816184fb930b235",
       "source_id": "pytorch",
@@ -9492,21 +9549,6 @@
       "label": "drop",
       "topics": [],
       "excerpt": "Sections: Day-0 Support for post-training Nemotron on Prime Intellect Lab | What RL on open envs does | A turnkey path for enterprises | Why this matters for the open ecosystem | Get started AI has moved from models to agents that go beyond solving individual problems and instead can execute on full broad scope projects through tool calls, sub-agent delegation, and iterations over long horizons. NVIDIA's Nemotron family is built for this paradigm. Nemotron 3 Ultra — a 550B-parameter Mixture-of-Experts model with 55B active parameters — is built for frontier reasoning and orchestration, with Nemotron 3.5 ASR for voice and Nemotron 3.5 Content Safety for guardrailing. Ultra sits at the open frontier out of the box: 95% on RULER@1M, 82% on IFBench, and 65–70.4% on SWE-bench Verified consistently across Pi, OpenHands, Hermes, OpenCode, and Mini SWE Agent. A strong open model is the starting point of an agent. To specialize Nemotron 3 Ultra for your specific workflows and data, you need a repeatable post-training loop. Define the task, build the environment, run reinforcement learning (RL), evaluate, deploy, feed production traces back in, and repeat. NVIDIA built Ultra with exactly this loop — it was post-trained using Multi-Teacher On-Policy Distillation in NVIDIA's open NeMo RL and Gym libraries. Lab enables you to do your own post-training — bring your workflow, your environment, your traces, and keep specializing Nemotron. Teams are already using Prime Intellect Lab to post-train open models that outperform closed frontier systems on their own workflows, and the same…"
-    },
-    {
-      "id": "3bc0f5b9d356b528",
-      "source_id": "together",
-      "source_name": "Together AI",
-      "url": "https://www.together.ai/blog/serving-minimax-m3-for-efficient-inference-unlocking-1m-token-context-and-multimodality-without-regrets",
-      "title": "Serving MiniMax-M3 for efficient inference: Unlocking 1M-Token Context and Multimodality Without Regrets",
-      "summary": "How Together served MiniMax-M3 efficiently with KV-block-major sparse attention, paged MSA decode, optimized index scoring, and a Rust-based multimodal gateway.",
-      "published_at": "2026-06-02T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z",
-      "label": "infra",
-      "topics": [
-        "inference"
-      ],
-      "excerpt": "Sections: Architecture / Characteristics | Optimizations | KV-Block-Major Sparse Attention | Integrate MSA with Paged Attention | Decode Index Scoring Kernel Optimization | Multimodal Preprocessing at the Gateway | Performance Results | Future Work MiniMax launched their latest state-of-the-art model M3 and Together AI is excited to be the preferred cloud partner, enabling MiniMax to efficiently serve M3 in production at scale. Once MiniMax M3 is released as an open weights model over the coming few days, Together AI will also host the model as an endpoint for developers directly. Behind that scale is the exceptional work of our Inference and Kernel teams, who drove deep performance optimizations and ensured production-grade reliability for a model that pushes the frontier: 1M-token context window, native multimodality, and an… MiniMax M3 is an all-in-one model that brings together state-of-the-art coding performance, agentic workflow support, and native multimodal reasoning. On top of these capabilities, it is also designed to support 1M context while being highly economically friendly to serve. This makes it a good fit for real-world tasks where long documents, codebases, tool use, images, and iterative reasoning often appear together and heavy in context. Compared to the previous generation, serving M3 imposes more challenges as new capabilities require optimizations on more dimensions including sparse attention… The most novel architectural change in M3 is MiniMax Sparse Attention (MSA), which is designed to address the attention-computation bottleneck seen in MiniMax…"
     },
     {
       "id": "0bb5314e77521ac3",
