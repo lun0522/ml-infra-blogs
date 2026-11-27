@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-26T22:53:08Z",
-  "last_new_count": 12,
+  "generated_at": "2026-11-27T22:33:53Z",
+  "last_new_count": 11,
   "sources": [
     {
       "id": "vllm",
@@ -13,7 +13,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "lmsys",
@@ -24,9 +24,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 50,
-      "new_count": 0,
+      "new_count": 1,
       "total_count": 50,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "modal",
@@ -39,7 +39,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "baseten",
@@ -52,7 +52,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 20,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "fireworks",
@@ -65,7 +65,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 18,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "together",
@@ -78,7 +78,7 @@
       "fetched_count": 50,
       "new_count": 9,
       "total_count": 50,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "anyscale",
@@ -91,7 +91,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "skypilot",
@@ -104,7 +104,7 @@
       "fetched_count": 12,
       "new_count": 0,
       "total_count": 12,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "crusoe",
@@ -117,7 +117,7 @@
       "fetched_count": 12,
       "new_count": 0,
       "total_count": 17,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "pytorch",
@@ -128,9 +128,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 10,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 15,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "nvidia",
@@ -143,7 +143,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "modular",
@@ -156,7 +156,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "timdettmers",
@@ -169,7 +169,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "thinkingmachines-blog",
@@ -182,7 +182,7 @@
       "fetched_count": 8,
       "new_count": 0,
       "total_count": 8,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "humansand",
@@ -195,7 +195,7 @@
       "fetched_count": 3,
       "new_count": 0,
       "total_count": 3,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "anthropic-eng",
@@ -208,7 +208,7 @@
       "fetched_count": 24,
       "new_count": 0,
       "total_count": 25,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "lilianweng",
@@ -221,7 +221,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "aleksagordic",
@@ -234,7 +234,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 15,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "semianalysis",
@@ -246,8 +246,8 @@
       "error": null,
       "fetched_count": 20,
       "new_count": 1,
-      "total_count": 21,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "total_count": 22,
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "cloudflare",
@@ -260,7 +260,7 @@
       "fetched_count": 20,
       "new_count": 0,
       "total_count": 28,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "netpreme",
@@ -273,7 +273,7 @@
       "fetched_count": 5,
       "new_count": 0,
       "total_count": 5,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "periodic",
@@ -286,7 +286,7 @@
       "fetched_count": 4,
       "new_count": 0,
       "total_count": 4,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "flashinfer",
@@ -299,7 +299,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 10,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "primeintellect",
@@ -312,7 +312,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "openai-eng",
@@ -325,7 +325,7 @@
       "fetched_count": 25,
       "new_count": 0,
       "total_count": 25,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "gimlet",
@@ -338,7 +338,7 @@
       "fetched_count": 16,
       "new_count": 0,
       "total_count": 16,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "cerebras",
@@ -351,7 +351,7 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "turbopuffer",
@@ -364,7 +364,7 @@
       "fetched_count": 17,
       "new_count": 0,
       "total_count": 17,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "friendli",
@@ -377,7 +377,7 @@
       "fetched_count": 13,
       "new_count": 0,
       "total_count": 13,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "fal",
@@ -390,7 +390,7 @@
       "fetched_count": 15,
       "new_count": 0,
       "total_count": 15,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "nebius",
@@ -401,9 +401,9 @@
       "status": "ok",
       "error": null,
       "fetched_count": 12,
-      "new_count": 1,
+      "new_count": 0,
       "total_count": 17,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "lambda",
@@ -416,7 +416,7 @@
       "fetched_count": 10,
       "new_count": 0,
       "total_count": 11,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     },
     {
       "id": "e2b",
@@ -429,10 +429,42 @@
       "fetched_count": 50,
       "new_count": 0,
       "total_count": 50,
-      "last_checked": "2026-11-26T22:53:08Z"
+      "last_checked": "2026-11-27T22:33:53Z"
     }
   ],
   "posts": [
+    {
+      "id": "e7792bf08cf97349",
+      "source_id": "semianalysis",
+      "source_name": "SemiAnalysis",
+      "url": "https://newsletter.semianalysis.com/p/trainium3-inferencex",
+      "title": "AWS Challenger: Trainium3 Inference and Microarchitecture Deep Dive",
+      "summary": "AgentX measures Trainium3 on a production end-to-end agentic inference workload. This is achieved by replaying real coding-agent sessions against a Trainium3 server. The goal is to compare accelerators’ realistic inference performance, that you may expect to see on actual agentic workloads.",
+      "published_at": "2026-11-27T15:54:59Z",
+      "first_seen": "2026-11-27T22:33:53Z",
+      "label": "infra",
+      "topics": [
+        "inference",
+        "hardware"
+      ],
+      "excerpt": "Sections: Prefill | Decode | Hardware and Programming Model | Memory | HBM Bandwidth | PSUM to SBUF Bandwidth | Tensor Engine | Simple Systolic Array Performance Model AgentX measures Trainium3 on a production end-to-end agentic inference workload. This is achieved by replaying real coding-agent sessions against a Trainium3 server. The goal is to compare accelerators’ realistic inference performance, that you may expect to see on actual agentic workloads. For those unfamiliar with InferenceX, the Pareto frontiers (curves) represent the fundamental inference tradeoff between throughput and latency. Each point is a different inference configuration targeting a different latency-throughput target. At each slice of the x-axis, higher perf per TCO is better and directly leads to higher inference gross margins. Today, we are excited to share that Trainium 3 PDS + vLLM achieves amazing perf/$ TCO across the entire frontier. In fact, it is better than every other accelerator besides Vera Rubin across the entire TCO versus p90 interactivity curve. This is an amazing achievement. Trainium is also very competitive from an end-to-end latency perspective, across the entire curve. With that being said, there is still room for improvement, particularly with respect to TTFT. It is not surprising that Trainium lags behind in some p90 TTFT cases against GB300 as this metric is largely dictated by prefill, a compute bound operation. Trainium3 has only 17% the theoretical FP4 flops as Blackwell Ultra (2,517 TFLOPS versus 15,000 TFLOPS). It has more competitive interactivity since decode is…"
+    },
+    {
+      "id": "b82681b380577d57",
+      "source_id": "lmsys",
+      "source_name": "LMSYS / SGLang",
+      "url": "https://www.lmsys.org/blog/2026-11-27-sglang-intel",
+      "title": "SGLang on Intel Xeon CPUs and Intel GPUs as First-Class Platforms: Execution Paths and Low-Precision Inference",
+      "summary": "Architecture-specific execution paths for Intel Xeon CPUs and Intel GPUs in SGLang, including AMX, attention and MoE kernels, graph execution, and packed MXFP4 expert weights.",
+      "published_at": "2026-11-27T00:00:00Z",
+      "first_seen": "2026-11-27T22:33:53Z",
+      "label": "infra",
+      "topics": [
+        "inference",
+        "hardware"
+      ],
+      "excerpt": "Sections: A Shared Serving Interface, Specialized Execution Paths | Intel Xeon: CPU-Native Inference | Intel GPUs: Building a Native XPU Serving Stack | Low-Precision MoE: A Closer Look at MXFP4 | Exploring Heterogeneous Inference with EPD | Co-Engineering the Future of Open AI Infrastructure | What’s Next | Get Started on Intel Platforms Efficient LLM inference on Intel Xeon CPUs and Intel GPUs depends on optimizations tailored to each architecture. This post examines RadixArk and Intel’s collaborative work on Intel Advanced Matrix Extensions (Intel AMX)-enabled computation, thread placement, and compiled execution on Intel Xeon, alongside attention and MoE kernels and graph execution on Intel GPUs. In particular, we take a closer look at the Xe2 MXFP4 path, which keeps expert weights compressed in device memory and converts weight tiles inside the compute kernel. We also describe the supported configurations and limitations… SGLang provides a common serving interface, while each backend specializes the execution and compute paths underneath. As shown below, compute kernels implement operations such as attention and expert GEMM; the execution layer organizes the threads, buffers, and data placement needed to run them. Their interaction matters: kernel efficiency depends on the shapes, layouts, and memory access patterns produced by the surrounding execution path. Figure 1. Shared serving interface, hardware-specific execution. Support is validated per backend and configuration; the diagram does not imply feature parity or automatic CPU-GPU workload placement. Intel’s…"
+    },
     {
       "id": "c1f121daf679bed7",
       "source_id": "pytorch",
@@ -8148,21 +8180,6 @@
         "systems"
       ],
       "excerpt": "Sections: How the resource model works | Weight based traffic split | Under the hood: choosing a config | Edge cases | Experiment showing capacity-aware routing | Try it yourself! Dedicated Model Inference on the Together AI platform consists of three parts: the endpoint (a stable name you or your clients call), deployments (specific model + hardware combinations running replicas behind it), and configs (recipes for how a model runs). A capacity-aware traffic split ties these three entities together. This architecture enables various other features such as rollouts, A/B tests, shadow experiments, zero-downtime changes possible. Below we'll show how capacity-aware routing works against a live endpoint with measured traffic. One easy way to understand this is by referring to the ID, every ID in the system tells you what it is by prefix, which makes logs and scripts self-documenting: proj_ (project), ml_ (model), cr_ (config revision), endpoint_ , dep_ (deployment), rol_ (rollout). Every advanced operation in the platform is just \"add a deployment, and assign it a traffic routing weight\" An A/B test is deployments with cohort assignments. A shadow experiment is a deployment at weight zero receiving mirrored traffic. Stopping a deployment is bounding min and max replicas to 0/0. The traffic split is a list of {deployment_id, weight} entries where a weight is per ready replica **.** The router computes each deployment's effective capacity as weight × ready_replicas and routes proportionally to this capacity. Walk through the diagram above: both deployments have weight 1 but…"
-    },
-    {
-      "id": "413f9cfb12cf02fa",
-      "source_id": "lmsys",
-      "source_name": "LMSYS / SGLang",
-      "url": "https://www.lmsys.org/blog/2026-07-29-mxfp8-nvfp4-rl",
-      "title": "Towards Blackwell-Native 8-bit and 4-bit RL: End-to-End MXFP8 and NVFP4 RL in Miles",
-      "summary": "In low-precision RL, rollout, training, checkpoint conversion, and live weight updates must agree on one precision contract, or the sampler and trainer policies will diverge.",
-      "published_at": "2026-07-29T00:00:00Z",
-      "first_seen": "2026-11-15T07:22:28Z",
-      "label": "infra",
-      "topics": [
-        "training"
-      ],
-      "excerpt": "Sections: Introduction | Why Blackwell-Native Recipes? | Format Background | MXFP8 | NVFP4 | Recipe 1: End-to-End MXFP8 RL | Training | Rollout TL;DR: We implemented two Blackwell-native RL recipes in Miles: end-to-end MXFP8 and per-token NVFP4 for MoE experts. Both are supported by fine-grained precision control across checkpoint conversion, Megatron training, SGLang rollout, and live weight updates. MXFP8 covers rollout, forward propagation, weight-gradient GEMMs, and data-gradient GEMMs. NVFP4 uses online per-token activation scaling for its MoE expert path, and both formats support high-precision or dequantized backward modes. In a Qwen3-30B-A3B recipe ablation on 8x B200, BF16 and all five low-precision configurations have… In low-precision RL, rollout, training, checkpoint conversion, and live weight updates must agree on one precision contract, or the sampler and trainer policies will diverge. Miles and the SGLang RL ecosystem have already incorporated low-precision recipes: the LMSYS FP8 RL post showed that using FP8 across training and sampling reduces mismatch relative to BF16 training with FP8 rollout; the INT4 QAT post showed that fake quantization during training and W4A16 rollout can make INT4 practical. We extend that work to Blackwell-native formats by implementing MXFP8 and NVFP4 recipes in Miles and… Previous low-precision approaches were not designed around MXFP8 or NVFP4. The existing Miles path follows a DeepSeek-V3 -style block-scaled FP8 recipe: weights use 128x128 block scaling, activations use 1x128 tile scaling, and scales are computed online for…"
     },
     {
       "id": "87c6a0a4546a6555",
